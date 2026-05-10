@@ -61,6 +61,7 @@ class VisualRenderer:
     def create_feed_image(self, title: str, illustration_prompt: str, style: str, output_path: Path) -> Path:
         # Implementar lógica para Sub-estilo A (Curiosidade visual) e B (Hook de texto puro)
         # Por enquanto, um placeholder simples
+        output_path.parent.mkdir(parents=True, exist_ok=True)
         img = Image.new('RGB', (1080, 1080), color=self.colors["background_paper"])
         d = ImageDraw.Draw(img)
         font = self._get_font(50, "bold")
