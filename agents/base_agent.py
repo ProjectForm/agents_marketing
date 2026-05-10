@@ -3,18 +3,17 @@ import time
 import logging
 import yaml
 from pathlib import Path
-from anthropic import Anthropic
+from google import genai
+from google.genai import types
 
 logger = logging.getLogger(__name__)
 
 CONFIG_PATH = Path(__file__).parent.parent / "config" / "agent_prompts.yaml"
 KNOWLEDGE_PATH = Path(__file__).parent.parent / "knowledge"
 
-
 def _load_config() -> dict:
     with open(CONFIG_PATH, "r", encoding="utf-8") as f:
         return yaml.safe_load(f)
-
 
 def _load_knowledge() -> str:
     """Concatena todos os arquivos da base de conhecimento."""
@@ -23,24 +22,28 @@ def _load_knowledge() -> str:
         docs.append(f"## {md_file.stem.upper()}\n\n{md_file.read_text(encoding='utf-8')}")
     return "\n\n---\n\n".join(docs)
 
-
 class BaseAgent:
-    """Agente base com integração Anthropic e base de conhecimento Finlancer."""
+    """Agente base com integração Gemini e base de conhecimento Finlancer."""
 
     agent_key: str = ""  # Sobrescrever nas subclasses
 
-    def __init__(self, client: Anthropic):
-        self.client = client
+    def __init__(self, model_name: str = "gemini-2.5-flash"):
+        self.client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
+        self.model_name = model_name
         config = _load_config()
         agent_config = config["agents"][self.agent_key]
         self.name = agent_config["name"]
-        self.model = agent_config["model"]
         self.temperature = agent_config["temperature"]
-        self.max_tokens = agent_config["max_tokens"]
+        self.max_tokens = 8192 # Force higher max_tokens for all agents to prevent truncation
         self._system_prompt_template = agent_config["system_prompt"]
         self._retry_config = config.get("retry_config", {})
         self._knowledge = _load_knowledge()
-        self.conversation_history: list[dict] = []
+        
+        self.config = types.GenerateContentConfig(
+            system_instruction=self.system_prompt,
+            temperature=self.temperature,
+            max_output_tokens=self.max_tokens,
+        )
 
     @property
     def system_prompt(self) -> str:
@@ -50,30 +53,19 @@ class BaseAgent:
             + self._knowledge
         )
 
-    def run(self, user_message: str, reset_history: bool = False, model: str = None) -> str:
+    def run(self, prompt: str, reset_history: bool = False) -> str:
         """Envia mensagem e retorna resposta do agente."""
-        if reset_history:
-            self.conversation_history = []
-
-        self.conversation_history.append({"role": "user", "content": user_message})
-
         max_retries = self._retry_config.get("max_retries", 3)
         delay = self._retry_config.get("retry_delay_seconds", 2)
 
         for attempt in range(max_retries):
             try:
-                response = self.client.messages.create(
-                    model=model or self.model,
-                    max_tokens=self.max_tokens,
-                    system=[{
-                        "type": "text",
-                        "text": self.system_prompt,
-                        "cache_control": {"type": "ephemeral"},
-                    }],
-                    messages=self.conversation_history,
+                response = self.client.models.generate_content(
+                    model=self.model_name,
+                    contents=prompt,
+                    config=self.config
                 )
-                content = response.content[0].text
-                self.conversation_history.append({"role": "assistant", "content": content})
+                content = response.text
                 logger.info(f"[{self.name}] Resposta gerada ({len(content)} chars)")
                 return content
 
@@ -87,4 +79,6 @@ class BaseAgent:
         return ""
 
     def reset(self) -> None:
-        self.conversation_history = []
+        # O novo SDK não mantém chat state automaticamente da mesma forma, 
+        # mas para o uso atual de 'run' simples, isso não é estritamente necessário.
+        pass

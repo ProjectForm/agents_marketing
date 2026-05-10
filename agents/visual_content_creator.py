@@ -2,23 +2,27 @@ import json
 import logging
 import re
 from pathlib import Path
-from typing import Optional
+from typing import Optional, Dict, Any
 
 from .base_agent import BaseAgent
 
 logger = logging.getLogger(__name__)
 
+def _clean_json_response(text: str) -> str:
+    """Remove markdown code blocks and other noise from JSON response."""
+    # Remove markdown code blocks
+    text = re.sub(r'```json\s*', '', text)
+    text = re.sub(r'```\s*', '', text)
+    return text.strip()
 
 class VisualContentCreator(BaseAgent):
     agent_key = "visual_content_creator"
 
-    # ─── concept text (unchanged — used in review pipeline) ──────────────────
-
-    def create_carousel_concept(self, theme: str, num_slides: int, briefing: str) -> str:
+    def create_carousel_concept(self, theme: str, num_slides: int, briefing: str) -> Dict[str, Any]:
         prompt = f"""Crie o conceito visual completo para um carrossel de {num_slides} slides.
 
-TEMA: {theme}
-BRIEFING: {briefing}
+Tema: {theme}
+Briefing: {briefing}
 
 Entregue:
 1. WIREFRAME SLIDE-A-SLIDE com:
@@ -27,28 +31,48 @@ Entregue:
    - Cores específicas (hex codes)
    - Tipografia (família, peso, tamanho em px)
    - Elemento decorativo/gráfico sugerido
+   - **visual_hint**: Uma descrição concisa (máximo 50 palavras) do que a imagem de fundo de cada slide deve conter, focando em elementos abstratos e cores, sem texto legível.
 
 2. PALETA DA PEÇA (mantendo identidade Finlancer: emerald #10b981, dark mode)
 
 3. INSTRUÇÕES DE EXECUÇÃO NO CANVA (passo a passo para reproduzir)
 
-Formato: 1080x1350px (4:5). Use dark mode obrigatoriamente."""
-        return self.run(prompt, reset_history=True)
+Formato: 1080x1350px (4:5). Use dark mode obrigatoriamente.
 
-    def create_feed_concept(self, theme: str, briefing: str) -> str:
+Responda em formato JSON com as chaves 'concept', 'palette', 'canva_instructions' e 'visual_hints' (lista de strings, uma para cada slide)."""
+        raw_output = self.run(prompt, reset_history=True)
+        clean_output = _clean_json_response(raw_output)
+        try:
+            parsed_output = json.loads(clean_output)
+            return parsed_output
+        except json.JSONDecodeError:
+            logger.error(f"Falha ao parsear JSON do carrossel: {raw_output}")
+            return {"concept": raw_output, "palette": "", "canva_instructions": "", "visual_hints": []}
+
+    def create_feed_concept(self, theme: str, briefing: str) -> Dict[str, Any]:
         prompt = f"""Crie o conceito visual para 1 post de feed estático.
 
-TEMA: {theme}
-BRIEFING: {briefing}
+Tema: {theme}
+Briefing: {briefing}
 
 Entregue:
 1. Conceito visual completo (layout, composição, hierarquia)
 2. Texto de título e subtítulo (máx. 8 e 12 palavras)
 3. Paleta de cores com hex codes
 4. Instrução de execução no Canva
+5. **visual_hint**: Uma descrição concisa (máximo 50 palavras) do que a imagem de fundo deve conter, focando em elementos abstratos e cores, sem texto legível.
 
-Formato: 1080x1080px (1:1) ou 1080x1350px (4:5). Dark mode obrigatório."""
-        return self.run(prompt)
+Formato: 1080x1080px (1:1) ou 1080x1350px (4:5). Dark mode obrigatório.
+
+Responda em formato JSON com as chaves 'concept', 'title', 'subtitle', 'palette', 'canva_instructions' e 'visual_hint' (string)."""
+        raw_output = self.run(prompt)
+        clean_output = _clean_json_response(raw_output)
+        try:
+            parsed_output = json.loads(clean_output)
+            return parsed_output
+        except json.JSONDecodeError:
+            logger.error(f"Falha ao parsear JSON do feed: {raw_output}")
+            return {"concept": raw_output, "title": "", "subtitle": "", "palette": "", "canva_instructions": "", "visual_hint": ""}
 
     def create_ugc_visual_brief(self, persona: str, theme: str) -> str:
         prompt = f"""Crie o briefing visual para gravação de vídeo UGC.
@@ -75,90 +99,30 @@ Entregue:
 4. Elementos visuais recorrentes da semana para consistência de feed"""
         return self.run(prompt, reset_history=True)
 
-    # ─── Imagen 2 prompt generation ───────────────────────────────────────────
-
-    def create_carousel_image_prompts(
-        self,
-        theme: str,
-        briefing: str,
-        num_slides: int = 8,
-    ) -> list[str]:
-        """
-        Generates Imagen 2-optimized prompts for each carousel slide (background/base images).
-        These are background images — text overlays are added in Canva/editing.
-        Returns a list of prompt strings (one per slide).
-        """
-        prompt = f"""Você gerará prompts para o Imagen 2 (Google) criar imagens de fundo para carrossel.
-
-TEMA: {theme}
-NÚMERO DE SLIDES: {num_slides}
-BRIEFING: {briefing[:500]}
-
-IDENTIDADE VISUAL FINLANCER:
-- Dark mode: fundo #0f172a (quase preto)
-- Cor de destaque: emerald #10b981 (verde)
-- Estilo: glassmorphism, cards com blur sutil, gradientes escuros
-- Tipografia abstrata como elemento visual (não palavras legíveis)
-
-REGRAS PARA OS PROMPTS IMAGEN 2:
-1. Descreva apenas elementos visuais ABSTRATOS ou CONCEITUAIS — sem texto legível nas imagens
-2. Cada slide deve ter composição diferente mas coerente com a identidade
-3. Estilos aceitos: glassmorphism, dark tech, financial data viz, abstract gradients
-4. Inclua: cor dominante, estilo, elementos visuais, composição
-5. Imagens serão usadas como FUNDO — haverá texto sobreposto em edição
-6. Cada prompt: máximo 60 palavras
-
-ESTRUTURA DOS SLIDES:
-- Slide 1 (capa): Composição impactante, elemento visual grande, espaço para título
-- Slides 2-{num_slides - 1} (conteúdo): Variações de layout, espaço para texto de conteúdo
-- Slide {num_slides} (CTA): Gradiente emerald, composição convidativa
-
-Responda APENAS JSON válido:
-["prompt do slide 1", "prompt do slide 2", ..., "prompt do slide {num_slides}"]"""
-
-        raw = self.run(prompt, reset_history=True)
-        match = re.search(r'\[[\s\S]*\]', raw)
-        if match:
-            try:
-                prompts = json.loads(match.group())
-                if isinstance(prompts, list) and all(isinstance(p, str) for p in prompts):
-                    return prompts[:num_slides]
-            except json.JSONDecodeError:
-                pass
-
-        logger.warning("Falha ao parsear prompts de carrossel. Usando fallback.")
-        return _fallback_carousel_prompts(theme, num_slides)
-
-    def create_feed_image_prompt(self, theme: str, briefing: str) -> str:
-        """Returns a single Imagen 2 prompt for a square feed post background."""
-        prompt = f"""Gere 1 prompt para o Imagen 2 criar uma imagem de fundo 1:1 para feed Instagram.
-
-TEMA: {theme}
-IDENTIDADE: dark mode, emerald #10b981, glassmorphism, estilo financeiro tech brasileiro
-
-Regras:
-- Sem texto legível na imagem (será sobreposto em edição)
-- Composição centrada com espaço para overlay
-- Máximo 50 palavras
-
-Responda APENAS o prompt, sem explicação."""
-        return self.run(prompt, reset_history=True).strip()
-
-
-# ─── Fallback prompts ─────────────────────────────────────────────────────────
-
-def _fallback_carousel_prompts(theme: str, num_slides: int) -> list[str]:
-    base = (
-        "Dark mode background #0f172a, emerald green #10b981 accent elements, "
-        "glassmorphism card with frosted blur effect, "
-        "subtle grid pattern, financial data visualization style, "
-        "centered composition with negative space for text overlay, "
-        "4K render quality, no text or words visible"
-    )
-    slides = [
-        f"Bold hero composition, large emerald geometric shape, deep dark gradient, {base}",
-    ]
-    for i in range(2, num_slides):
-        slides.append(f"Slide {i} content layout, soft depth lines, minimal {base}")
-    slides.append(f"CTA slide, emerald to sky-blue gradient glow, radiant center, {base}")
-    return slides[:num_slides]
+    def extract_visual_hints(self, text_output: str, num_slides: int = 0) -> list[str]:
+        """Extrai visual_hints de um output textual, seja para carrossel ou feed."""
+        clean_text = _clean_json_response(text_output)
+        try:
+            data = json.loads(clean_text)
+            if num_slides > 0:
+                return data.get('visual_hints', [])[:num_slides]
+            else:
+                hint = data.get('visual_hint', '')
+                return [hint] if hint else []
+        except json.JSONDecodeError:
+            # Fallback regex if JSON is still broken
+            if num_slides > 0: # Carrossel
+                match = re.search(r'"visual_hints":\s*\[([^\]]+)\]', clean_text)
+                if match:
+                    try:
+                        hints_str = f"[{match.group(1)}]"
+                        hints = json.loads(hints_str)
+                        return [h for h in hints if isinstance(h, str)][:num_slides]
+                    except json.JSONDecodeError:
+                        pass
+                return ["" for _ in range(num_slides)]
+            else: # Feed
+                match = re.search(r'"visual_hint":\s*"([^"]+)"', clean_text)
+                if match:
+                    return [match.group(1)]
+                return [""]

@@ -137,24 +137,24 @@ class OutputManager:
 
         mapping = {
             # ── Instagram ─────────────────────────────────────────────────────
-            "instagram_legenda":          ("instagram", "legenda-reel.pdf"),
-            "instagram_carrossel_textos": ("instagram", "carrossel-textos.pdf"),
-            "instagram_engagement":       ("instagram", "engagement-dicas.pdf"),
+            "instagram_legenda":          ("instagram", "legendas.md"),
+            "instagram_carrossel_textos": ("instagram", "carrossel_textos.md"),
+            "instagram_engagement":       ("instagram", "engagement_dicas.md"),
             # ── TikTok ───────────────────────────────────────────────────────
-            "tiktok_legenda":             ("tiktok",    "legenda-video.pdf"),
-            "tiktok_engagement":          ("tiktok",    "engagement-dicas.pdf"),
-            "tiktok_video_ideia":         ("tiktok",    "video-ideia.pdf"),
+            "tiktok_legenda":             ("tiktok",    "legenda_video.md"),
+            "tiktok_engagement":          ("tiktok",    "engagement_dicas.md"),
+            "tiktok_video_ideia":         ("tiktok",    "video_ideia.md"),
             # ── YouTube ──────────────────────────────────────────────────────
-            "youtube_legenda":            ("youtube",   "titulo-descricao.pdf"),
-            "youtube_engagement":         ("youtube",   "engagement-dicas.pdf"),
+            "youtube_legenda":            ("youtube",   "titulo_descricao.md"),
+            "youtube_engagement":         ("youtube",   "engagement_dicas.md"),
             # ── Facebook ─────────────────────────────────────────────────────
-            "facebook_legenda":           ("facebook",  "legenda-video.pdf"),
-            "facebook_storytelling":      ("facebook",  "storytelling.pdf"),
-            "facebook_engagement":        ("facebook",  "engagement-dicas.pdf"),
+            "facebook_legenda":           ("facebook",  "legenda_video.md"),
+            "facebook_storytelling":      ("facebook",  "storytelling.md"),
+            "facebook_engagement":        ("facebook",  "engagement_dicas.md"),
             # ── Video production package ──────────────────────────────────────
-            "video_master":               ("video-criativo", "producao-roteiro.pdf"),
+            "video_master":               ("video-criativo", "producao_roteiro.md"),
             # ── Visual concept ────────────────────────────────────────────────
-            "visual_concept":             ("instagram", "visual-conceito.pdf"),
+            "visual_concept":             ("visual-conceito", "conceito.md"),
         }
 
         for key, (plat, filename) in mapping.items():
@@ -162,7 +162,8 @@ class OutputManager:
             if content and len(content.strip()) > 50:
                 run_dir = self._get_run_dir(date_str)
                 path = run_dir / plat / filename
-                self._markdown_to_pdf(content, path)
+                path.parent.mkdir(parents=True, exist_ok=True)
+                path.write_text(content, encoding="utf-8")
                 saved[key] = path
             elif key in outputs and outputs[key]:
                 logger.warning(f"[{key}] ignorado — conteúdo muito curto ({len(outputs.get(key,''))} chars)")
@@ -181,6 +182,32 @@ class OutputManager:
         return self._markdown_to_pdf(content, path)
 
     # ─── index ────────────────────────────────────────────────────────────────
+
+    def generate_index_content(self, run_id: str, outputs: dict, image_outputs: dict, final_review: str) -> str:
+        date_str = run_id.split("_")[0]
+        lines = [f"# Output da Agência Finlancer — {date_str}\n"]
+        
+        lines.append("\n## Revisão Final do Brand Director\n")
+        lines.append(final_review)
+
+        if "instagram" in outputs:
+            lines.append("\n## Instagram\n")
+            if outputs["instagram"].get("legendas"):
+                lines.append(f"- [Legendas Instagram](/instagram/legendas.md)")
+            if outputs["instagram"].get("roteiros"):
+                lines.append(f"- [Roteiros Instagram](/instagram/roteiros.md)")
+            for img_name in outputs["instagram"].get("images", {}).keys():
+                lines.append(f"- [{img_name.replace('_', ' ').title()}](/instagram/images/{img_name}.png)")
+
+        if "facebook" in outputs and outputs["facebook"].get("post"):
+            lines.append("\n## Facebook\n")
+            lines.append(f"- [Post Storytelling Facebook](/facebook/post_storytelling.md)")
+
+        if "tiktok" in outputs and outputs["tiktok"].get("roteiro_ugc"):
+            lines.append("\n## TikTok\n")
+            lines.append(f"- [Roteiro UGC TikTok](/tiktok/roteiro_ugc.md)")
+
+        return "\n".join(lines)
 
     def generate_index(self, date_str: str = None) -> str:
         run_dir = self._get_run_dir(date_str)
@@ -201,9 +228,10 @@ class OutputManager:
                 for f in sorted(set(files)):
                     lines.append(f"- [{f.name}]({f.relative_to(run_dir)})")
 
-        index_content = "\n".join(lines)
-        index_path = run_dir / "INDEX.pdf"
-        self._markdown_to_pdf(index_content, index_path)
+        # This generate_index is for local file system, not for Drive. Main.py will handle Drive index.
+        index_content = self.generate_index_content(date_str, {}, {}, "") # Placeholder, actual content from main.py
+        index_path = run_dir / "INDEX.md"
+        index_path.write_text(index_content, encoding="utf-8")
         return str(index_path)
 
     def _sanitize(self, text: str) -> str:

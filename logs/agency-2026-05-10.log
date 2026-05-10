@@ -1,0 +1,1784 @@
+2026-05-10 01:43:38,738 | finlancer-agency | INFO | === ROTINA DIÁRIA — 2026-05-10_014338 ===
+2026-05-10 01:43:38,739 | tools.drive_manager | ERROR | GOOGLE_SERVICE_ACCOUNT_JSON não configurado no .env
+2026-05-10 01:43:44,231 | finlancer-agency | INFO | === ROTINA DIÁRIA — 2026-05-10_014344 ===
+2026-05-10 01:43:44,343 | finlancer-agency | INFO | FASE 1: Planning Meeting
+2026-05-10 01:43:44,490 | agents.base_agent | WARNING | [Finlancer Brand Director] Tentativa 1 falhou: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.5-pro
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.5-pro
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-pro
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-pro
+Please retry in 15.525955638s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerDay-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, retry_delay {
+  seconds: 15
+}
+]
+2026-05-10 01:43:46,586 | agents.base_agent | WARNING | [Finlancer Brand Director] Tentativa 2 falhou: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.5-pro
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-pro
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-pro
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.5-pro
+Please retry in 13.430466293s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerDay-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, retry_delay {
+  seconds: 13
+}
+]
+2026-05-10 01:43:50,681 | agents.base_agent | WARNING | [Finlancer Brand Director] Tentativa 3 falhou: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.5-pro
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-pro
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-pro
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.5-pro
+Please retry in 9.334822847s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerDay-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, retry_delay {
+  seconds: 9
+}
+]
+2026-05-10 01:43:57,946 | finlancer-agency | INFO | === ROTINA DIÁRIA — 2026-05-10_014357 ===
+2026-05-10 01:43:58,067 | finlancer-agency | INFO | FASE 1: Planning Meeting
+2026-05-10 01:43:58,204 | agents.base_agent | WARNING | [Finlancer Brand Director] Tentativa 1 falhou: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-05-10 01:44:00,284 | agents.base_agent | WARNING | [Finlancer Brand Director] Tentativa 2 falhou: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-05-10 01:44:04,370 | agents.base_agent | WARNING | [Finlancer Brand Director] Tentativa 3 falhou: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-05-10 01:44:11,425 | finlancer-agency | INFO | === ROTINA DIÁRIA — 2026-05-10_014411 ===
+2026-05-10 01:44:11,538 | finlancer-agency | INFO | FASE 1: Planning Meeting
+2026-05-10 01:44:11,671 | agents.base_agent | WARNING | [Finlancer Brand Director] Tentativa 1 falhou: 404 models/gemini-1.5-flash-latest is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-05-10 01:44:13,753 | agents.base_agent | WARNING | [Finlancer Brand Director] Tentativa 2 falhou: 404 models/gemini-1.5-flash-latest is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-05-10 01:44:17,841 | agents.base_agent | WARNING | [Finlancer Brand Director] Tentativa 3 falhou: 404 models/gemini-1.5-flash-latest is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-05-10 01:44:24,774 | finlancer-agency | INFO | === ROTINA DIÁRIA — 2026-05-10_014424 ===
+2026-05-10 01:44:24,891 | finlancer-agency | INFO | FASE 1: Planning Meeting
+2026-05-10 01:44:25,036 | agents.base_agent | WARNING | [Finlancer Brand Director] Tentativa 1 falhou: 404 models/gemini-1.5-pro-latest is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-05-10 01:44:27,118 | agents.base_agent | WARNING | [Finlancer Brand Director] Tentativa 2 falhou: 404 models/gemini-1.5-pro-latest is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-05-10 01:44:31,195 | agents.base_agent | WARNING | [Finlancer Brand Director] Tentativa 3 falhou: 404 models/gemini-1.5-pro-latest is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-05-10 01:49:49,041 | finlancer-agency | INFO | === ROTINA DIÁRIA — 2026-05-10_014949 ===
+2026-05-10 01:49:49,154 | finlancer-agency | INFO | FASE 1: Planning Meeting
+2026-05-10 01:49:49,304 | agents.base_agent | WARNING | [Finlancer Brand Director] Tentativa 1 falhou: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-05-10 01:49:51,402 | agents.base_agent | WARNING | [Finlancer Brand Director] Tentativa 2 falhou: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-05-10 01:49:55,494 | agents.base_agent | WARNING | [Finlancer Brand Director] Tentativa 3 falhou: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-05-10 01:50:04,415 | finlancer-agency | INFO | === ROTINA DIÁRIA — 2026-05-10_015004 ===
+2026-05-10 01:50:04,543 | finlancer-agency | INFO | FASE 1: Planning Meeting
+2026-05-10 01:50:04,697 | agents.base_agent | WARNING | [Finlancer Brand Director] Tentativa 1 falhou: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+Please retry in 55.318414781s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, retry_delay {
+  seconds: 55
+}
+]
+2026-05-10 01:50:06,802 | agents.base_agent | WARNING | [Finlancer Brand Director] Tentativa 2 falhou: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash
+Please retry in 53.213261072s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, retry_delay {
+  seconds: 53
+}
+]
+2026-05-10 01:50:10,892 | agents.base_agent | WARNING | [Finlancer Brand Director] Tentativa 3 falhou: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+Please retry in 49.123601528s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, retry_delay {
+  seconds: 49
+}
+]
+2026-05-10 01:50:19,766 | finlancer-agency | INFO | === ROTINA DIÁRIA — 2026-05-10_015019 ===
+2026-05-10 01:50:19,887 | finlancer-agency | INFO | FASE 1: Planning Meeting
+2026-05-10 01:50:20,042 | agents.base_agent | WARNING | [Finlancer Brand Director] Tentativa 1 falhou: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-05-10 01:50:22,119 | agents.base_agent | WARNING | [Finlancer Brand Director] Tentativa 2 falhou: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-05-10 01:50:26,220 | agents.base_agent | WARNING | [Finlancer Brand Director] Tentativa 3 falhou: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-05-10 01:50:35,866 | finlancer-agency | INFO | === ROTINA DIÁRIA — 2026-05-10_015035 ===
+2026-05-10 01:50:35,998 | finlancer-agency | INFO | FASE 1: Planning Meeting
+2026-05-10 01:50:36,144 | agents.base_agent | WARNING | [Finlancer Brand Director] Tentativa 1 falhou: 404 models/gemini-1.5-flash-8b is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-05-10 01:50:38,228 | agents.base_agent | WARNING | [Finlancer Brand Director] Tentativa 2 falhou: 404 models/gemini-1.5-flash-8b is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-05-10 01:50:42,324 | agents.base_agent | WARNING | [Finlancer Brand Director] Tentativa 3 falhou: 404 models/gemini-1.5-flash-8b is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-05-10 01:50:53,801 | finlancer-agency | INFO | === ROTINA DIÁRIA — 2026-05-10_015053 ===
+2026-05-10 01:50:53,912 | finlancer-agency | INFO | FASE 1: Planning Meeting
+2026-05-10 01:50:54,040 | agents.base_agent | WARNING | [Finlancer Brand Director] Tentativa 1 falhou: 404 models/gemini-1.5-flash-001 is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-05-10 01:50:56,126 | agents.base_agent | WARNING | [Finlancer Brand Director] Tentativa 2 falhou: 404 models/gemini-1.5-flash-001 is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-05-10 01:51:00,209 | agents.base_agent | WARNING | [Finlancer Brand Director] Tentativa 3 falhou: 404 models/gemini-1.5-flash-001 is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-05-10 01:51:09,246 | finlancer-agency | INFO | === ROTINA DIÁRIA — 2026-05-10_015109 ===
+2026-05-10 01:51:09,361 | finlancer-agency | INFO | FASE 1: Planning Meeting
+2026-05-10 01:51:09,493 | agents.base_agent | WARNING | [Finlancer Brand Director] Tentativa 1 falhou: 404 models/gemini-1.5-flash-002 is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-05-10 01:51:11,590 | agents.base_agent | WARNING | [Finlancer Brand Director] Tentativa 2 falhou: 404 models/gemini-1.5-flash-002 is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-05-10 01:51:15,679 | agents.base_agent | WARNING | [Finlancer Brand Director] Tentativa 3 falhou: 404 models/gemini-1.5-flash-002 is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-05-10 01:51:55,321 | finlancer-agency | INFO | === ROTINA DIÁRIA — 2026-05-10_015155 ===
+2026-05-10 01:51:56,173 | finlancer-agency | INFO | FASE 1: Planning Meeting
+2026-05-10 01:51:56,173 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 01:51:56,293 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-05-10 01:51:56,294 | agents.base_agent | WARNING | [Finlancer Brand Director] Tentativa 1 falhou: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\nPlease retry in 3.722290471s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '3s'}]}}
+2026-05-10 01:51:58,294 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 01:51:58,384 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-05-10 01:51:58,385 | agents.base_agent | WARNING | [Finlancer Brand Director] Tentativa 2 falhou: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\nPlease retry in 1.630621919s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '1s'}]}}
+2026-05-10 01:52:02,386 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 01:52:02,487 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-05-10 01:52:02,488 | agents.base_agent | WARNING | [Finlancer Brand Director] Tentativa 3 falhou: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\nPlease retry in 57.528548197s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '57s'}]}}
+2026-05-10 01:52:12,266 | finlancer-agency | INFO | === ROTINA DIÁRIA — 2026-05-10_015212 ===
+2026-05-10 01:52:12,886 | finlancer-agency | INFO | FASE 1: Planning Meeting
+2026-05-10 01:52:12,886 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 01:52:13,000 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent "HTTP/1.1 404 Not Found"
+2026-05-10 01:52:13,001 | agents.base_agent | WARNING | [Finlancer Brand Director] Tentativa 1 falhou: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}
+2026-05-10 01:52:15,001 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 01:52:15,076 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent "HTTP/1.1 404 Not Found"
+2026-05-10 01:52:15,077 | agents.base_agent | WARNING | [Finlancer Brand Director] Tentativa 2 falhou: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}
+2026-05-10 01:52:19,077 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 01:52:19,162 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent "HTTP/1.1 404 Not Found"
+2026-05-10 01:52:19,163 | agents.base_agent | WARNING | [Finlancer Brand Director] Tentativa 3 falhou: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}
+2026-05-10 01:52:28,886 | finlancer-agency | INFO | === ROTINA DIÁRIA — 2026-05-10_015228 ===
+2026-05-10 01:52:29,585 | finlancer-agency | INFO | FASE 1: Planning Meeting
+2026-05-10 01:52:29,586 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 01:52:29,672 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp:generateContent "HTTP/1.1 404 Not Found"
+2026-05-10 01:52:29,674 | agents.base_agent | WARNING | [Finlancer Brand Director] Tentativa 1 falhou: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-2.0-flash-exp is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}
+2026-05-10 01:52:31,674 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 01:52:31,757 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp:generateContent "HTTP/1.1 404 Not Found"
+2026-05-10 01:52:31,758 | agents.base_agent | WARNING | [Finlancer Brand Director] Tentativa 2 falhou: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-2.0-flash-exp is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}
+2026-05-10 01:52:35,758 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 01:52:35,845 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp:generateContent "HTTP/1.1 404 Not Found"
+2026-05-10 01:52:35,846 | agents.base_agent | WARNING | [Finlancer Brand Director] Tentativa 3 falhou: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-2.0-flash-exp is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}
+2026-05-10 01:52:44,681 | finlancer-agency | INFO | === ROTINA DIÁRIA — 2026-05-10_015244 ===
+2026-05-10 01:52:45,389 | finlancer-agency | INFO | FASE 1: Planning Meeting
+2026-05-10 01:52:45,390 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 01:52:45,513 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-05-10 01:52:45,514 | agents.base_agent | WARNING | [Finlancer Brand Director] Tentativa 1 falhou: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\nPlease retry in 14.505917988s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '14s'}]}}
+2026-05-10 01:52:47,514 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 01:52:47,684 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 404 Not Found"
+2026-05-10 01:52:47,686 | agents.base_agent | WARNING | [Finlancer Brand Director] Tentativa 2 falhou: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.0-flash is no longer available to new users. Please update your code to use a newer model for the latest features and improvements.', 'status': 'NOT_FOUND'}}
+2026-05-10 01:52:51,686 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 01:52:51,869 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 404 Not Found"
+2026-05-10 01:52:51,870 | agents.base_agent | WARNING | [Finlancer Brand Director] Tentativa 3 falhou: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.0-flash is no longer available to new users. Please update your code to use a newer model for the latest features and improvements.', 'status': 'NOT_FOUND'}}
+2026-05-10 01:53:01,336 | finlancer-agency | INFO | === ROTINA DIÁRIA — 2026-05-10_015301 ===
+2026-05-10 01:53:01,973 | finlancer-agency | INFO | FASE 1: Planning Meeting
+2026-05-10 01:53:01,973 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 01:53:02,070 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-001:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-05-10 01:53:02,071 | agents.base_agent | WARNING | [Finlancer Brand Director] Tentativa 1 falhou: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\nPlease retry in 57.945243291s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '57s'}]}}
+2026-05-10 01:53:04,072 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 01:53:04,224 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-001:generateContent "HTTP/1.1 404 Not Found"
+2026-05-10 01:53:04,225 | agents.base_agent | WARNING | [Finlancer Brand Director] Tentativa 2 falhou: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.0-flash-001 is no longer available to new users. Please update your code to use a newer model for the latest features and improvements.', 'status': 'NOT_FOUND'}}
+2026-05-10 01:53:08,225 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 01:53:08,314 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-001:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-05-10 01:53:08,315 | agents.base_agent | WARNING | [Finlancer Brand Director] Tentativa 3 falhou: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\nPlease retry in 51.701766461s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.0-flash', 'location': 'global'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.0-flash', 'location': 'global'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '51s'}]}}
+2026-05-10 01:53:17,163 | finlancer-agency | INFO | === ROTINA DIÁRIA — 2026-05-10_015317 ===
+2026-05-10 01:53:17,790 | finlancer-agency | INFO | FASE 1: Planning Meeting
+2026-05-10 01:53:17,790 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 01:53:17,909 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-lite-preview-02-05:generateContent "HTTP/1.1 404 Not Found"
+2026-05-10 01:53:17,910 | agents.base_agent | WARNING | [Finlancer Brand Director] Tentativa 1 falhou: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-2.0-flash-lite-preview-02-05 is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}
+2026-05-10 01:53:19,911 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 01:53:19,987 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-lite-preview-02-05:generateContent "HTTP/1.1 404 Not Found"
+2026-05-10 01:53:19,987 | agents.base_agent | WARNING | [Finlancer Brand Director] Tentativa 2 falhou: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-2.0-flash-lite-preview-02-05 is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}
+2026-05-10 01:53:23,988 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 01:53:24,183 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-lite-preview-02-05:generateContent "HTTP/1.1 404 Not Found"
+2026-05-10 01:53:24,184 | agents.base_agent | WARNING | [Finlancer Brand Director] Tentativa 3 falhou: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-2.0-flash-lite-preview-02-05 is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}
+2026-05-10 01:53:32,759 | finlancer-agency | INFO | === ROTINA DIÁRIA — 2026-05-10_015332 ===
+2026-05-10 01:53:33,370 | finlancer-agency | INFO | FASE 1: Planning Meeting
+2026-05-10 01:53:33,370 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 01:53:33,556 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-lite:generateContent "HTTP/1.1 404 Not Found"
+2026-05-10 01:53:33,557 | agents.base_agent | WARNING | [Finlancer Brand Director] Tentativa 1 falhou: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.0-flash-lite is no longer available to new users. Please update your code to use a newer model for the latest features and improvements.', 'status': 'NOT_FOUND'}}
+2026-05-10 01:53:35,558 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 01:53:35,760 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-lite:generateContent "HTTP/1.1 404 Not Found"
+2026-05-10 01:53:35,761 | agents.base_agent | WARNING | [Finlancer Brand Director] Tentativa 2 falhou: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.0-flash-lite is no longer available to new users. Please update your code to use a newer model for the latest features and improvements.', 'status': 'NOT_FOUND'}}
+2026-05-10 01:53:39,761 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 01:53:39,924 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-lite:generateContent "HTTP/1.1 404 Not Found"
+2026-05-10 01:53:39,925 | agents.base_agent | WARNING | [Finlancer Brand Director] Tentativa 3 falhou: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.0-flash-lite is no longer available to new users. Please update your code to use a newer model for the latest features and improvements.', 'status': 'NOT_FOUND'}}
+2026-05-10 01:53:49,031 | finlancer-agency | INFO | === ROTINA DIÁRIA — 2026-05-10_015349 ===
+2026-05-10 01:53:49,680 | finlancer-agency | INFO | FASE 1: Planning Meeting
+2026-05-10 01:53:49,680 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 01:53:49,885 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-001:generateContent "HTTP/1.1 404 Not Found"
+2026-05-10 01:53:49,886 | agents.base_agent | WARNING | [Finlancer Brand Director] Tentativa 1 falhou: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.0-flash-001 is no longer available to new users. Please update your code to use a newer model for the latest features and improvements.', 'status': 'NOT_FOUND'}}
+2026-05-10 01:53:51,887 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 01:53:52,060 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-001:generateContent "HTTP/1.1 404 Not Found"
+2026-05-10 01:53:52,061 | agents.base_agent | WARNING | [Finlancer Brand Director] Tentativa 2 falhou: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.0-flash-001 is no longer available to new users. Please update your code to use a newer model for the latest features and improvements.', 'status': 'NOT_FOUND'}}
+2026-05-10 01:53:56,061 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 01:53:56,271 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-001:generateContent "HTTP/1.1 404 Not Found"
+2026-05-10 01:53:56,272 | agents.base_agent | WARNING | [Finlancer Brand Director] Tentativa 3 falhou: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.0-flash-001 is no longer available to new users. Please update your code to use a newer model for the latest features and improvements.', 'status': 'NOT_FOUND'}}
+2026-05-10 01:54:05,756 | finlancer-agency | INFO | === ROTINA DIÁRIA — 2026-05-10_015405 ===
+2026-05-10 01:54:06,387 | finlancer-agency | INFO | FASE 1: Planning Meeting
+2026-05-10 01:54:06,387 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 01:54:06,504 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-lite-preview:generateContent "HTTP/1.1 404 Not Found"
+2026-05-10 01:54:06,505 | agents.base_agent | WARNING | [Finlancer Brand Director] Tentativa 1 falhou: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-2.0-flash-lite-preview is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}
+2026-05-10 01:54:08,505 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 01:54:08,602 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-lite-preview:generateContent "HTTP/1.1 404 Not Found"
+2026-05-10 01:54:08,603 | agents.base_agent | WARNING | [Finlancer Brand Director] Tentativa 2 falhou: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-2.0-flash-lite-preview is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}
+2026-05-10 01:54:12,603 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 01:54:12,711 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-lite-preview:generateContent "HTTP/1.1 404 Not Found"
+2026-05-10 01:54:12,712 | agents.base_agent | WARNING | [Finlancer Brand Director] Tentativa 3 falhou: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-2.0-flash-lite-preview is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}
+2026-05-10 01:54:21,725 | finlancer-agency | INFO | === ROTINA DIÁRIA — 2026-05-10_015421 ===
+2026-05-10 01:54:22,389 | finlancer-agency | INFO | FASE 1: Planning Meeting
+2026-05-10 01:54:22,390 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 01:54:22,487 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp:generateContent "HTTP/1.1 404 Not Found"
+2026-05-10 01:54:22,488 | agents.base_agent | WARNING | [Finlancer Brand Director] Tentativa 1 falhou: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-2.0-flash-exp is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}
+2026-05-10 01:54:24,488 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 01:54:24,569 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp:generateContent "HTTP/1.1 404 Not Found"
+2026-05-10 01:54:24,570 | agents.base_agent | WARNING | [Finlancer Brand Director] Tentativa 2 falhou: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-2.0-flash-exp is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}
+2026-05-10 01:54:28,571 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 01:54:28,662 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp:generateContent "HTTP/1.1 404 Not Found"
+2026-05-10 01:54:28,663 | agents.base_agent | WARNING | [Finlancer Brand Director] Tentativa 3 falhou: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-2.0-flash-exp is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}
+2026-05-10 01:54:37,117 | finlancer-agency | INFO | === ROTINA DIÁRIA — 2026-05-10_015437 ===
+2026-05-10 01:54:37,827 | finlancer-agency | INFO | FASE 1: Planning Meeting
+2026-05-10 01:54:37,828 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 01:54:38,025 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 404 Not Found"
+2026-05-10 01:54:38,026 | agents.base_agent | WARNING | [Finlancer Brand Director] Tentativa 1 falhou: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.0-flash is no longer available to new users. Please update your code to use a newer model for the latest features and improvements.', 'status': 'NOT_FOUND'}}
+2026-05-10 01:54:40,027 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 01:54:40,222 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 404 Not Found"
+2026-05-10 01:54:40,223 | agents.base_agent | WARNING | [Finlancer Brand Director] Tentativa 2 falhou: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.0-flash is no longer available to new users. Please update your code to use a newer model for the latest features and improvements.', 'status': 'NOT_FOUND'}}
+2026-05-10 01:54:44,223 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 01:54:44,396 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 404 Not Found"
+2026-05-10 01:54:44,397 | agents.base_agent | WARNING | [Finlancer Brand Director] Tentativa 3 falhou: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.0-flash is no longer available to new users. Please update your code to use a newer model for the latest features and improvements.', 'status': 'NOT_FOUND'}}
+2026-05-10 01:54:53,844 | finlancer-agency | INFO | === ROTINA DIÁRIA — 2026-05-10_015453 ===
+2026-05-10 01:54:54,466 | finlancer-agency | INFO | FASE 1: Planning Meeting
+2026-05-10 01:54:54,467 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 01:54:54,642 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-001:generateContent "HTTP/1.1 404 Not Found"
+2026-05-10 01:54:54,643 | agents.base_agent | WARNING | [Finlancer Brand Director] Tentativa 1 falhou: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.0-flash-001 is no longer available to new users. Please update your code to use a newer model for the latest features and improvements.', 'status': 'NOT_FOUND'}}
+2026-05-10 01:54:56,643 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 01:54:56,785 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-001:generateContent "HTTP/1.1 404 Not Found"
+2026-05-10 01:54:56,786 | agents.base_agent | WARNING | [Finlancer Brand Director] Tentativa 2 falhou: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.0-flash-001 is no longer available to new users. Please update your code to use a newer model for the latest features and improvements.', 'status': 'NOT_FOUND'}}
+2026-05-10 01:55:00,786 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 01:55:00,950 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-001:generateContent "HTTP/1.1 404 Not Found"
+2026-05-10 01:55:00,951 | agents.base_agent | WARNING | [Finlancer Brand Director] Tentativa 3 falhou: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.0-flash-001 is no longer available to new users. Please update your code to use a newer model for the latest features and improvements.', 'status': 'NOT_FOUND'}}
+2026-05-10 02:03:17,186 | finlancer-agency | INFO | === ROTINA DIÁRIA — 2026-05-10_020317 ===
+2026-05-10 02:03:17,903 | finlancer-agency | INFO | FASE 1: Planning Meeting
+2026-05-10 02:03:17,903 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 02:03:36,925 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-10 02:03:36,927 | agents.base_agent | INFO | [Finlancer Brand Director] Resposta gerada (6963 chars)
+2026-05-10 02:03:36,927 | finlancer-agency | INFO | Tema customizado: teste de integração final
+2026-05-10 02:03:36,927 | finlancer-agency | INFO | Briefing do dia gerado
+2026-05-10 02:03:36,927 | finlancer-agency | INFO | FASE 2: Producao de Conteudo (paralela)
+2026-05-10 02:03:36,927 | finlancer-agency | INFO | Copy Specialist produzindo...
+2026-05-10 02:03:36,928 | finlancer-agency | INFO | Visual Creator produzindo conceito...
+2026-05-10 02:03:36,928 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 02:03:36,928 | finlancer-agency | INFO | Video Script Specialist produzindo roteiros...
+2026-05-10 02:03:36,928 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 02:03:36,931 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 02:03:52,589 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-10 02:03:52,591 | agents.base_agent | INFO | [Finlancer Video Script Specialist] Resposta gerada (5867 chars)
+2026-05-10 02:03:52,592 | finlancer-agency | INFO | video concluido
+2026-05-10 02:03:58,705 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-10 02:03:58,706 | agents.base_agent | INFO | [Finlancer Visual Content Creator] Resposta gerada (11065 chars)
+2026-05-10 02:03:58,707 | agents.visual_content_creator | ERROR | Falha ao parsear JSON do carrossel: ```json
+{
+  "concept": {
+    "title": "Carrossel: A Urgência de Separar PF e PJ para IRPF e DASN-SIMEI",
+    "description": "Um carrossel de 8 slides no formato 4:5 (1080x1350px) para Instagram, com foco na urgência de separar as finanças PF e PJ para o IRPF e DASN-SIMEI. Utiliza a identidade visual Finlancer com dark mode, glassmorphism e a cor emerald como destaque. Os slides guiam o usuário da dor da confusão para a solução do Finlancer, destacando a integração PF+PJ e a IA Consultiva.",
+    "target_personas": ["Carla", "Fernanda"],
+    "finlancer_differentiators": [
+      "Integração PF+PJ em um só lugar",
+      "IA Consultiva (chat completo com Fin)",
+      "Separação automática PF/PJ (toggle)"
+    ]
+  },
+  "palette": {
+    "background": "#0f172a",
+    "primary_accent": "#10b981",
+    "surface_cards": "#1e293b",
+    "text_primary": "#f1f5f9",
+    "text_secondary": "#94a3b8",
+    "gradient": ["#10b981", "#0ea5e9"],
+    "glassmorphism_fill": "rgba(30,41,59,0.7)",
+    "glassmorphism_border": "rgba(255,255,255,0.1)"
+  },
+  "visual_hints": [
+    "Fundo escuro com um grande ponto de interrogação abstrato em gradiente emerald-azul, com um leve brilho. Elementos geométricos sutis se sobrepondo, criando profundidade.",
+    "Fundo escuro com linhas e formas abstratas em emerald e azul se entrelaçando e colidindo, simbolizando confusão e mistura. Sem elementos reconhecíveis de interface.",
+    "Fundo escuro com um grande relógio abstrato ou ícone de calendário estilizado em gradiente emerald-azul, com ponteiros que indicam um prazo próximo. Elementos de tempo e urgência.",
+    "Fundo escuro com um mockup abstrato de um smartphone/tablet exibindo uma interface Finlancer simplificada, com dois painéis distintos (PF e PJ) e uma bolha de chat sutil na parte inferior, todos em tons de emerald.",
+    "Fundo escuro com formas geométricas limpas e separadas em emerald e azul, fluindo de forma organizada e harmoniosa. Um grande ícone de 'check' ou 'alívio' abstrato no centro.",
+    "Fundo escuro com um mockup abstrato de um smartphone/tablet exibindo a interface Finlancer. O foco está em um elemento de toggle (chave seletora) claramente visível, alternando entre duas visões distintas (PF e PJ) com a cor emerald destacando a seleção ativa.",
+    "Fundo escuro com um mockup abstrato de um smartphone/tablet exibindo a interface Finlancer. O destaque é para uma bolha de chat estilizada com um ícone de IA (cabeça robótica minimalista) em emerald, sugerindo uma conversa inteligente.",
+    "Fundo escuro com o logo Finlancer centralizado e um grande botão de CTA abstrato em gradiente emerald-azul. Formas fluidas em emerald e azul irradiam do centro, transmitindo convite e oportunidade."
+  ],
+  "canva_instructions": [
+    "**Configuração Inicial:**",
+    "1. Crie um novo design no Canva com as dimensões 1080x1350px.",
+    "2. Defina o fundo de todos os slides para a cor sólida #0f172a.",
+    "3. Defina a fonte padrão para 'Inter' ou 'Poppins' para todos os textos.",
+    "",
+    "**Slide 1/8 — Capa:**",
+    "1. Adicione um título em 'Inter ExtraBold' (ou Poppins Bold), tamanho 72px, cor #f1f5f9, centralizado horizontalmente e posicionado a 25% da altura do slide.",
+    "2. Abaixo do título, adicione um ícone de 'ponto de exclamação' ou 'explosão' estilizado (pode ser um emoji 🤯 grande ou um gráfico vetorial abstrato) em #10b981, tamanho 100px, com um efeito de 'brilho' (glow) sutil em #10b981 (opacidade 30%).",
+    "3. Adicione um subtítulo em 'Inter SemiBold' (ou Poppins Medium), tamanho 32px, cor #94a3b8, centralizado abaixo do ícone.",
+    "4. Adicione um retângulo arredondado (raio 16px) na parte inferior (rodapé) do slide, preenchido com rgba(30,41,59,0.7), com 'efeito de desfoque' (blur) de 16px e borda de 1px em rgba(255,255,255,0.1). Dentro, adicione o texto 'Slide 1/8' em 'Inter Regular', tamanho 20px, cor #94a3b8, centralizado no rodapé.",
+    "",
+    "**Slide 2/8 — A Dor da Mistura:**",
+    "1. Crie um card glassmorphism: retângulo arredondado (raio 16px) preenchido com rgba(30,41,59,0.7), com 'efeito de desfoque' (blur) de 16px e borda de 1px em rgba(255,255,255,0.1). Posicione-o no centro do slide, ocupando cerca de 70% da largura e 50% da altura.",
+    "2. Dentro do card, adicione um título em 'Inter Bold' (ou Poppins Bold), tamanho 48px, cor #f1f5f9, alinhado à esquerda no topo do card.",
+    "3. Abaixo do título, adicione 3-4 bullet points com texto em 'Inter Regular', tamanho 28px, cor #94a3b8. Use pequenos ícones de 'x' ou 'sinal de alerta' em #10b981 ao lado de cada ponto.",
+    "4. Adicione o rodapé padrão 'Slide 2/8'.",
+    "",
+    "**Slide 3/8 — Urgência do Prazo:**",
+    "1. No topo, adicione um título em 'Inter ExtraBold' (ou Poppins Bold), tamanho 60px, cor #f1f5f9, centralizado horizontalmente.",
+    "2. Crie um grande círculo ou forma de relógio abstrata no centro do slide, utilizando um gradiente de #10b981 para #0ea5e9. Adicione um efeito de 'brilho' sutil em #10b981 (opacidade 30%).",
+    "3. Sobre o relógio, adicione o texto '31 de MAIO' em 'Inter ExtraBold', tamanho 80px, cor #f1f5f9, com um leve brilho em #10b981.",
+    "4. Abaixo, adicione um texto de apoio em 'Inter Medium', tamanho 28px, cor #94a3b8, centralizado.",
+    "5. Adicione o rodapé padrão 'Slide 3/8'.",
+    "",
+    "**Slide 4/8 — Solução Finlancer (Visão Unificada e IA):**",
+    "1. Adicione um título em 'Inter Bold' (ou Poppins Bold), tamanho 48px, cor #f1f5f9, alinhado à esquerda no topo (20% da altura).",
+    "2. Crie um mockup de tela de celular/tablet (retângulo arredondado com raio 20px, cor #1e293b). Dentro, simule a interface do Finlancer com dois cards glassmorphism sobrepostos sutilmente, um para 'PF' e outro para 'PJ', ambos com elementos em #10b981 (barras de progresso, ícones).",
+    "3. Adicione um pequeno ícone de 'chat' em #10b981 no canto inferior do mockup, com um leve glow.",
+    "4. Adicione um texto de apoio em 'Inter Regular', tamanho 24px, cor #94a3b8, abaixo do mockup.",
+    "5. Adicione o rodapé padrão 'Slide 4/8'.",
+    "",
+    "**Slide 5/8 — Benefícios:**",
+    "1. Adicione um título em 'Inter ExtraBold' (ou Poppins Bold), tamanho 60px, cor #10b981, centralizado horizontalmente.",
+    "2. Crie um card glassmorphism centralizado (retângulo arredondado, raio 16px, rgba(30,41,59,0.7), blur 16px, borda rgba(255,255,255,0.1)).",
+    "3. Dentro do card, adicione 3 ícones minimalistas (ex: 'clareza', 'calma', 'check') em #10b981, cada um com um texto descritivo em 'Inter Medium', tamanho 28px, cor #f1f5f9. Organize-os verticalmente.",
+    "4. Adicione o rodapé padrão 'Slide 5/8'.",
+    "",
+    "**Slide 6/8 — Finlancer em Ação (Toggle PF/PJ):**",
+    "1. Adicione um título em 'Inter Bold' (ou Poppins Bold), tamanho 48px, cor #f1f5f9, alinhado à esquerda no topo (20% da altura).",
+    "2. Crie um mockup de tela de celular/tablet (retângulo arredondado com raio 20px, cor #1e293b).",
+    "3. Dentro do mockup, simule a interface do Finlancer. Destaque um 'toggle switch' (botão de alternância) em #10b981, mostrando claramente a mudança entre 'PF' e 'PJ' com dados visuais (ex: gráficos de barra pequenos em emerald).",
+    "4. Adicione um texto explicativo em 'Inter Regular', tamanho 24px, cor #94a3b8, abaixo do mockup.",
+    "5. Adicione o rodapé padrão 'Slide 6/8'.",
+    "",
+    "**Slide 7/8 — Finlancer em Ação (IA Consultiva):**",
+    "1. Adicione um título em 'Inter Bold' (ou Poppins Bold), tamanho 48px, cor #f1f5f9, alinhado à esquerda no topo (20% da altura).",
+    "2. Crie um mockup de tela de celular/tablet (retângulo arredondado com raio 20px, cor #1e293b).",
+    "3. Dentro do mockup, simule a interface de chat do Finlancer. Mostre balões de conversa com perguntas e respostas. Destaque o ícone da IA (cabeça robótica minimalista) em #10b981 e o texto das respostas em 'Inter Regular', cor #f1f5f9.",
+    "4. Adicione um texto explicativo em 'Inter Regular', tamanho 24px, cor #94a3b8, abaixo do mockup.",
+    "5. Adicione o rodapé padrão 'Slide 7/8'.",
+    "",
+    "**Slide 8/8 — CTA Final:**",
+    "1. Centralize o logo Finlancer (se disponível, em branco ou emerald) no topo do slide, com um leve glow em #10b981.",
+    "2. Abaixo do logo, adicione o CTA principal em 'Inter ExtraBold' (ou Poppins Bold), tamanho 64px, cor #10b981, centralizado, com um efeito de 'brilho' sutil.",
+    "3. Crie um botão grande e arredondado (raio 20px) no centro inferior do slide, preenchido com o gradiente #10b981 para #0ea5e9. Dentro do botão, adicione o texto 'Crie sua conta grátis!' em 'Inter Bold', tamanho 36px, cor #f1f5f9.",
+    "4. Abaixo do botão, adicione o texto 'Link na bio' em 'Inter Medium', tamanho 28px, cor #94a3b8, centralizado.",
+    "5. Adicione o rodapé padrão 'Slide 8/8'."
+  ],
+  "slides": [
+    {
+      "slide_number": "Slide 1/8",
+      "dimensions": "1080x1350px",
+      "layout": "Topo (20%): Espaço para título; Centro (60%): Título principal e ícone; Rodapé (20%): Subtítulo e indicador de slide.",
+      "visual_element_main": "Um grande ícone de ponto de exclamação estilizado ou um símbolo de 'explosão' minimalista, em gradiente #10b981 para #0ea5e9, centralizado na área central do slide.",
+      "text_content": [
+        {"text": "MEI + CLT?", "position": "Topo, centralizado", "font": "Inter ExtraBold", "size": "72px", "color": "#f1f5f9"},
+        {"text": "IRPF e DASN-SIMEI te dão calafrios? 🤯", "position": "Centro, abaixo do ícone", "font": "Inter Bold", "size": "52px", "color": "#f1f5f9"},
+        {"text": "Deslize para descobrir a solução", "position": "Rodapé, centralizado", "font": "Inter Medium", "size": "28px", "color": "#94a3b8"}
+      ],
+      "colors_and_finishes": {
+        "background": "#0f172a",
+        "icon": "Gradient #10b981 → #0ea5e9",
+        "text_primary": "#f1f5f9",
+        "text_secondary": "#94a3b8"
+      },
+      "effects": "Glow sutil (#10b981, 30% opacidade) no ícone principal.",
+      "observation": "O ícone deve ser abstrato, sem ser um emoji real, mas transmitindo a ideia de 'explosão' ou 'problema'."
+    },
+    {
+      "slide_number": "Slide 2/8",
+      "dimensions": "1080x1350px",
+      "layout": "Topo (20%): Título; Centro (60%): Card glassmorphism com pontos de dor; Rodapé (20%): Indicador de slide.",
+      "visual_element_main": "Um card glassmorphism retangular arredondado no centro do slide, contendo 3-4 ícones de 'alerta' ou 'confusão' minimalistas em #10b981, cada um ao lado de um ponto de texto.",
+      "text_content": [
+        {"text": "A dor de misturar tudo:", "position": "Topo, alinhado à esquerda", "font": "Inter Bold", "size": "48px", "color": "#f1f5f9"},
+        {"text": "• Cartão pessoal no negócio", "position": "Dentro do card, alinhado à esquerda", "font": "Inter Regular", "size": "28px", "color": "#94a3b8"},
+        {"text": "• IRPF vira pesadelo", "position": "Dentro do card, alinhado à esquerda", "font": "Inter Regular", "size": "28px", "color": "#94a3b8"},
+        {"text": "• Ansiedade com o DASN-SIMEI", "position": "Dentro do card, alinhado à esquerda", "font": "Inter Regular", "size": "28px", "color": "#94a
+2026-05-10 02:03:58,707 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 02:04:09,904 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-10 02:04:09,906 | agents.base_agent | INFO | [Finlancer Social Copy Specialist] Resposta gerada (9170 chars)
+2026-05-10 02:04:09,906 | finlancer-agency | INFO | copy concluido
+2026-05-10 02:04:13,969 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-10 02:04:13,970 | agents.base_agent | INFO | [Finlancer Visual Content Creator] Resposta gerada (3428 chars)
+2026-05-10 02:04:13,971 | agents.visual_content_creator | ERROR | Falha ao parsear JSON do feed: ```json
+{
+  "concept": "Um post estático que visualiza a complexidade de gerenciar finanças PF e PJ simultaneamente, especialmente para quem tem MEI e CLT, e como o Finlancer as unifica. Dois cards glassmorphism abstratos representam PF e PJ, sobrepondo-se e sendo 'integrados' por um mockup do app Finlancer no centro, destacando a visão unificada e a IA Consultiva.",
+  "title": "MEI + CLT? IRPF e DASN-SIMEI batendo na porta?",
+  "subtitle": "Organize suas finanças PF e PJ em um só lugar. Sem mistério.",
+  "palette": {
+    "background": "#0f172a",
+    "primary_accent": "#10b981",
+    "surface_cards": "#1e293b",
+    "text_primary": "#f1f5f9",
+    "text_secondary": "#94a3b8",
+    "border_subtle": "rgba(255,255,255,0.1)"
+  },
+  "canva_instructions": [
+    "1. Crie um design de 1080x1350px.",
+    "2. Defina o fundo como cor sólida `#0f172a`.",
+    "3. Crie um retângulo arredondado (Raio 16px) para o 'Card PF'. Cor: `#1e293b` com opacidade de 70%. Borda: 1px, cor `rgba(255,255,255,0.1)`. Aplique um efeito de desfoque (blur) de 16px. Posicione no terço superior esquerdo do centro da tela, levemente inclinado. Adicione um ícone minimalista de pessoa (outline) em `#94a3b8` no canto superior esquerdo deste card.",
+    "4. Crie outro retângulo arredondado (Raio 16px) para o 'Card PJ'. Cor: `#1e293b` com opacidade de 70%. Borda: 1px, cor `rgba(255,255,255,0.1)`. Aplique um efeito de desfoque (blur) de 16px. Posicione no terço superior direito do centro da tela, levemente inclinado e sobrepondo o 'Card PF'. Adicione um ícone minimalista de prédio/empresa (outline) em `#94a3b8` no canto superior direito deste card.",
+    "5. Crie um retângulo arredondado (Raio 16px) maior para o 'Mockup Finlancer'. Cor: `#1e293b` com opacidade de 80%. Borda: 1px, cor `rgba(255,255,255,0.1)`. Aplique um efeito de desfoque (blur) de 16px. Centralize-o, sobrepondo os dois cards anteriores.",
+    "6. Dentro do 'Mockup Finlancer' (simulado):",
+    "   a. No topo, adicione um 'toggle' horizontal (retângulo pequeno com bordas arredondadas) com texto 'PF' e 'PJ'. Destaque 'PF' em `#10b981` e 'PJ' em `#94a3b8` para simular a alternância.",
+    "   b. Abaixo, adicione algumas linhas de texto simuladas (retângulos finos em `#94a3b8` para labels e `#10b981` para valores) para representar dados financeiros.",
+    "   c. No canto inferior do mockup, adicione um pequeno ícone de balão de fala (chat) em `#10b981` para representar a IA Consultiva.",
+    "7. Adicione um efeito de sombra externa sutil no 'Mockup Finlancer', usando a cor `#10b981` com 30% de opacidade e levemente espalhada.",
+    "8. Adicione o Título: `MEI + CLT? IRPF e DASN-SIMEI batendo na porta?` Fonte: Poppins Bold (ou Inter ExtraBold), tamanho aproximado 64px. Cor: `#f1f5f9`. Posicione no topo da tela, centralizado horizontalmente.",
+    "9. Adicione o Subtítulo: `Organize suas finanças PF e PJ em um só lugar. Sem mistério.` Fonte: Poppins Medium (ou Inter SemiBold), tamanho aproximado 32px. Cor: `#94a3b8`. Posicione abaixo do 'Mockup Finlancer', centralizado horizontalmente.",
+    "10. Opcional: Adicione o logo Finlancer (apenas o ícone ou texto) no rodapé, sutilmente."
+  ],
+  "visual_hint": "Fundo escuro (#0f172a). Dois cards glassmorphism translúcidos representam PF e PJ, levemente sobrepostos. Um mockup estilizado do Finlancer com o toggle PF/PJ e elementos da IA Consultiva unifica os cards, com um brilho sutil em emerald (#10b981)."
+}
+```
+2026-05-10 02:04:13,971 | finlancer-agency | INFO | visual concluido
+2026-05-10 02:04:13,971 | finlancer-agency | INFO | FASE 3: Revisao do Content Strategist (Gemini)
+2026-05-10 02:04:36,822 | finlancer-agency | INFO | === ROTINA DIÁRIA — 2026-05-10_020436 ===
+2026-05-10 02:04:37,592 | finlancer-agency | INFO | FASE 1: Planning Meeting
+2026-05-10 02:04:37,592 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 02:05:00,241 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-10 02:05:00,242 | agents.base_agent | INFO | [Finlancer Brand Director] Resposta gerada (5912 chars)
+2026-05-10 02:05:00,243 | finlancer-agency | INFO | Tema customizado: teste de integração final v2
+2026-05-10 02:05:00,243 | finlancer-agency | INFO | Briefing do dia gerado
+2026-05-10 02:05:00,243 | finlancer-agency | INFO | FASE 2: Producao de Conteudo (paralela)
+2026-05-10 02:05:00,243 | finlancer-agency | INFO | Copy Specialist produzindo...
+2026-05-10 02:05:00,244 | finlancer-agency | INFO | Visual Creator produzindo conceito...
+2026-05-10 02:05:00,244 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 02:05:00,244 | finlancer-agency | INFO | Video Script Specialist produzindo roteiros...
+2026-05-10 02:05:00,244 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 02:05:00,247 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 02:05:15,325 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-10 02:05:15,326 | agents.base_agent | INFO | [Finlancer Video Script Specialist] Resposta gerada (5046 chars)
+2026-05-10 02:05:15,326 | finlancer-agency | INFO | video concluido
+2026-05-10 02:05:22,195 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-10 02:05:22,197 | agents.base_agent | INFO | [Finlancer Visual Content Creator] Resposta gerada (633 chars)
+2026-05-10 02:05:22,197 | agents.visual_content_creator | ERROR | Falha ao parsear JSON do carrossel: ```json
+{
+  "concept": [
+    {
+      "slide_number": "Slide 1/8",
+      "dimensions": "1080x1350px",
+      "layout_structure": "Topo 15%: Número do slide. Centro 60%: Título principal em card glassmorphism. Rodapé 25%: Espaço para respiro e logo Finlancer sutil.",
+      "main_visual_element": "Card glassmorphism centralizado (largura 900px, altura adaptável). Ícone de calendário (outline) estilizado em #10b981 com glow sutil, posicionado acima e ligeiramente à esquerda do título principal, sobrepondo o card.",
+      "text_on_slide": {
+        "title": {
+          "content": "DASN-SIMEI: O que é e por que você precisa declarar
+2026-05-10 02:05:22,197 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 02:05:22,452 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-10 02:05:22,454 | agents.base_agent | INFO | [Finlancer Social Copy Specialist] Resposta gerada (10343 chars)
+2026-05-10 02:05:22,454 | finlancer-agency | INFO | copy concluido
+2026-05-10 02:05:38,351 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-10 02:05:38,353 | agents.base_agent | INFO | [Finlancer Visual Content Creator] Resposta gerada (4665 chars)
+2026-05-10 02:05:38,353 | finlancer-agency | INFO | visual concluido
+2026-05-10 02:05:38,354 | finlancer-agency | INFO | FASE 3: Revisao do Content Strategist (Gemini)
+2026-05-10 02:09:19,155 | finlancer-agency | INFO | === ROTINA DIÁRIA — 2026-05-10_020919 ===
+2026-05-10 02:09:19,895 | finlancer-agency | INFO | FASE 1: Planning Meeting
+2026-05-10 02:09:19,896 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 02:09:40,178 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-10 02:09:40,181 | agents.base_agent | INFO | [Finlancer Brand Director] Resposta gerada (6674 chars)
+2026-05-10 02:09:40,181 | finlancer-agency | INFO | Tema customizado: teste de integração final v3
+2026-05-10 02:09:40,181 | finlancer-agency | INFO | Briefing do dia gerado
+2026-05-10 02:09:40,182 | finlancer-agency | INFO | FASE 2: Producao de Conteudo (paralela)
+2026-05-10 02:09:40,182 | finlancer-agency | INFO | Copy Specialist produzindo...
+2026-05-10 02:09:40,183 | finlancer-agency | INFO | Visual Creator produzindo conceito...
+2026-05-10 02:09:40,183 | finlancer-agency | INFO | Video Script Specialist produzindo roteiros...
+2026-05-10 02:09:40,183 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 02:09:40,183 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 02:09:40,183 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 02:10:01,707 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-10 02:10:01,708 | agents.base_agent | INFO | [Finlancer Visual Content Creator] Resposta gerada (643 chars)
+2026-05-10 02:10:01,708 | agents.visual_content_creator | ERROR | Falha ao parsear JSON do carrossel: ```json
+{
+  "concept": "O carrossel visualiza a jornada de estresse e confusão que a persona Carla enfrenta ao lidar com o IRPF e o DASN-SIMEI simultaneamente, culminando na clareza e solução oferecidas pelo Finlancer. Utiliza elementos abstratos de dualidade (dois mundos, caminhos cruzados) e transição para representar a integração PF+PJ e a assistência da IA, sempre dentro da estética dark mode e glassmorphism da marca, com o emerald como cor de destaque.",
+  "palette": {
+    "background": "#0f172a",
+    "primary_highlight": "#10b981",
+    "surface_card": "#1e293b",
+    "text_primary": "#f1f5f9",
+    "text_secondary": "#94a3b8",
+    
+2026-05-10 02:10:01,709 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 02:10:05,678 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-10 02:10:05,681 | agents.base_agent | INFO | [Finlancer Video Script Specialist] Resposta gerada (3865 chars)
+2026-05-10 02:10:05,681 | finlancer-agency | INFO | video concluido
+2026-05-10 02:10:14,603 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-10 02:10:14,604 | agents.base_agent | INFO | [Finlancer Social Copy Specialist] Resposta gerada (5315 chars)
+2026-05-10 02:10:14,605 | finlancer-agency | INFO | copy concluido
+2026-05-10 02:10:23,309 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-10 02:10:23,311 | agents.base_agent | INFO | [Finlancer Visual Content Creator] Resposta gerada (4732 chars)
+2026-05-10 02:10:23,311 | agents.visual_content_creator | ERROR | Falha ao parsear JSON do feed: ```json
+{
+  "concept": "Um visual que representa a sobrecarga e confusão das finanças PF e PJ se unindo, e o Finlancer como a solução que traz clareza e simplifica essa 'dupla jornada' de declarações de maio. A peça transmite alívio e controle através de um design moderno e dark.",
+  "layout": {
+    "dimensions": "1080x1350px (4:5)",
+    "hierarchy": "O título ocupa a área superior, o elemento visual central domina o meio, e o subtítulo/CTA fica na parte inferior. O olhar é guiado da dor (título) para a solução (visual central) e o benefício (subtítulo).",
+    "regions": {
+      "top_20_percent": "Título principal sobre a dor da dupla declaração.",
+      "center_60_percent": "Elemento visual principal: representação abstrata da integração PF+PJ com destaque do Finlancer.",
+      "bottom_20_percent": "Subtítulo com a promessa de solução."
+    }
+  },
+  "central_element": {
+    "description": "Duas formas abstratas e orgânicas, em tons escuros (#1e293b e #334155 com 30% de opacidade), representando as finanças PF e PJ, se sobrepõem sutilmente no centro da tela. No ponto de intersecção, um card glassmorphism retangular arredondado (raio 16px) é posicionado, representando o Finlancer. Dentro do card, um ícone minimalista (ex: dois círculos interligados ou um cérebro estilizado dentro de um balão de chat) em #10b981 simboliza a IA Consultiva ou a integração. Um brilho sutil (glow) de #10b981 em 30% de opacidade circunda o card.",
+    "position": "Centralizado horizontal e verticalmente na área dos 60% centrais do canvas.",
+    "styling": "Glassmorphism para o card: rgba(30,41,59,0.7) com backdrop-filter: blur(16px) e borda 1px sólida rgba(255,255,255,0.1). Formas abstratas de fundo com baixa opacidade para manter a profundidade do dark mode."
+  },
+  "texts_overlays": [
+    {
+      "type": "title",
+      "text": "IRPF + MEI Anual: Maio chegou. Calma!",
+      "position": "Centralizado horizontalmente, a 15% da altura superior do canvas.",
+      "font": "Poppins ExtraBold (800)",
+      "size_approx": "64px",
+      "color": "#f1f5f9"
+    },
+    {
+      "type": "subtitle",
+      "text": "Sua dupla jornada financeira simplificada com o Finlancer.",
+      "position": "Centralizado horizontalmente, a 15% da altura inferior do canvas.",
+      "font": "Poppins Medium (500)",
+      "size_approx": "32px",
+      "color": "#94a3b8"
+    }
+  ],
+  "palette": {
+    "background": "#0f172a",
+    "primary_highlight": "#10b981",
+    "surface_cards": "#1e293b",
+    "surface_secondary": "#334155",
+    "text_primary": "#f1f5f9",
+    "text_secondary": "#94a3b8",
+    "gradient_accent": "#10b981 → #0ea5e9"
+  },
+  "canva_instructions": [
+    "1. Crie um novo design no Canva com dimensões personalizadas: 1080px de largura por 1350px de altura.",
+    "2. Defina o fundo do canvas para a cor sólida #0f172a.",
+    "3. Adicione duas formas orgânicas/abstratas grandes (como nuvens ou ondas suaves) em tons escuros. Uma em #1e293b e outra em #334155. Posicione-as de forma que se sobreponham levemente no centro da tela. Ajuste a transparência de ambas para cerca de 30-40% para que fiquem sutis no fundo escuro.",
+    "4. Crie um retângulo arredondado no centro da tela (raio de canto de 16px). Defina a cor de preenchimento para #1e293b com 70% de opacidade. Adicione uma borda de 1px na cor branca com 10% de opacidade. Este será o card glassmorphism. (No Canva, o efeito de 'blur' de fundo é limitado, então a opacidade e a borda simulam o glassmorphism).",
+    "5. Dentro deste card glassmorphism, adicione um ícone minimalista que represente 'integração' ou 'IA'. Por exemplo, procure por 'interconnected circles' ou 'AI brain chat' nos elementos do Canva. Pinte o ícone na cor #10b981.",
+    "6. Adicione um efeito de 'sombra' ou 'brilho' sutil ao redor do card glassmorphism. Use a cor #10b981 com cerca de 30% de opacidade e um desfoque suave para criar um glow.",
+    "7. Adicione o título 'IRPF + MEI Anual: Maio chegou. Calma!' na parte superior da tela. Use a fonte Poppins, estilo ExtraBold (ou o mais próximo de 800 disponível), tamanho aproximado de 64px. Defina a cor para #f1f5f9. Centralize o texto horizontalmente e posicione-o a aproximadamente 15% da altura total do canvas a partir do topo.",
+    "8. Adicione o subtítulo 'Sua dupla jornada financeira simplificada com o Finlancer.' na parte inferior da tela. Use a fonte Poppins, estilo Medium (ou o mais próximo de 500 disponível), tamanho aproximado de 32px. Defina a cor para #94a3b8. Centralize o texto horizontalmente e posicione-o a aproximadamente 15% da altura total do canvas a partir da base."
+  ],
+  "visual_hint": "Fundo dark (#0f172a) com formas abstratas orgânicas em tons de #1e293b e #334155. No centro, um card glassmorphism com um
+2026-05-10 02:10:23,311 | finlancer-agency | INFO | visual concluido
+2026-05-10 02:10:23,312 | finlancer-agency | INFO | FASE 3: Revisao do Content Strategist (Gemini)
+2026-05-10 02:10:42,657 | finlancer-agency | INFO | === ROTINA DIÁRIA — 2026-05-10_021042 ===
+2026-05-10 02:10:43,402 | finlancer-agency | INFO | FASE 1: Planning Meeting
+2026-05-10 02:10:43,402 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 02:11:04,942 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-10 02:11:04,943 | agents.base_agent | INFO | [Finlancer Brand Director] Resposta gerada (7967 chars)
+2026-05-10 02:11:04,943 | finlancer-agency | INFO | Tema customizado: teste de integração final v4
+2026-05-10 02:11:04,943 | finlancer-agency | INFO | Briefing do dia gerado
+2026-05-10 02:11:04,944 | finlancer-agency | INFO | FASE 2: Producao de Conteudo (paralela)
+2026-05-10 02:11:04,944 | finlancer-agency | INFO | Copy Specialist produzindo...
+2026-05-10 02:11:04,944 | finlancer-agency | INFO | Visual Creator produzindo conceito...
+2026-05-10 02:11:04,945 | finlancer-agency | INFO | Video Script Specialist produzindo roteiros...
+2026-05-10 02:11:04,945 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 02:11:04,945 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 02:11:04,945 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 02:11:24,721 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-10 02:11:24,724 | agents.base_agent | INFO | [Finlancer Video Script Specialist] Resposta gerada (6009 chars)
+2026-05-10 02:11:24,724 | finlancer-agency | INFO | video concluido
+2026-05-10 02:11:38,188 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-10 02:11:38,190 | agents.base_agent | INFO | [Finlancer Visual Content Creator] Resposta gerada (13812 chars)
+2026-05-10 02:11:38,190 | agents.visual_content_creator | ERROR | Falha ao parsear JSON do carrossel: ```json
+{
+  "concept": {
+    "title": "Carrossel: IRPF e MEI Anual: Como não surtar com os dois prazos em maio",
+    "description": "Um carrossel de 8 slides focado na urgência dos prazos fiscais de maio (IRPF e DASN-SIMEI) para a persona Carla (CLT + MEI). O design utiliza o dark mode obrigatório do Finlancer, cards glassmorphism e a cor emerald como destaque para guiar o usuário através do problema e apresentar o Finlancer como a solução unificada e inteligente para organizar suas finanças e evitar o estresse fiscal.",
+    "layout_overview": "Cada slide mantém uma estrutura clara com título superior, área central para conteúdo visual/texto e uma base para subtítulos ou CTAs. O uso de glassmorphism em cards e mockups, combinado com glows sutis em emerald, cria profundidade e destaca os pontos-chave. A hierarquia visual é projetada para capturar a atenção para o tema fiscal e a solução Finlancer.",
+    "target_persona": "Carla (Autônoma Múltipla)",
+    "cta": "Crie sua conta gratuita e organize seu IRPF e MEI Anual sem estresse. Link na bio!"
+  },
+  "palette": {
+    "background": "#0f172a",
+    "primary_highlight": "#10b981",
+    "surface_cards": "#1e293b",
+    "text_primary": "#f1f5f9",
+    "text_secondary": "#94a3b8",
+    "gradient_accent": "linear-gradient(#10b981, #0ea5e9)",
+    "glassmorphism_base": "rgba(30,41,59,0.7)",
+    "glassmorphism_border": "rgba(255,255,255,0.1)"
+  },
+  "carousel_slides": [
+    {
+      "slide_number": "1/8",
+      "dimensions": "1080x1350px",
+      "layout_structure": "Topo (15%): Título principal. Centro (45%): Subtítulo principal e visual central. Rodapé (10%): Tagline de apoio. O restante é espaço negativo para respiro.",
+      "element_visual_principal": "Ícone de calendário abstrato em destaque, com formas de documentos fiscais sobrepostas sutilmente. Tudo com glow emerald.",
+      "texto_no_slide": [
+        {
+          "content": "IRPF + MEI Anual:",
+          "position": "Topo, centralizado",
+          "font": "Poppins ExtraBold",
+          "size_aprox": "72px",
+          "color": "#f1f5f9"
+        },
+        {
+          "content": "Maio é o mês da dobradinha fiscal.",
+          "position": "Logo abaixo do primeiro título, centralizado",
+          "font": "Poppins ExtraBold",
+          "size_aprox": "72px",
+          "color": "#10b981"
+        },
+        {
+          "content": "Você tá pronto?",
+          "position": "Abaixo do título principal, centralizado",
+          "font": "Poppins Bold",
+          "size_aprox": "48px",
+          "color": "#f1f5f9"
+        },
+        {
+          "content": "Não surte! A gente te ajuda.",
+          "position": "Rodapé, centralizado",
+          "font": "Poppins Medium",
+          "size_aprox": "36px",
+          "color": "#94a3b8"
+        }
+      ],
+      "cores_e_acabamentos": "Fundo: #0f172a. Ícones: #10b981 com glow. Textos conforme especificado.",
+      "efeitos": "Glow sutil (#10b981, 30% opacidade) nos ícones e no texto 'Maio é o mês da dobradinha fiscal'.",
+      "observacao_designer": "Garantir que o calendário e os documentos sejam estilizados de forma abstrata e moderna, sem ser literal.",
+      "visual_hint": "Fundo escuro com um grande ícone de calendário abstrato e brilhante em emerald, sobreposto por formas translúcidas de documentos em tom escuro. Luzes suaves azuis e verdes se espalham pelo fundo."
+    },
+    {
+      "slide_number": "2/8",
+      "dimensions": "1080x1350px",
+      "layout_structure": "Topo (10%): Título. Centro (60%): Card glassmorphism com texto e ícone de problema. Rodapé (10%): Espaço negativo.",
+      "element_visual_principal": "Card glassmorphism central (80% largura, 50% altura) com um ícone de interrogação ou emaranhado de linhas na cor emerald, simbolizando confusão.",
+      "texto_no_slide": [
+        {
+          "content": "A Dor da Dupla Renda",
+          "position": "Topo, centralizado",
+          "font": "Poppins Bold",
+          "size_aprox": "60px",
+          "color": "#f1f5f9"
+        },
+        {
+          "content": "CLT + MEI? O IRPF já é um desafio. E o MEI Anual também vence 31/maio! É pra surtar, né?",
+          "position": "Dentro do card, centralizado, com padding",
+          "font": "Poppins Medium",
+          "size_aprox": "40px",
+          "color": "#f1f5f9"
+        }
+      ],
+      "cores_e_acabamentos": "Fundo: #0f172a. Card: #1e293b com glassmorphism. Ícone: #10b981.",
+      "efeitos": "Glassmorphism no card (rgba(30,41,59,0.7), blur(16px), borda rgba(255,255,255,0.1), border-radius 16px).",
+      "observacao_designer": "O ícone deve ser sutil e complementar o texto, não competir com ele.",
+      "visual_hint": "Fundo escuro com um card glassmorphism central. Dentro, um ícone abstrato em emerald, como um emaranhado de linhas ou interrogações, simbolizando complexidade. Partículas de luz flutuam."
+    },
+    {
+      "slide_number": "3/8",
+      "dimensions": "1080x1350px",
+      "layout_structure": "Topo (10%): Título. Centro (60%): Card glassmorphism com explicação e ícone. Rodapé (10%): Espaço negativo.",
+      "element_visual_principal": "Card glassmorphism central (80% largura, 60% altura) com um ícone de documento ou declaração estilizado na cor emerald.",
+      "texto_no_slide": [
+        {
+          "content": "O que é o DASN-SIMEI?",
+          "position": "Topo, centralizado",
+          "font": "Poppins Bold",
+          "size_aprox": "60px",
+          "color": "#f1f5f9"
+        },
+        {
+          "content": "É a Declaração Anual do MEI. Crucial para manter seu CNPJ ativo e evitar multas. O prazo final é 31 de maio!",
+          "position": "Dentro do card, centralizado, com padding",
+          "font": "Poppins Medium",
+          "size_aprox": "40px",
+          "color": "#f1f5f9"
+        }
+      ],
+      "cores_e_acabamentos": "Fundo: #0f172a. Card: #1e293b com glassmorphism. Ícone: #10b981. Destaque '31 de maio' em #10b981.",
+      "efeitos": "Glassmorphism no card (rgba(30,41,59,0.7), blur(16px), borda rgba(255,255,255,0.1), border-radius 16px).",
+      "observacao_designer": "O ícone deve remeter a um documento oficial, mas com a estética Finlancer.",
+      "visual_hint": "Fundo azul escuro com um card glassmorphism. No interior, um ícone emerald de um documento com um checkmark ou seta para cima, indicando declaração. Linhas de código abstratas adornam o fundo."
+    },
+    {
+      "slide_number": "4/8",
+      "dimensions": "1080x1350px",
+      "layout_structure": "Topo (10%): Título. Centro (60%): Card glassmorphism com texto de alerta e ícone. Rodapé (10%): Espaço negativo.",
+      "element_visual_principal": "Card glassmorphism central (80% largura, 60% altura) com um ícone de alerta (ex: ampulheta, exclamação) na cor emerald, com glow.",
+      "texto_no_slide": [
+        {
+          "content": "Não perca os prazos!",
+          "position": "Topo, centralizado",
+          "font": "Poppins Bold",
+          "size_aprox": "60px",
+          "color": "#10b981"
+        },
+        {
+          "content": "Atrasar o IRPF pode gerar multas e juros. Não entregar o DASN-SIMEI pode levar ao cancelamento do seu CNPJ e perda de benefícios. Evite dores de cabeça!",
+          "position": "Dentro do card, centralizado, com padding",
+          "font": "Poppins Medium",
+          "size_aprox": "40px",
+          "color": "#f1f5f9"
+        }
+      ],
+      "cores_e_acabamentos": "Fundo: #0f172a. Card: #1e293b com glassmorphism. Ícone: #10b981.",
+      "efeitos": "Glassmorphism no card (rgba(30,41,59,0.7), blur(16px), borda rgba(255,255,255,0.1), border-radius 16px). Glow sutil no ícone de alerta.",
+      "observacao_designer": "O ícone deve transmitir urgência sem ser alarmista, mantendo a estética Finlancer.",
+      "visual_hint": "Fundo escuro com um card glassmorphism. No centro, um ícone de ampulheta ou relógio em emerald, emitindo um brilho suave. Linhas abstratas em tons de azul e verde se movem no fundo."
+    },
+    {
+      "slide_number": "5/8",
+      "dimensions": "1080x1350px",
+      "layout_structure": "Topo (10%): Título. Centro (60%): Mockup de celular com interface Finlancer. Rodapé (10%): Texto explicativo.",
+      "element_visual_principal": "Mockup de celular estilizado, com tela exibindo a interface do Finlancer (tela 'Início' com visão PF+PJ). O mockup deve ter um glow emerald.",
+      "texto_no_slide": [
+        {
+          "content": "Finlancer: Seu IRPF Descomplicado",
+          "position": "Topo, centralizado",
+          "font": "Poppins Bold",
+          "size_aprox": "60px",
+          "color": "#f1f5f9"
+        },
+        {
+          "content": "Organize dados para o IRPF com a visão unificada PF+PJ. Finalmente um app que entende quem tem os dois mundos.",
+          "position": "Abaixo do mockup, centralizado",
+          "font": "Poppins Medium",
+          "size_aprox": "36px",
+          "color": "#f1f5f9"
+        }
+      ],
+      "cores_e_acabamentos": "Fundo: #0f172a. Mockup com glow #10b981. Interface do app com elementos em #10b981 e #f1f5f9.",
+      "efeitos": "Glow #10b981 no contorno do mockup. Elementos da interface do app devem seguir o estilo glassmorphism do Finlancer.",
+      "observacao_designer": "A tela do app no mockup deve ser clara e legível, destacando a integração PF+PJ.",
+      "visual_hint": "Fundo escuro com um mockup de smartphone brilhante em emerald, exibindo um dashboard financeiro com gráficos e dados estilizados. Linhas de conexão e pontos de luz emergem do mockup."
+    },
+    {
+      "slide_number": "6/8",
+      "dimensions": "1080x1350px",
+      "layout_structure": "Topo (10%): Título. Centro (60%): Mockup de celular com interface da IA. Rodapé (10%): Texto explicativo.",
+      "element_visual_principal": "Mockup de celular estilizado, com tela exibindo a interface da IA Consultiva (chat). O mockup deve ter um glow emerald.",
+      "texto_no_slide": [
+        {
+          "content": "Dúvidas? Pergunte ao Fin!",
+          "position": "Topo, centralizado",
+          "font": "Poppins Bold",
+          "size_aprox": "60px",
+          "color": "#f1f5f9"
+        },
+        {
+          "content": "Nossa IA Consultiva responde suas dúvidas fiscais sobre IRPF e DASN-SIMEI, sugere deduções e explica limites.",
+          "position": "Abaixo do mockup, centralizado",
+          "font": "Poppins Medium",
+          "size_aprox": "36px",
+          "color": "#f1f5f9"
+        }
+      ],
+      "cores_e_acabamentos": "Fundo: #0f172a. Mockup com glow #10b981. Interface do app com elementos em #10b981 e #f1f5f9.",
+      "efeitos": "Glow #10b981 no contorno do mockup. Elementos da interface da IA (bolhas de chat, ícone) devem seguir o estilo Finlancer.",
+      "observacao_designer": "A tela da IA deve simular uma conversa fluida e útil, com a cor emerald destacando as respostas da IA.",
+      "visual_hint": "Fundo escuro com um mockup de smartphone brilhante em emerald, exibindo uma interface de chat com a IA. Um orbe de luz central no fundo representa a inteligência artificial, conectado por linhas abstratas."
+    },
+    {
+      "slide_number": "7/8",
+      "dimensions": "1080x1350px",
+      "layout_structure": "Topo (10%): Título de alerta. Centro (50%): Grande número '31' com ícone de calendário. Rodapé (15%): Lembrete final.",
+      "element_visual_principal": "Número '31' em tamanho gigante, com um ícone de calendário sutil ao lado ou sobreposto, ambos com glow emerald.",
+      "texto_no_slide": [
+        {
+          "content": "Atenção: 31 de Maio!",
+          "position": "Topo, centralizado",
+          "font": "Poppins Bold",
+          "size_aprox": "72px",
+          "color": "#10b981"
+        },
+        {
+          "content": "31",
+          "position": "Centro, grande e centralizado",
+          "font": "Poppins ExtraBold",
+          "size_aprox": "200px",
+          "color": "#f1f5f9"
+        },
+        {
+          "content": "Não deixe para a última hora! É o limite para IRPF e DASN-SIMEI.",
+          "position": "Rodapé, centralizado",
+          "font": "Poppins Medium",
+          "size_aprox": "40px",
+          "color": "#94a3b8"
+        }
+      ],
+      "cores_e_acabamentos": "Fundo: #0f172a. Número '31': #f1f5f9 com glow #10b981. Título e ícone: #10b981.",
+      "efeitos": "Glow #10b981 no número '31' e no ícone de calendário. O fundo pode ter um gradiente sutil de #0f172a para #0ea5e9 na parte inferior, indicando transição para o CTA.",
+      "observacao_designer": "O número '31' deve ser o elemento mais dominante do slide, com o ícone de calendário como um reforço visual.",
+      "visual_hint": "Fundo escuro com um número '31' gigante e brilhante em emerald no centro. Um ícone de calendário abstrato flutua próximo. Linhas de energia e luzes sutis em azul e verde irradiam do número."
+    },
+    {
+      "slide_number": "8/8",
+      "dimensions": "1080x1350px",
+      "layout_structure": "Topo (20%): CTA principal. Centro (40%): Logo Finlancer. Rodapé (15%): Endereço do site e instrução.",
+      "element_visual_principal": "Logo Finlancer (ícone e/ou nome estilizado) centralizado, com um forte glow emerald.",
+      "texto_no_slide": [
+        {
+          "content": "Crie sua conta gratuita e organize seu IRPF e MEI Anual sem estresse.",
+          "position": "Topo, centralizado",
+          "font": "Poppins Bold",
+          "size_aprox": "52px",
+          "color": "#f1f5f9"
+        },
+        {
+          "content": "Link na bio!",
+          "position": "Abaixo do logo, centralizado",
+          "font": "Poppins Medium",
+          "size_aprox": "32px",
+          "color": "#10b981"
+        },
+        {
+          "content": "finlancer.com.br",
+          "position": "Rodapé, centralizado",
+          "font": "Poppins Medium",
+          "size_aprox": "36px",
+          "color": "#94a3b8"
+        }
+      ],
+      "cores_e_acabamentos": "Fundo: #0f172a. Logo/Icon: #10b981 com glow intenso.
+2026-05-10 02:11:38,190 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 02:11:39,549 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-10 02:11:39,551 | agents.base_agent | INFO | [Finlancer Social Copy Specialist] Resposta gerada (11405 chars)
+2026-05-10 02:11:39,551 | finlancer-agency | INFO | copy concluido
+2026-05-10 02:11:53,809 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-10 02:11:53,811 | agents.base_agent | INFO | [Finlancer Visual Content Creator] Resposta gerada (4232 chars)
+2026-05-10 02:11:53,812 | finlancer-agency | INFO | visual concluido
+2026-05-10 02:11:53,812 | finlancer-agency | INFO | FASE 3: Revisao do Content Strategist (Gemini)
+2026-05-10 02:12:02,230 | finlancer-agency | INFO | === ROTINA DIÁRIA — 2026-05-10_021202 ===
+2026-05-10 02:12:03,030 | finlancer-agency | INFO | FASE 1: Planning Meeting
+2026-05-10 02:12:03,031 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 02:12:19,623 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-10 02:12:19,625 | agents.base_agent | INFO | [Finlancer Brand Director] Resposta gerada (4837 chars)
+2026-05-10 02:12:19,625 | finlancer-agency | INFO | Tema customizado: teste de integração final v5
+2026-05-10 02:12:19,625 | finlancer-agency | INFO | Briefing do dia gerado
+2026-05-10 02:12:19,625 | finlancer-agency | INFO | FASE 2: Producao de Conteudo (paralela)
+2026-05-10 02:12:19,626 | finlancer-agency | INFO | Copy Specialist produzindo...
+2026-05-10 02:12:19,626 | finlancer-agency | INFO | Visual Creator produzindo conceito...
+2026-05-10 02:12:19,627 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 02:12:19,627 | finlancer-agency | INFO | Video Script Specialist produzindo roteiros...
+2026-05-10 02:12:19,627 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 02:12:19,630 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 02:12:37,142 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-10 02:12:37,144 | agents.base_agent | INFO | [Finlancer Video Script Specialist] Resposta gerada (5414 chars)
+2026-05-10 02:12:37,144 | finlancer-agency | INFO | video concluido
+2026-05-10 02:12:43,771 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-10 02:12:43,773 | agents.base_agent | INFO | [Finlancer Social Copy Specialist] Resposta gerada (11125 chars)
+2026-05-10 02:12:43,773 | finlancer-agency | INFO | copy concluido
+2026-05-10 02:12:53,249 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-10 02:12:53,251 | agents.base_agent | INFO | [Finlancer Visual Content Creator] Resposta gerada (1544 chars)
+2026-05-10 02:12:53,252 | agents.visual_content_creator | ERROR | Falha ao parsear JSON do carrossel: ```json
+{
+  "concept": [
+    {
+      "slide_number": "Slide 1/8",
+      "dimensions": "1080x1350px",
+      "layout_structure": "Topo (20%): Espaço para logo Finlancer (opcional, pequeno). Centro (60%): Título principal. Rodapé (20%): Subtítulo/contexto.",
+      "main_visual_element": "No centro, um grande ícone abstrato e estilizado de uma nota fiscal ou um cifrão com um 'check' verde, feito com linhas finas na cor #10b981, com um glow sutil. O ícone deve ser centralizado vertical e horizontalmente, ocupando cerca de 40% da altura do slide.",
+      "text_on_slide": [
+        {
+          "content": "MEI, seu IRPF tá chegando...",
+          "position": "Topo do centro, centralizado horizontalmente, 200px do topo",
+          "font": "Poppins Bold (800)",
+          "size_approx": "68px",
+          "color": "#f1f5f9"
+        },
+        {
+          "content": "...e você sabe o que pode deduzir?",
+          "position": "Abaixo do título principal, centralizado horizontalmente, 300px do topo",
+          "font": "Poppins Bold (800)",
+          "size_approx": "68px",
+          "color": "#10b981"
+        },
+        {
+          "content": "Descubra como aliviar seu imposto de renda e organizar suas finanças.",
+          "position": "Rodapé, centralizado horizontalmente, 150px do rodapé",
+          "font": "Poppins Medium (500)",
+          "size_approx": "32px",
+          "color": "#94a3b8"
+        }
+      ],
+      "colors_and_finishes": {
+        "background": "#0f172a",
+        "icon_color": "#10b981"
+      },
+      "effects": "G
+2026-05-10 02:12:53,252 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 02:13:11,573 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-10 02:13:11,574 | agents.base_agent | INFO | [Finlancer Visual Content Creator] Resposta gerada (4298 chars)
+2026-05-10 02:13:11,575 | finlancer-agency | INFO | visual concluido
+2026-05-10 02:13:11,575 | finlancer-agency | INFO | FASE 3: Revisao do Content Strategist (Gemini)
+2026-05-10 02:13:11,575 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 02:13:33,843 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-10 02:13:33,844 | agents.base_agent | INFO | [Finlancer Content Strategist] Resposta gerada (4919 chars)
+2026-05-10 02:13:33,844 | finlancer-agency | INFO | FASE 4: Aprovacao Final — Brand Director
+2026-05-10 02:13:33,844 | finlancer-agency | INFO | FASE 4: Revisao textual final (Gemini)
+2026-05-10 02:13:33,844 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 02:14:01,065 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-10 02:14:01,067 | agents.base_agent | INFO | [Finlancer Brand Director] Resposta gerada (10936 chars)
+2026-05-10 02:14:01,067 | finlancer-agency | INFO | Brand Director concluiu revisao
+2026-05-10 02:14:01,067 | finlancer-agency | INFO | FASE 7: Salvando outputs localmente
+2026-05-10 02:16:34,094 | finlancer-agency | INFO | === ROTINA DIÁRIA — 2026-05-10_021634 ===
+2026-05-10 02:16:34,828 | finlancer-agency | INFO | FASE 1: Planning Meeting
+2026-05-10 02:16:34,829 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 02:16:49,944 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-10 02:16:49,946 | agents.base_agent | INFO | [Finlancer Brand Director] Resposta gerada (6785 chars)
+2026-05-10 02:16:49,946 | finlancer-agency | INFO | Tema customizado: teste de integração final v6
+2026-05-10 02:16:49,946 | finlancer-agency | INFO | Briefing do dia gerado
+2026-05-10 02:16:49,947 | finlancer-agency | INFO | FASE 2: Producao de Conteudo (paralela)
+2026-05-10 02:16:49,947 | finlancer-agency | INFO | Copy Specialist produzindo...
+2026-05-10 02:16:49,947 | finlancer-agency | INFO | Visual Creator produzindo conceito...
+2026-05-10 02:16:49,947 | finlancer-agency | INFO | Video Script Specialist produzindo roteiros...
+2026-05-10 02:16:49,947 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 02:16:49,948 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 02:16:49,948 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 02:17:05,369 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-10 02:17:05,371 | agents.base_agent | INFO | [Finlancer Video Script Specialist] Resposta gerada (6735 chars)
+2026-05-10 02:17:05,371 | finlancer-agency | INFO | video concluido
+2026-05-10 02:17:11,638 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-10 02:17:11,641 | agents.base_agent | INFO | [Finlancer Social Copy Specialist] Resposta gerada (11485 chars)
+2026-05-10 02:17:11,641 | finlancer-agency | INFO | copy concluido
+2026-05-10 02:17:22,917 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-10 02:17:22,920 | agents.base_agent | INFO | [Finlancer Visual Content Creator] Resposta gerada (16527 chars)
+2026-05-10 02:17:22,920 | agents.visual_content_creator | ERROR | Falha ao parsear JSON do carrossel: ```json
+{
+  "concept": "Este carrossel visual tem como objetivo guiar o público através da complexidade do IRPF para MEIs e autônomos com múltiplas fontes de renda, posicionando o Finlancer como a solução unificada e inteligente. O estilo visual foca em um design dark mode sofisticado, com glassmorphism, gradientes suaves e o vibrante verde esmeralda para destacar a clareza e a inovação da plataforma, utilizando mockups do app para ilustrar os diferenciais.",
+  "palette": {
+    "background": "#0f172a",
+    "primary_accent": "#10b981",
+    "surface_cards": "#1e293b",
+    "text_primary": "#f1f5f9",
+    "text_secondary": "#94a3b8",
+    "gradient": "linear-gradient(#10b981, #0ea5e9)"
+  },
+  "canva_instructions": [
+    "1. Crie um novo design no Canva com dimensões personalizadas de 1080x1350px.",
+    "2. Defina o fundo de todos os slides como sólido #0f172a.",
+    "3. Para textos, use a fonte 'Poppins' ou 'Inter' (disponível no Canva).",
+    "4. Para elementos glassmorphism (cards, balões de chat):",
+    "   - Crie um retângulo arredondado (raio 16px-20px) na cor #1e293b com opacidade de 70%.",
+    "   - Adicione uma borda de 1px na cor branca (#ffffff) com opacidade de 10%.",
+    "   - Aplique um efeito de 'desfoque' (blur) no elemento, ajustando a intensidade para um efeito sutil de glassmorphism.",
+    "5. Para glows sutis: Adicione um 'box-shadow' com a cor #10b981 e opacidade de 30%, com um desfoque generoso (ex: 20-30px) e sem deslocamento.",
+    "6. Para gradientes: Use a ferramenta de gradiente do Canva com as cores #10b981 e #0ea5e9, ajustando a direção conforme a necessidade.",
+    "7. **Slide 1 (Capa):**",
+    "   - Título principal: 'IRPF: MEI + CLT? A gente te explica como o Finlancer te ajuda!' em Poppins Bold, tamanho 64px, cor #f1f5f9, centralizado horizontalmente, a 20% da altura do topo.",
+    "   - Subtítulo: 'O pesadelo anual de quem tem múltiplas rendas.' em Poppins Medium, tamanho 36px, cor #94a3b8, logo abaixo do título.",
+    "   - Elemento visual de fundo: Formas geométricas abstratas e linhas finas em tons escuros sobre o fundo, com um brilho sutil (box-shadow) em #10b981 no centro da tela.",
+    "8. **Slide 2 (A Dor da Carla):**",
+    "   - Título: 'Você tem CLT e MEI e o IRPF vira um nó na cabeça?' em Poppins Bold, tamanho 52px, cor #f1f5f9, no topo (15% da altura).",
+    "   - Card glassmorphism central: Crie um retângulo arredondado (20px) no centro da tela. Dentro, o texto 'Misturar contas, não saber o que deduzir, a ansiedade da declaração... A Carla sabe bem como é.' em Poppins Regular, tamanho 32px, cor #f1f5f9, centralizado.",
+    "   - Elemento visual de fundo: Padrões abstratos de grade distorcidos e desfocados em tons de cinza escuro, com formas sobrepostas para criar a sensação de confusão.",
+    "9. **Slide 3 (Solução Finlancer: Dashboard Unificado):**",
+    "   - Título: 'Finalmente, um app que entende quem tem os dois mundos.' em Poppins Bold, tamanho 52px, cor #f1f5f9, no topo.",
+    "   - Mockup do app Finlancer: Insira um mockup de tela do Finlancer no centro. A tela deve mostrar um dashboard com dois cards glassmorphism (um para 'CPF', outro para 'CNPJ') lado a lado, com dados financeiros fictícios e gráficos de linha em #10b981. O mockup deve ter um glow sutil em #10b981.",
+    "   - Texto descritivo: 'Veja sua vida financeira completa: PF e PJ em um só lugar.' em Poppins Regular, tamanho 32px, cor #f1f5f9, abaixo do mockup.",
+    "   - Elemento visual de fundo: Fundo com um gradiente sutil de azul escuro para #10b981, com pequenas partículas luminosas dispersas, evocando clareza.",
+    "10. **Slide 4 (Como a IA Separa):**",
+    "    - Título: 'Nossa IA organiza suas transações, PF e PJ, para você não se perder.' em Poppins Bold, tamanho 52px, cor #f1f5f9, no topo.",
+    "    - Visual de categorização: No centro, crie duas caixas glassmorphism menores (PF e PJ) com ícones minimalistas (ex: pessoa para PF, maleta para PJ). Linhas ou setas em gradiente #10b981 → #0ea5e9 devem sair de um ponto central e apontar para cada caixa, simbolizando a separação.",
+    "    - Texto de suporte: 'Transações categorizadas automaticamente para cada regime. Chega de confusão!' em Poppins Regular, tamanho 32px, cor #f1f5f9, abaixo do visual.",
+    "    - Elemento visual de fundo: Linhas de dados abstratas e fluidas em tons escuros, partindo de um centro e se dividindo em duas direções, com um brilho esmeralda-azulado.",
+    "11. **Slide 5 (IA Consultiva - Fin):**",
+    "    - Título: 'Pergunte ao Fin, nossa IA Consultiva, sobre deduções e declarações específicas para seu caso.' em Poppins Bold, tamanho 52px, cor #f1f5f9, no topo.",
+    "    - Mockup do chat com o Fin: Insira um mockup da interface de chat do Finlancer. Mostre um balão de fala de usuário (ex: 'Posso deduzir o aluguel do home office como MEI e o plano de saúde como PF no IRPF?'), seguido por um balão de resposta do 'Fin' (em #10b981 ou com borda emerald) com uma resposta concisa. Os balões devem ser glassmorphism.",
+    "    - Texto descritivo: 'Dúvidas fiscais? O Fin responde em segundos, com base no seu perfil.' em Poppins Regular, tamanho 32px, cor #f1f5f9, abaixo do mockup.",
+    "    - Elemento visual de fundo: Ondas de luz digitais e um efeito de névoa esmeralda em tons escuros, criando uma atmosfera de inteligência e assistência tecnológica.",
+    "12. **Slide 6 (Chega de Planilha):**",
+    "    - Título: 'Chega de planilha e dor de cabeça. Tenha a visão completa.' em Poppins Bold, tamanho 52px, cor #f1f5f9, no topo.",
+    "    - Visual 'Antes e Depois': No lado esquerdo, uma imagem abstrata e borrada de uma planilha complexa com um 'X' vermelho sutil sobre ela. No lado direito, um card glassmorphism limpo do Finlancer (um snippet de dashboard simples) com um 'check' verde (#10b981).",
+    "    - Texto de reforço: 'Substitua horas de trabalho manual por clareza e automação.' em Poppins Regular, tamanho 32px, cor #f1f5f9, abaixo do visual.",
+    "    - Elemento visual de fundo: Fundo dividido verticalmente, com um lado com padrões caóticos e densos (desfocados) e o outro lado liso e minimalista, com uma transição suave ao centro.",
+    "13. **Slide 7 (Benefícios Consolidados):**",
+    "    - Título: 'IRPF sem stress é possível!' em Poppins Bold, tamanho 52px, cor #f1f5f9, no topo.",
+    "    - Cards de Benefícios: Três cards glassmorphism menores, alinhados verticalmente ou em um leve ângulo no centro. Cada card deve conter um ícone minimalista em #10b981 e um texto curto em Poppins Medium, tamanho 28px, cor #f1f5f9. Ex: 'Visão Unificada', 'Dúvidas Respondidas', 'Organização Automática'.",
+    "    - Elemento visual de fundo: Uma rede de conexões luminosas em tons de esmeralda e azul sobre um fundo escuro, representando integração e sinergia entre os elementos.",
+    "14. **Slide 8 (CTA Final):**",
+    "    - CTA principal: 'Organize seu IRPF com o Finlancer.' em Poppins ExtraBold (800), tamanho 72px, cor #f1f5f9, centralizado horizontalmente e posicionado a 30% da altura do topo.",
+    "    - URL: 'Crie sua conta grátis em finlancer.com.br' em Poppins Bold, tamanho 48px, cor #10b981, centralizado horizontalmente e posicionado a 70% da altura do topo.",
+    "    - Elemento visual de reforço: Um grande ícone estilizado da letra 'F' (do Finlancer) ou o logo completo, com um forte glow em #10b981. O fundo deve ter um gradiente dinâmico #10b981 → #0ea5e9, com um efeito de vórtice ou expansão a partir do centro."
+  ],
+  "slides": [
+    {
+      "slide_number": "Slide 1/8",
+      "dimensions": "1080x1350px",
+      "layout": "Topo (25%) para título principal, Centro (50%) para elemento visual de impacto, Rodapé (25%) para subtítulo.",
+      "main_visual_element": "Formas geométricas abstratas e linhas finas em tons escuros se entrelaçando, com um ponto de luz central emanando um brilho sutil em #10b981.",
+      "text_content": {
+        "title": {
+          "text": "IRPF: MEI + CLT? A gente te explica como o Finlancer te ajuda!",
+          "position": "Topo, centralizado horizontalmente, Margem superior: 150px",
+          "font": "Poppins Bold (800)",
+          "size": "64px",
+          "color": "#f1f5f9"
+        },
+        "subtitle": {
+          "text": "O pesadelo anual de quem tem múltiplas rendas.",
+          "position": "Abaixo do título, centralizado horizontalmente, Margem superior: 400px",
+          "font": "Poppins Medium (500)",
+          "size": "36px",
+          "color": "#94a3b8"
+        }
+      },
+      "colors_and_finishes": "Fundo: #0f172a. Título: #f1f5f9. Subtítulo: #94a3b8. Brilho: #10b981.",
+      "effects": "Glow sutil no elemento visual central.",
+      "observation_for_designer": "Garantir hierarquia visual clara, com o título como elemento dominante.",
+      "visual_hint": "Fundo abstrato com linhas entrelaçadas em tons escuros e um brilho esmeralda sutil, sugerindo complexidade e um ponto de luz."
+    },
+    {
+      "slide_number": "Slide 2/8",
+      "dimensions": "1080x1350px",
+      "layout": "Topo (20%) para título, Centro (60%) para card glassmorphism com texto, Rodapé (20%) para espaço visual.",
+      "main_visual_element": "Card glassmorphism (#1e293b, 70% opacidade, blur, borda rgba(255,255,255,0.1), border-radius 20px) contendo o texto principal, centralizado na tela.",
+      "text_content": {
+        "title": {
+          "text": "Você tem CLT e MEI e o IRPF vira um nó na cabeça?",
+          "position": "Topo, centralizado horizontalmente, Margem superior: 100px",
+          "font": "Poppins Bold (800)",
+          "size": "52px",
+          "color": "#f1f5f9"
+        },
+        "card_text": {
+          "text": "Misturar contas, não saber o que deduzir, a ansiedade da declaração... A Carla sabe bem como é.",
+          "position": "Dentro do card glassmorphism, centralizado",
+          "font": "Poppins Regular (400)",
+          "size": "32px",
+          "color": "#f1f5f9"
+        }
+      },
+      "colors_and_finishes": "Fundo: #0f172a. Título: #f1f5f9. Card: #1e293b. Texto do card: #f1f5f9.",
+      "effects": "Glassmorphism no card.",
+      "observation_for_designer": "O card deve ser grande o suficiente para o texto, mas com margens internas confortáveis. O fundo abstrato deve reforçar a ideia de confusão.",
+      "visual_hint": "Padrão de grade distorcido e desfocado em segundo plano, com formas geométricas escuras se sobrepondo, transmitindo confusão."
+    },
+    {
+      "slide_number": "Slide 3/8",
+      "dimensions": "1080x1350px",
+      "layout": "Topo (15%) para título, Centro (70%) para mockup do app, Rodapé (15%) para texto descritivo.",
+      "main_visual_element": "Mockup do Finlancer mostrando o dashboard unificado PF+PJ. Dois cards glassmorphism (um para 'CPF', outro para 'CNPJ') visíveis lado a lado, com dados financeiros fictícios e gráficos de linha em #10b981.",
+      "text_content": {
+        "title": {
+          "text": "Finalmente, um app que entende quem tem os dois mundos.",
+          "position": "Topo, centralizado horizontalmente, Margem superior: 80px",
+          "font": "Poppins Bold (800)",
+          "size": "52px",
+          "color": "#f1f5f9"
+        },
+        "description": {
+          "text": "Veja sua vida financeira completa: PF e PJ em um só lugar.",
+          "position": "Abaixo do mockup, centralizado horizontalmente",
+          "font": "Poppins Regular (400)",
+          "size": "32px",
+          "color": "#f1f5f9"
+        }
+      },
+      "colors_and_finishes": "Fundo: #0f172a. Título e descrição: #f1f5f9. Elementos do mockup: cores da UI Finlancer (emerald para gráficos, #1e293b para cards).",
+      "effects": "Glassmorphism nos cards do mockup. Glow sutil em #10b981 ao redor do mockup.",
+      "observation_for_designer": "O mockup deve ser claro e legível, destacando a unificação das informações PF e PJ. O glow deve ser suave para não competir com o mockup.",
+      "visual_hint": "Fundo com gradiente suave de azul escuro para um verde esmeralda, com partículas luminosas dispersas, evocando clareza e ordem."
+    },
+    {
+      "slide_number": "Slide 4/8",
+      "dimensions": "1080x1350px",
+      "layout": "Topo (15%) para título, Centro (60%) para visual de categorização, Rodapé (25%) para texto de suporte.",
+      "main_visual_element": "Visual abstrato de categorização de dados. Linhas ou setas em gradiente #10b981 → #0ea5e9 partindo de um ponto central e fluindo para dois cards glassmorphism menores (um rotulado 'PF', outro 'PJ', com ícones minimalistas como pessoa e maleta), centralizados horizontalmente.",
+      "text_content": {
+        "title": {
+          "text": "Nossa IA organiza suas transações, PF e PJ, para você não se perder.",
+          "position": "Topo, centralizado horizontalmente, Margem superior: 80px",
+          "font": "Poppins Bold (800)",
+          "size": "52px",
+          "color": "#f1f5f9"
+        },
+        "support_text": {
+          "text": "Transações categorizadas automaticamente para cada regime. Chega de confusão!",
+          "position": "Abaixo do visual, centralizado horizontalmente",
+          "font": "Poppins Regular (400)",
+          "size": "32px",
+          "color": "#f1f5f9"
+        }
+      },
+      "colors_and_finishes": "Fundo: #0f172a. Título e texto: #f1f5f9. Cards: #1e293b (glassmorphism). Ícones: #10b981. Setas/linhas: Gradiente #10b981 → #0ea5e9.",
+      "effects": "Glassmorphism nos cards PF/PJ. Gradiente nas setas.",
+      "observation_for_designer": "O visual deve transmitir movimento e organização. Os ícones dos cards devem ser simples e reconhecíveis.",
+      "visual_hint": "Linhas de dados abstratas fluindo de um ponto central para dois polos distintos, com um toque de gradiente esmeralda-azul, simbolizando organização."
+    },
+    {
+      "slide_number": "Slide 5/8",
+      "dimensions": "1080x1350px",
+      "layout": "Topo (15%) para título, Centro (65%) para mockup do chat da IA, Rodapé (20%) para texto descritivo.",
+      "main_visual_element": "Mockup da interface de chat do Finlancer com a IA 'Fin'. Uma pergunta de usuário (balão cinza glassmorphism) sobre IRPF MEI/CLT e a resposta do 'Fin' (balão emerald glassmorphism).",
+      "text_content": {
+        "title": {
+          "text": "Pergunte ao Fin, nossa IA Consultiva, sobre deduções e declarações específicas para seu caso.",
+          "position": "Topo, centralizado horizontalmente, Margem superior: 80px",
+          "font": "Poppins Bold (800)",
+          "size": "52px",
+          "color": "#f1f5f9"
+        },
+        "description": {
+          "text": "Dúvidas fiscais? O Fin responde em segundos, com base no seu perfil.",
+          "position": "Abaixo do mockup, centralizado horizontalmente",
+          "font": "Poppins Regular (400)",
+          "size": "32px",
+          "color": "#f1f5f9"
+        }
+      },
+      "colors_and_finishes": "Fundo: #0f172a. Título e descrição: #f1f5f9. Balão usuário: #1e293b (glassmorphism). Balão Fin: #10b981 (glassmorphism, texto #f1f5f9).",
+      "effects": "Glassmorphism nos balões de chat.",
+      "observation_for_designer": "A pergunta e resposta devem ser concisas e relevantes para a persona Carla. O balão do Fin deve se destacar visualmente.",
+      "visual_hint": "Ondas de luz digitais sutis e um efeito de névoa esmeralda em tons escuros, criando uma atmosfera de inteligência e assistência."
+    },
+    {
+      "slide_number": "Slide 6/8",
+      "dimensions": "1080x1350px",
+      "layout": "Topo (20%) para título, Centro (60%) para visual comparativo, Rodapé (20%) para texto de reforço.",
+      "main_visual_element": "Visual comparativo: Lado esquerdo com uma imagem abstrata e borrada de uma planilha complexa (tons escuros, ilegível) com um 'X' sutil em vermelho. Lado direito com um card glassmorphism limpo do Finlancer (um snippet de dashboard simples) com um 'check' em #10b981.",
+      "text_content": {
+        "title": {
+          "text": "Chega de planilha e dor de cabeça. Tenha a visão completa.",
+          "position": "Topo, centralizado horizontalmente, Margem superior: 100px",
+          "font": "Poppins Bold (800)",
+          "size": "52px",
+          "color": "#f1f5f9"
+        },
+        "reinforcement_text": {
+          "text": "Substitua horas de trabalho manual por clareza e automação.",
+          "position": "Abaixo do visual, centralizado horizontalmente",
+          "font": "Poppins Regular (400)",
+          "size": "32px",
+          "color": "#f1f5f9"
+        }
+      },
+      "colors_and_finishes": "Fundo: #0f172a. Título e texto: #f1f5f9. Card Finlancer: #1e293b (glassmorphism). Check: #10
+2026-05-10 02:17:22,921 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 02:17:34,797 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-10 02:17:34,799 | agents.base_agent | INFO | [Finlancer Visual Content Creator] Resposta gerada (2643 chars)
+2026-05-10 02:17:34,799 | finlancer-agency | INFO | visual concluido
+2026-05-10 02:17:34,799 | finlancer-agency | INFO | FASE 3: Revisao do Content Strategist (Gemini)
+2026-05-10 02:17:34,800 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 02:17:52,345 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-10 02:17:52,347 | agents.base_agent | INFO | [Finlancer Content Strategist] Resposta gerada (2623 chars)
+2026-05-10 02:17:52,347 | finlancer-agency | INFO | FASE 4: Aprovacao Final — Brand Director
+2026-05-10 02:17:52,347 | finlancer-agency | INFO | FASE 4: Revisao textual final (Gemini)
+2026-05-10 02:17:52,348 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 02:18:13,315 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-10 02:18:13,316 | agents.base_agent | INFO | [Finlancer Brand Director] Resposta gerada (3875 chars)
+2026-05-10 02:18:13,317 | finlancer-agency | INFO | Brand Director concluiu revisao
+2026-05-10 02:18:13,317 | finlancer-agency | INFO | FASE 7: Salvando outputs localmente
+2026-05-10 02:19:05,088 | finlancer-agency | INFO | === ROTINA DIÁRIA — 2026-05-10_021905 ===
+2026-05-10 02:19:05,888 | finlancer-agency | INFO | FASE 1: Planning Meeting
+2026-05-10 02:19:05,888 | finlancer-agency | INFO | FASE 2: Producao de Conteudo (paralela)
+2026-05-10 02:19:05,889 | finlancer-agency | INFO | Copy Specialist produzindo...
+2026-05-10 02:19:05,890 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 02:19:05,890 | finlancer-agency | INFO | Visual Creator produzindo conceito...
+2026-05-10 02:19:05,890 | finlancer-agency | INFO | Video Script Specialist produzindo roteiros...
+2026-05-10 02:19:05,893 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 02:19:05,893 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 02:19:26,773 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-10 02:19:26,775 | agents.base_agent | INFO | [Finlancer Social Copy Specialist] Resposta gerada (11659 chars)
+2026-05-10 02:19:26,775 | finlancer-agency | INFO | copy concluido
+2026-05-10 02:19:29,526 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-10 02:19:29,527 | agents.base_agent | INFO | [Finlancer Video Script Specialist] Resposta gerada (8505 chars)
+2026-05-10 02:19:29,527 | finlancer-agency | INFO | video concluido
+2026-05-10 02:19:38,744 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-10 02:19:38,745 | agents.base_agent | INFO | [Finlancer Visual Content Creator] Resposta gerada (12796 chars)
+2026-05-10 02:19:38,746 | agents.visual_content_creator | ERROR | Falha ao parsear JSON do carrossel: ```json
+{
+  "concept": "Carrossel de 8 slides focado na persona 'Carla' (CLT + MEI), abordando a dor da confusão financeira entre PF e PJ, especialmente durante IRPF e DASN-SIMEI. O conceito visual utiliza o dark mode Finlancer, glassmorphism e acentos emerald para apresentar a visão unificada PF+PJ e a IA Consultiva (Fin) como soluções para clareza e paz fiscal.",
+  "palette": {
+    "background": "#0f172a",
+    "primary_accent": "#10b981",
+    "secondary_accent_gradient": "#0ea5e9",
+    "surface_cards": "#1e293b",
+    "text_primary": "#f1f5f9",
+    "text_secondary": "#94a3b8",
+    "glassmorphism_border": "rgba(255,255,255,0.1)",
+    "glow": "rgba(16,185,129,0.3)"
+  },
+  "canva_instructions": [
+    {
+      "slide_number": "Slide 1/8 — Capa",
+      "dimensions": "1080x1350px",
+      "layout": "Título principal no topo, subtítulo centralizado, elemento visual abstrato central.",
+      "elements": [
+        {
+          "type": "Background",
+          "color": "#0f172a"
+        },
+        {
+          "type": "Text",
+          "content": "Carla, você também?",
+          "position": "Topo, Centralizado",
+          "font": "Poppins ExtraBold",
+          "size": "64px",
+          "color": "#f1f5f9"
+        },
+        {
+          "type": "Text",
+          "content": "CLT + MEI: A confusão entre PF e PJ na hora do IRPF e DASN-SIMEI.",
+          "position": "Centro, Centralizado (abaixo do título)",
+          "font": "Poppins Medium",
+          "size": "36px",
+          "color": "#94a3b8"
+        },
+        {
+          "type": "Visual Element",
+          "description": "Ícone abstrato de 'confusão' ou 'mistura' (ex: duas esferas se fundindo ou linhas emaranhadas).",
+          "style": "Gradiente #10b981 para #0ea5e9, com glow sutil rgba(16,185,129,0.3) ao redor."
+        }
+      ],
+      "canva_steps": [
+        "Defina o tamanho da tela para 1080x1350px.",
+        "Defina o fundo como sólido #0f172a.",
+        "Adicione um texto 'Carla, você também?' no topo, centralizado. Use a fonte Poppins ExtraBold, tamanho 64px, cor #f1f5f9.",
+        "Adicione um texto 'CLT + MEI: A confusão entre PF e PJ na hora do IRPF e DASN-SIMEI.' no centro, abaixo do título. Use a fonte Poppins Medium, tamanho 36px, cor #94a3b8.",
+        "Insira um elemento gráfico abstrato que sugira mistura ou emaranhado (procure por 'abstract blend', 'intertwined lines' ou 'gradient spheres'). Aplique um gradiente de #10b981 para #0ea5e9. Se possível, adicione um 'efeito de sombra' ou 'brilho' na cor #10b981 com 30% de opacidade."
+      ]
+    },
+    {
+      "slide_number": "Slide 2/8",
+      "dimensions": "1080x1350px",
+      "layout": "Título no topo, um glassmorphism card central com lista de dores.",
+      "elements": [
+        {
+          "type": "Background",
+          "color": "#0f172a"
+        },
+        {
+          "type": "Text",
+          "content": "A dor de cabeça que todo mês chega:",
+          "position": "Topo, Alinhado à Esquerda",
+          "font": "Poppins Bold",
+          "size": "48px",
+          "color": "#f1f5f9"
+        },
+        {
+          "type": "Glassmorphism Card",
+          "position": "Centralizado",
+          "size": "Aproximadamente 800px de largura, 600px de altura",
+          "style": "Cor #1e293b com 70% de opacidade, borda 1px rgba(255,255,255,0.1), border-radius 16px. Aplicar blur (se disponível).",
+          "content": [
+            "❌ Contas PF e PJ misturadas",
+            "❌ IRPF virando um pesadelo",
+            "❌ DASN-SIMEI: o que declarar?",
+            "❌ Medo de errar com a Receita",
+            "❌ Não saber o lucro real do MEI"
+          ],
+          "text_style": "Poppins Regular, 28px, #f1f5f9. Ícones '❌' em cinza escuro."
+        }
+      ],
+      "canva_steps": [
+        "Defina o fundo como sólido #0f172a.",
+        "Adicione um texto 'A dor de cabeça que todo mês chega:' no topo, alinhado à esquerda. Use a fonte Poppins Bold, tamanho 48px, cor #f1f5f9.",
+        "Crie um retângulo arredondado (raio 16px) no centro da tela. Defina a cor para #1e293b e a transparência para 70%. Adicione uma borda de 1px na cor branca com 10% de opacidade. Se houver, aplique um efeito de desfoque (blur).",
+        "Dentro do card, adicione os seguintes itens como lista, com espaçamento confortável. Use a fonte Poppins Regular, tamanho 28px, cor #f1f5f9. Use um ícone 'X' ou '❌' na cor #94a3b8 antes de cada item: 'Contas PF e PJ misturadas', 'IRPF virando um pesadelo', 'DASN-SIMEI: o que declarar?', 'Medo de errar com a Receita', 'Não saber o lucro real do MEI'."
+      ]
+    },
+    {
+      "slide_number": "Slide 3/8",
+      "dimensions": "1080x1350px",
+      "layout": "Título no topo, subtítulo abaixo, mockup de interface do Finlancer centralizado.",
+      "elements": [
+        {
+          "type": "Background",
+          "color": "#0f172a"
+        },
+        {
+          "type": "Text",
+          "content": "A solução que você sempre quis:",
+          "position": "Topo, Centralizado",
+          "font": "Poppins Bold",
+          "size": "48px",
+          "color": "#f1f5f9"
+        },
+        {
+          "type": "Text",
+          "content": "Finanças PF e PJ em um só lugar.",
+          "position": "Abaixo do título",
+          "font": "Poppins Medium",
+          "size": "32px",
+          "color": "#10b981"
+        },
+        {
+          "type": "Visual Element",
+          "description": "Mockup de um dashboard Finlancer mostrando a visão unificada PF+PJ. Deve conter dois cards glassmorphism lado a lado (um para PF, outro para PJ) com valores fictícios e gráficos de barra/linha em emerald. O toggle 'Empresa/Pessoal' deve estar visível no topo do mockup.",
+          "style": "Mockup com elementos da UI Finlancer (cards glassmorphism, gráficos emerald). Adicionar glow sutil emerald rgba(16,185,129,0.3) ao redor do mockup."
+        }
+      ],
+      "canva_steps": [
+        "Defina o fundo como sólido #0f172a.",
+        "Adicione um texto 'A solução que você sempre quis:' no topo, centralizado. Use a fonte Poppins Bold, tamanho 48px, cor #f1f5f9.",
+        "Adicione um texto 'Finanças PF e PJ em um só lugar.' abaixo do título. Use a fonte Poppins Medium, tamanho 32px, cor #10b981.",
+        "Insira uma imagem de mockup da interface do Finlancer (solicitar ao designer ou usar um template de UI kit). O mockup deve mostrar um dashboard com a visão unificada PF+PJ, contendo dois cards glassmorphism (um para PF, outro para PJ) com dados fictícios e gráficos de linha/barra na cor #10b981. Certifique-se de que o elemento de toggle 'Empresa/Pessoal' esteja visível no topo do mockup. Posicione o mockup centralizado. Adicione um 'efeito de sombra' ou 'brilho' na cor #10b981 com 30% de opacidade ao redor do mockup."
+      ]
+    },
+    {
+      "slide_number": "Slide 4/8",
+      "dimensions": "1080x1350px",
+      "layout": "Título no topo, dois cards glassmorphism menores lado a lado no centro.",
+      "elements": [
+        {
+          "type": "Background",
+          "color": "#0f172a"
+        },
+        {
+          "type": "Text",
+          "content": "Chega de misturar tudo!",
+          "position": "Topo, Centralizado",
+          "font": "Poppins Bold",
+          "size": "48px",
+          "color": "#f1f5f9"
+        },
+        {
+          "type": "Text",
+          "content": "O Finlancer organiza para você:",
+          "position": "Abaixo do título",
+          "font": "Poppins Medium",
+          "size": "32px",
+          "color": "#94a3b8"
+        },
+        {
+          "type": "Glassmorphism Card (Esquerdo)",
+          "position": "Centro-esquerda",
+          "size": "Aproximadamente 450px de largura, 300px de altura",
+          "style": "Cor #1e293b com 70% de opacidade, borda 1px rgba(255,255,255,0.1), border-radius 16px. Aplicar blur.",
+          "content": [
+            "Ícone de documento/imposto (abstrato) em #10b981.",
+            "IRPF simplificado (Poppins Bold, 32px, #10b981)",
+            "Dados separados para sua declaração (Poppins Regular, 24px, #f1f5f9)"
+          ]
+        },
+        {
+          "type": "Glassmorphism Card (Direito)",
+          "position": "Centro-direita",
+          "size": "Aproximadamente 450px de largura, 300px de altura",
+          "style": "Cor #1e293b com 70% de opacidade, borda 1px rgba(255,255,255,0.1), border-radius 16px. Aplicar blur.",
+          "content": [
+            "Ícone de calendário/alerta (abstrato) em #10b981.",
+            "DASN-SIMEI sem erros (Poppins Bold, 32px, #10b981)",
+            "Relatórios claros para o seu contador (Poppins Regular, 24px, #f1f5f9)"
+          ]
+        }
+      ],
+      "canva_steps": [
+        "Defina o fundo como sólido #0f172a.",
+        "Adicione um texto 'Chega de misturar tudo!' no topo, centralizado. Use a fonte Poppins Bold, tamanho 48px, cor #f1f5f9.",
+        "Adicione um texto 'O Finlancer organiza para você:' abaixo do título. Use a fonte Poppins Medium, tamanho 32px, cor #94a3b8.",
+        "Crie dois retângulos arredondados (raio 16px) lado a lado, centralizados horizontalmente na tela, com um pequeno espaço entre eles. Defina a cor para #1e293b e a transparência para 70%. Adicione uma borda de 1px na cor branca com 10% de opacidade. Se houver, aplique um efeito de desfoque (blur).",
+        "No card esquerdo: Insira um ícone abstrato de documento ou imposto (ex: uma folha com um gráfico) na cor #10b981. Abaixo, adicione o texto 'IRPF simplificado' (Poppins Bold, 32px, #10b981) e 'Dados separados para sua declaração' (Poppins Regular, 24px, #f1f5f9).",
+        "No card direito: Insira um ícone abstrato de calendário ou alerta (ex: um calendário com um '!' ou sino) na cor #10b981. Abaixo, adicione o texto 'DASN-SIMEI sem erros' (Poppins Bold, 32px, #10b981) e 'Relatórios claros para o seu contador' (Poppins Regular, 24px, #f1f5f9)."
+      ]
+    },
+    {
+      "slide_number": "Slide 5/8",
+      "dimensions": "1080x1350px",
+      "layout": "Título no topo, ícone de IA/chat centralizado, com subtítulo abaixo.",
+      "elements": [
+        {
+          "type": "Background",
+          "color": "#0f172a"
+        },
+        {
+          "type": "Text",
+          "content": "Dúvidas fiscais? Pergunte ao Fin!",
+          "position": "Topo, Centralizado",
+          "font": "Poppins Bold",
+          "size": "48px",
+          "color": "#f1f5f9"
+        },
+        {
+          "type": "Visual Element",
+          "description": "Ícone grande e estilizado de um 'cérebro' ou 'robô' ou 'balão de chat' com um brilho emerald, representando a IA.",
+          "style": "Gradiente #10b981 para #0ea5e9. Adicionar glow sutil rgba(16,185,129,0.3) ao redor do ícone."
+        },
+        {
+          "type": "Text",
+          "content": "Sua IA Consultiva 24/7 para MEI e IRPF.",
+          "position": "Abaixo do ícone",
+          "font": "Poppins Medium",
+          "size": "32px",
+          "color": "#10b981"
+        }
+      ],
+      "canva_steps": [
+        "Defina o fundo como sólido #0f172a.",
+        "Adicione um texto 'Dúvidas fiscais? Pergunte ao Fin!' no topo, centralizado. Use a fonte Poppins Bold, tamanho 48px, cor #f1f5f9.",
+        "Insira um ícone grande e futurista que represente inteligência artificial ou um assistente de chat (procure por 'AI icon', 'robot brain', 'chat bot'). Aplique um gradiente de #10b981 para #0ea5e9. Adicione um 'efeito de sombra' ou 'brilho' na cor #10b981 com 30% de opacidade ao redor do ícone. Posicione o ícone centralizado.",
+        "Adicione um texto 'Sua IA Consultiva 24/7 para MEI e IRPF.' abaixo do ícone. Use a fonte Poppins Medium, tamanho 32px, cor #10b981."
+      ]
+    },
+    {
+      "slide_number": "Slide 6/8",
+      "dimensions": "1080x1350px",
+      "layout": "Título no topo, mockup de interface do Finlancer mostrando o chat da IA.",
+      "elements": [
+        {
+          "type": "Background",
+          "color": "#0f172a"
+        },
+        {
+          "type": "Text",
+          "content": "Exemplo real:",
+          "position": "Topo, Centralizado",
+          "font": "Poppins Bold",
+          "size": "48px",
+          "color": "#f1f5f9"
+        },
+        {
+          "type": "Text",
+          "content": "A Carla perguntou, o Fin respondeu.",
+          "position": "Abaixo do título",
+          "font": "Poppins Medium",
+          "size": "32px",
+          "color": "#94a3b8"
+        },
+        {
+          "type": "Visual Element",
+          "description": "Mockup de um chat da IA Finlancer com uma pergunta e resposta. A pergunta do usuário em balão cinza claro: 'Como declaro despesas de home office no IRPF sendo MEI + CLT?'. A resposta da IA em balão emerald: 'Para MEI, despesas de home office podem ser deduzidas como PF se relacionadas à atividade. Para CLT, não. Finlancer te ajuda a separar.'.",
+          "style": "Balão de pergunta em cor #334155, balão de resposta em #1
+2026-05-10 02:19:38,746 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 02:19:55,293 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-10 02:19:55,295 | agents.base_agent | INFO | [Finlancer Visual Content Creator] Resposta gerada (6738 chars)
+2026-05-10 02:19:55,296 | agents.visual_content_creator | ERROR | Falha ao parsear JSON do feed: ```json
+{
+  "concept": {
+    "dimensions": "1080x1350px (4:5) - Feed Instagram Retrato",
+    "layout_structure": "A peça é dividida em três regiões principais: Topo (15%), Centro (70%), Rodapé (15%). A hierarquia visual guia o olhar do usuário do centro para o topo e depois para o rodapé.",
+    "element_visual_principal": {
+      "description": "No centro da tela, dois cards glassmorphism representam as finanças 'Pessoal' (PF) e 'Empresarial' (PJ). O card 'PF' virá do canto superior esquerdo, ligeiramente inclinado para a direita, e o card 'PJ' virá do canto superior direito, ligeiramente inclinado para a esquerda. Ambos se sobrepõem no centro da tela. No ponto de sobreposição e união dos dois cards, emerge um mockup da interface do Finlancer, exibindo um dashboard unificado com gráficos de linha/barra em emerald e cards de dados (ex: 'Receitas PF', 'Despesas PJ') lado a lado. Acima e à direita do mockup do Finlancer, uma pequena bolha de chat glassmorphism, contendo um ícone minimalista de IA (ex: cérebro abstrato ou robô estilizado), simbolizando o Fin AI Consultivo.",
+      "position": "Cards PF/PJ sobrepostos no centro. Mockup Finlancer centralizado sobre a sobreposição. Bolha de chat IA flutuando acima e à direita do mockup.",
+      "styling": "Cards PF/PJ e bolha de chat IA com glassmorphism (cor de superfície, blur, borda sutil). Mockup Finlancer com um glow sutil #10b981 ao redor para destacá-lo como a solução."
+    },
+    "texto_no_slide": {
+      "title": {
+        "position": "Topo da tela, centralizado horizontalmente, alinhado ao centro verticalmente da região do topo.",
+        "font": "Poppins Bold (800)",
+        "size_approx": "64px",
+        "color": "#f1f5f9"
+      },
+      "subtitle": {
+        "position": "Rodapé da tela, centralizado horizontalmente, alinhado ao centro verticalmente da região do rodapé.",
+        "font": "Poppins Medium (500)",
+        "size_approx": "32px",
+        "color": "#94a3b8"
+      },
+      "card_labels": [
+        {"text": "PF", "position": "Canto superior esquerdo do card PF", "font": "Inter Bold (800)", "size_approx": "24px", "color": "#f1f5f9"},
+        {"text": "PJ", "position": "Canto superior esquerdo do card PJ", "font": "Inter Bold (800)", "size_approx": "24px", "color": "#f1f5f9"}
+      ]
+    },
+    "cores_e_acabamentos": {
+      "background": "#0f172a",
+      "cards_glassmorphism": "#1e293b (com 70% de opacidade)",
+      "borda_glassmorphism": "rgba(255,255,255,0.1)",
+      "accent_principal": "#10b981 (no mockup Finlancer, ícones, glow)",
+      "texto_primario": "#f1f5f9",
+      "texto_secundario": "#94a3b8",
+      "gradiente_fundo_abstrato": "#10b981 para #0ea5e9 (sutilmente no fundo)"
+    },
+    "efeitos": "Glassmorphism nos cards PF/PJ e na bolha de chat da IA (backdrop-filter: blur(16px), border-radius: 16px). Glow sutil box-shadow com #10b981 a 30% de opacidade ao redor do mockup do Finlancer. Gradiente abstrato no fundo para criar profundidade.",
+    "observacao_designer": "Certifique-se de que o mockup do Finlancer mostre a funcionalidade de visão unificada PF+PJ de forma clara, com elementos visuais da nossa identidade (gráficos emerald, cards de dados). O ícone da IA na bolha de chat deve ser minimalista e moderno."
+  },
+  "title": "CLT + MEI: IRPF e DASN te confundem?",
+  "subtitle": "Finlancer une tudo: PF, PJ e IA para suas dúvidas fiscais.",
+  "palette": {
+    "background": "#0f172a",
+    "primary_accent": "#10b981",
+    "surface_cards": "#1e293b",
+    "text_primary": "#f1f5f9",
+    "text_secondary": "#94a3b8",
+    "gradient_start": "#10b981",
+    "gradient_end": "#0ea5e9"
+  },
+  "canva_instructions": [
+    "1. Defina o fundo da tela para a cor sólida #0f172a.",
+    "2. Adicione um elemento de gradiente abstrato no fundo: Crie uma forma grande (ex: círculo ou retângulo arredondado gigante) e aplique um gradiente linear de #10b981 (no topo esquerdo) para #0ea5e9 (no canto inferior direito). Desfoque (blur) essa forma para que seja sutil e sirva apenas como um brilho de fundo, sem ser um elemento visual dominante.",
+    "3. Crie o 'Card PF': Insira um retângulo arredondado (raio 16px) com preenchimento #1e293b e opacidade de 70%. Adicione uma borda de 1px na cor branca com 10% de opacidade. Gire-o ligeiramente para a esquerda (-5 graus). Posicione-o no centro-esquerda da tela.",
+    "4. Dentro do 'Card PF', adicione um texto 'PF' em Poppins Bold, tamanho 24px, cor #f1f5f9 no canto superior esquerdo do card. Opcionalmente, adicione um ícone discreto que remeta a 'pessoal' (ex: um avatar ou pessoa estilizada) acima do texto.",
+    "5. Crie o 'Card PJ': Insira outro retângulo arredondado (raio 16px) com preenchimento #1e293b e opacidade de 70%. Adicione uma borda de 1px na cor branca com 10% de opacidade. Gire-o ligeiramente para a direita (+5 graus). Posicione-o no centro-direita da tela, sobrepondo parcialmente o 'Card PF'.",
+    "6. Dentro do 'Card PJ', adicione um texto 'PJ' em Poppins Bold, tamanho 24px, cor #f1f5f9 no canto superior esquerdo do card. Opcionalmente, adicione um ícone discreto que remeta a 'negócio' (ex: um prédio ou maleta) acima do texto.",
+    "7. Insira o mockup da interface do Finlancer: Use a imagem do dashboard unificado do Finlancer (PF+PJ). Posicione-o centralmente, sobrepondo a área onde os 'Cards PF' e 'PJ' se encontram. Certifique-se de que o mockup esteja limpo e mostre elementos em #10b981.",
+    "8. Adicione um efeito de 'Glow' ao redor do mockup do Finlancer: Use a função de sombra (shadow) do Canva, configure-a com a cor #10b981, opacidade de 30%, desfoque alto (ex: 20-30px) e sem deslocamento (x=0, y=0).",
+    "9. Crie a 'Bolha de Chat IA': Insira um pequeno retângulo arredondado (raio 12px) com preenchimento #1e293b e opacidade de 70%. Adicione uma borda de 1px na cor branca com 10% de opacidade. Posicione-o acima e ligeiramente à direita do mockup do Finlancer.",
+    "10. Dentro da 'Bolha de Chat IA', adicione um ícone de IA (ex: um cérebro estilizado ou um robô minimalista) na cor #10b981, tamanho 20px, centralizado na bolha.",
+    "11. Adicione o Título: Insira o texto 'CLT + MEI: IRPF e DASN te confundem?' no topo da tela. Use a fonte Poppins Bold (800), tamanho 64px, cor #f1f5f9. Centralize horizontalmente.",
+    "12. Adicione o Subtítulo: Insira o texto 'Finlancer une tudo: PF, PJ e IA para suas dúvidas fiscais.' no rodapé da tela. Use a fonte Poppins Medium (500), tamanho 32px, cor #94a3b8. Centralize horizontalmente."
+  },
+  "visual_hint": "Fundo dark #0f172a. Gradiente sutil #10b981 para #0ea5e9 em diagonal, formando um 'X' no centro, simbolizando a união de dois mundos. Partículas luminosas emerald flutuando, criando profundidade e um toque tecnológico. Sem elementos figurativos ou texto."
+}
+```
+2026-05-10 02:19:55,296 | finlancer-agency | INFO | visual concluido
+2026-05-10 02:19:55,297 | finlancer-agency | INFO | FASE 3: Revisao do Content Strategist (Gemini)
+2026-05-10 02:19:55,297 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 02:20:19,627 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-10 02:20:19,629 | agents.base_agent | INFO | [Finlancer Content Strategist] Resposta gerada (3693 chars)
+2026-05-10 02:20:19,629 | finlancer-agency | INFO | FASE 4: Aprovacao Final — Brand Director
+2026-05-10 02:20:19,629 | finlancer-agency | INFO | FASE 4: Revisao textual final (Gemini)
+2026-05-10 02:20:19,630 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 02:20:46,700 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-10 02:20:46,701 | agents.base_agent | INFO | [Finlancer Brand Director] Resposta gerada (11255 chars)
+2026-05-10 02:20:46,701 | finlancer-agency | INFO | Brand Director concluiu revisao
+2026-05-10 02:20:46,701 | finlancer-agency | INFO | FASE 7: Salvando outputs localmente
+2026-05-10 02:20:46,706 | finlancer-agency | INFO | Revisao final salva: /home/ubuntu/agents_marketing/output/2026-05-10_021905/REVISAO-FINAL.md
+2026-05-10 02:20:46,707 | finlancer-agency | INFO | 
+============================================================
+2026-05-10 02:20:46,707 | finlancer-agency | INFO | RESUMO DA EXECUÇÃO 2026-05-10_021905
+2026-05-10 02:20:46,707 | finlancer-agency | INFO | ============================================================
+2026-05-10 02:20:46,707 | finlancer-agency | INFO | Revisão Final do Brand Director: **STATUS GERAL: APROVADO**
+O pacote de conteúdo está totalmente alinhado com a persona Carla, o cale...
+2026-05-10 02:20:46,707 | finlancer-agency | INFO | ------------------------------------------------------------
+2026-05-10 02:20:46,707 | finlancer-agency | INFO | Arquivos Locais Salvos:
+2026-05-10 02:20:46,707 | finlancer-agency | INFO |   - instagram_carrossel_textos: /home/ubuntu/agents_marketing/output/2026-05-10_021905/instagram/carrossel_textos.md
+2026-05-10 02:20:46,707 | finlancer-agency | INFO |   - tiktok_video_ideia: /home/ubuntu/agents_marketing/output/2026-05-10_021905/tiktok/video_ideia.md
+2026-05-10 02:20:46,707 | finlancer-agency | INFO |   - video_master: /home/ubuntu/agents_marketing/output/2026-05-10_021905/video-criativo/producao_roteiro.md
+2026-05-10 02:20:46,707 | finlancer-agency | INFO |   - visual_concept: /home/ubuntu/agents_marketing/output/2026-05-10_021905/visual-conceito/conceito.md
+2026-05-10 02:20:46,707 | finlancer-agency | INFO | ============================================================
+
+2026-05-10 02:20:46,717 | finlancer-agency | INFO | Rotina concluída com sucesso para 2026-05-10
