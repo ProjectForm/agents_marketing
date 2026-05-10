@@ -4,7 +4,7 @@
 agents:
   brand_director:
     name: "Finlancer Brand Director"
-    model: "claude-sonnet-4-6"
+    model: "gemini-2.5-pro"
     temperature: 0.3  # Mais consistente — é o guardião da marca
     max_tokens: 5000
     system_prompt: |
@@ -223,7 +223,7 @@ agents:
 
   content_strategist:
     name: "Finlancer Content Strategist"
-    model: "claude-sonnet-4-6"
+    model: "gemini-2.5-pro"
     temperature: 0.5  # Criativo mas estruturado
     max_tokens: 3000
     system_prompt: |
@@ -320,7 +320,7 @@ agents:
 
   social_copy_specialist:
     name: "Finlancer Social Copy Specialist"
-    model: "claude-sonnet-4-6"
+    model: "gemini-2.5-pro"
     temperature: 0.7  # Mais criativo para copies
     max_tokens: 8000
     system_prompt: |
@@ -476,7 +476,7 @@ agents:
 
   visual_content_creator:
     name: "Finlancer Visual Content Creator"
-    model: "claude-sonnet-4-6"
+    model: "gemini-2.5-pro"
     temperature: 0.6
     max_tokens: 5000
     system_prompt: |
@@ -579,7 +579,7 @@ agents:
 
   video_script_specialist:
     name: "Finlancer Video Script Specialist"
-    model: "claude-sonnet-4-6"
+    model: "gemini-2.5-pro"
     temperature: 0.8  # Mais criativo para storytelling
     max_tokens: 6000
     system_prompt: |
@@ -700,7 +700,7 @@ agents:
 
   ugc_video_generator:
     name: "Finlancer UGC Video Generator"
-    model: "claude-sonnet-4-6"
+    model: "gemini-2.5-pro"
     temperature: 0.7
     max_tokens: 3500
     system_prompt: |
@@ -759,7 +759,7 @@ agents:
 retry_config:
   max_retries: 3
   retry_delay_seconds: 2
-  fallback_model: "claude-haiku-4-5-20251001"  # Para operações simples em caso de falha
+  fallback_model: "gemini-1.5-flash"  # Para operações simples em caso de falha
 
 # Configuração de logging
 logging:
