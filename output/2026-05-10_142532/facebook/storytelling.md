@@ -1,0 +1,13 @@
+<!-- Aprovado pelo Brand Director em 2026-05-10 -->
+
+**CLT e MEI: O IRPF de Dupla Jornada que Tira o Seu Sono (Mas Não Precisa Mais!)**
+
+Quem tem duas fontes de renda, como uma consultora de marketing em Curitiba que conhecemos, sabe bem o que é o mês de maio. De um lado, o Imposto de Renda da Pessoa Física (IRPF) da renda CLT. Do outro, a Declaração Anual Simplificada para o Microempreendedor Individual (DASN-SIMEI). E no meio, a confusão de tentar juntar tudo e não misturar as estações. Já passou por isso?
+
+Essa consultora, que chamaremos de Carla para essa história, é uma profissional super competente. Ela tem um emprego CLT part-time que garante uma base de segurança, e um MEI super ativo com sua consultoria de marketing, que traz uma renda variável, mas muito promissora. Antes do Finlancer, a Carla usava planilhas e até pagava um contador para a parte do MEI, mas o IRPF era sempre um pesadelo. "Nunca sei o que é dedução do MEI, o que é da PF, e se estou declarando certo", ela contava. Ela se sentia culpada por não ter o controle total, mas o tempo e a complexidade de organizar duas fontes de renda com regimes tributários diferentes eram esmagadores. Ela já chegou a pagar multas por atraso no DAS, porque a cabeça estava tão cheia com o IRPF que o boleto do MEI sumia da mente.
+
+Foi aí que ela descobriu o Finlancer. Com nosso app, a Carla finalmente conseguiu ter uma visão unificada de toda a sua renda. O Finlancer separa automaticamente o que ela ganha como CLT e o que entra pelo MEI, categorizando cada transação. Ela consegue ver em um dashboard simples que, por exemplo, no mês passado ela ganhou R$ 4.500 como CLT e R$ 6.000 como MEI. E na hora de preparar o IRPF, ela tem todos os dados organizados, sem misturar as bolas. O módulo de relatórios do Finlancer permite que ela extraia as informações necessárias em poucos cliques, sem ter que vasculhar extratos e planilhas por horas.
+
+Chega de ansiedade, de medo de errar na declaração ou de perder prazos. Com o Finlancer, você tem clareza sobre suas duas fontes de renda, sabe quanto de imposto paga e ainda se prepara para o IRPF com antecedência. É a tranquilidade que todo CLT + MEI precisa para focar no que realmente importa: seu trabalho e sua vida. A Carla, por exemplo, economizou cerca de 5 horas por mês só na organização financeira, tempo que ela agora usa para prospectar novos clientes ou simplesmente relaxar.
+
+Lembre-se: o prazo final para o IRPF e a DASN-SIMEI é 31 de maio! Não deixe para a última hora. Se você, como a Carla, vive essa dupla jornada financeira e busca organização sem burocracia, o Finlancer foi feito para você. Clique no link e comece a descomplicar sua vida: crie sua conta grátis em finlancer.com.br

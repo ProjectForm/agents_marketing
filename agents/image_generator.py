@@ -6,13 +6,10 @@ import logging
 
 logger = logging.getLogger("finlancer-agency")
 
-FINLANCER_STYLE = """
-Dark mode fintech design. Solid background #0f172a (deep navy dark slate).
-Emerald green #10b981 as primary accent. Glassmorphism UI cards with 
-rgba(255,255,255,0.1) border and subtle blur. Inter or Poppins typography, 
-bold white text high contrast. Professional Brazilian fintech. 
-No white backgrounds. Dark mode only. Minimal, clean, trustworthy.
-Gradient elements from #10b981 to #0ea5e9 on highlights.
+NEGATIVE_PROMPT_IMAGEN = """
+absolutely no text, no letters, no words, no captions, no writing,
+no numbers, no watermarks, no logos, no typography of any kind,
+pure visual composition only
 """
 
 class ImageGeneratorAgent:
@@ -21,7 +18,7 @@ class ImageGeneratorAgent:
         self.model = "imagen-4.0-generate-001"
     
     def generate_image(self, prompt: str, output_path: str, 
-                       aspect_ratio: str = "1:1") -> str:
+                       aspect_ratio: str = "1:1", negative_prompt: str = "") -> str:
         """
         aspect_ratio: "1:1" para feed, "3:4" para carrossel (fallback de 4:5), "9:16" para reel cover
         Retorna path do arquivo salvo.
@@ -35,6 +32,7 @@ class ImageGeneratorAgent:
             response = self.client.models.generate_images(
                 model=self.model,
                 prompt=prompt,
+                negative_prompt=negative_prompt,
                 config=genai.types.GenerateImagesConfig(
                     output_mime_type="image/png",
                     aspect_ratio=aspect_ratio,
@@ -53,55 +51,31 @@ class ImageGeneratorAgent:
             logger.info(f"Imagem salva em: {output_path}")
             return output_path
         except Exception as e:
-            logger.error(f"Erro ao gerar imagem para prompt '{prompt[:50]}...': {e}")
+            logger.error(f"Erro ao gerar imagem para prompt \'{prompt[:50]}...\': {e}")
             return f"[ERRO_IMAGEM: {e}]"
     
     def generate_feed_image(self, theme: str, texto_overlay: str, 
                             output_dir: str) -> str:
-        """Feed 1080x1080. Retorna path do PNG."""
-        prompt = f"""
-        {FINLANCER_STYLE}
-        Social media feed post 1:1 square format.
-        Main topic: {theme}
-        Text overlay (bold, top-center): "{texto_overlay}"
-        Include: emerald accent card, financial dashboard UI elements,
-        subtle chart or graph decoration, @finlancer.app watermark bottom-right.
-        Photorealistic fintech app promotional image.
         """
-        path = f"{output_dir}/feed_estatico.png"
-        return self.generate_image(prompt, path, "1:1")
+        Este método será substituído pelo VisualRenderer. Por enquanto, retorna um placeholder.
+        """
+        logger.info("ImageGeneratorAgent não gera mais imagens de feed diretamente. Usando VisualRenderer.")
+        return "[PLACEHOLDER_FEED_IMAGE]"
     
     def generate_carousel_slide(self, slide_num: int, titulo: str, 
                                  corpo: str, output_dir: str) -> str:
-        """Slide carrossel 1080x1350. Retorna path do PNG."""
-        is_capa = slide_num == 1
-        
-        if is_capa:
-            prompt = f"""
-            {FINLANCER_STYLE}
-            Instagram carousel cover slide vertical format.
-            Bold impact title center: "{titulo}"
-            Subtitle below: "{corpo}"
-            Large emerald geometric accent shape background.
-            Professional, high-impact, invites to swipe right.
-            """
-        else:
-            prompt = f"""
-            {FINLANCER_STYLE}
-            Instagram carousel content slide {slide_num}, vertical.
-            Slide number "{slide_num:02d}" small emerald top-left.
-            Title: "{titulo}"
-            Body text: "{corpo}"
-            Glassmorphism card center, emerald left border accent strip.
-            Clean readable layout, minimal elements.
-            """
-        
-        path = f"{output_dir}/carrossel_slide_{slide_num:02d}.png"
-        return self.generate_image(prompt, path, "3:4")
+        """
+        Este método será substituído pelo VisualRenderer. Por enquanto, retorna um placeholder.
+        """
+        logger.info("ImageGeneratorAgent não gera mais slides de carrossel diretamente. Usando VisualRenderer.")
+        return "[PLACEHOLDER_CAROUSEL_SLIDE]"
     
     def generate_ugc_persona_image(self, persona_desc: str, 
-                                    output_dir: str) -> str:
-        """Gera imagem fotorrealista da persona para thumbnail do UGC."""
+                                    output_dir: str, angle: str = "frontal") -> str:
+        """
+        Gera imagem fotorrealista da persona para thumbnail do UGC.
+        angle: "frontal" ou "3/4"
+        """
         prompt = f"""
         Photorealistic portrait of a Brazilian professional person.
         {persona_desc}
@@ -109,7 +83,11 @@ class ImageGeneratorAgent:
         Casual-professional attire, authentic expression looking at camera.
         Natural lighting, UGC style (not overly staged). 
         Smartphone or laptop subtly visible. High quality, 9:16 vertical.
-        Do NOT include text overlays. Pure portrait for video thumbnail.
         """
-        path = f"{output_dir}/ugc_persona_thumbnail.png"
-        return self.generate_image(prompt, path, "9:16")
+        if angle == "frontal":
+            prompt += " Looking directly into camera, mouth slightly open, mid-conversation."
+        elif angle == "3/4":
+            prompt += " 3/4 angle, listening expression or hand near chin (vary posture)."
+
+        path = f"{output_dir}/ugc_persona_thumbnail_{angle}.png"
+        return self.generate_image(prompt, path, "9:16", negative_prompt=NEGATIVE_PROMPT_IMAGEN)

@@ -3735,3 +3735,359 @@ CHECKLIST DE IA:
 2026-05-10 03:22:51,299 | finlancer-agency | INFO | Google Drive: https://drive.google.com/mock/2026-05-10_031942
 2026-05-10 03:22:51,299 | finlancer-agency | INFO | ============================================================
 2026-05-10 03:22:51,314 | finlancer-agency | INFO | Rotina concluída com sucesso para 2026-05-10
+2026-05-10 03:23:04,736 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-10 03:23:04,737 | agents.base_agent | INFO | [Finlancer Social Copy Specialist] Resposta gerada (9376 chars)
+2026-05-10 03:23:04,737 | finlancer-agency | INFO | copy concluido
+2026-05-10 03:23:04,738 | finlancer-agency | INFO | Visual Creator produzindo conceito...
+2026-05-10 03:23:04,738 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 03:23:39,061 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-10 03:23:39,062 | agents.base_agent | INFO | [Finlancer Visual Content Creator] Resposta gerada (10076 chars)
+2026-05-10 03:23:39,063 | finlancer-agency | ERROR | Falha ao parsear JSON do carrossel: Expecting value: line 1 column 1 (char 0)
+2026-05-10 03:23:39,063 | finlancer-agency | INFO | visual concluido
+2026-05-10 03:23:39,063 | finlancer-agency | INFO | Video Script Specialist produzindo roteiros...
+2026-05-10 03:23:39,063 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 03:24:06,248 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-10 03:24:06,250 | agents.base_agent | INFO | [Finlancer Video Script Specialist] Resposta gerada (13003 chars)
+2026-05-10 03:24:06,250 | finlancer-agency | INFO | video concluido
+2026-05-10 03:24:06,250 | finlancer-agency | INFO | FASE 3: Revisao do Content Strategist (Gemini)
+2026-05-10 03:24:06,251 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 03:24:38,711 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-10 03:24:38,712 | agents.base_agent | INFO | [Finlancer Content Strategist] Resposta gerada (4502 chars)
+2026-05-10 03:24:38,712 | finlancer-agency | INFO | FASE 4: Aprovacao Final — Brand Director
+2026-05-10 03:24:38,841 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 03:25:11,588 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-10 03:25:11,590 | agents.base_agent | INFO | [Finlancer Brand Director] Resposta gerada (13779 chars)
+2026-05-10 03:25:11,590 | finlancer-agency | INFO | Brand Director concluiu revisao
+2026-05-10 03:25:11,590 | finlancer-agency | INFO | FASE 5: Geracao de Imagens
+2026-05-10 03:25:11,592 | finlancer-agency | INFO | Gerando imagem com prompt: 
+        Photorealistic portrait of a Brazilian professional person.
+        A Brazilian professiona... (Ratio: 9:16)
+2026-05-10 03:25:20,583 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/imagen-4.0-generate-001:predict "HTTP/1.1 200 OK"
+2026-05-10 03:25:20,855 | finlancer-agency | INFO | Imagem salva em: output/2026-05-10_032218/03_ugc_video/ugc_persona_thumbnail.png
+2026-05-10 03:25:27,856 | finlancer-agency | INFO | FASE 7: Salvando outputs localmente
+2026-05-10 03:25:27,857 | finlancer-agency | INFO | Revisao final salva: output/2026-05-10_032218/REVISAO-FINAL.md
+2026-05-10 03:25:27,857 | finlancer-agency | INFO | FASE 8: Upload para Google Drive
+2026-05-10 03:25:27,857 | finlancer-agency | INFO | [MOCK] Folder 'Finlancer Marketing' created (parent: None)
+2026-05-10 03:25:27,859 | finlancer-agency | INFO | [MOCK] Folder '2026' created (parent: mock_folder_id_Finlancer Marketing)
+2026-05-10 03:25:27,859 | finlancer-agency | INFO | [MOCK] Folder 'May' created (parent: mock_folder_id_2026)
+2026-05-10 03:25:27,859 | finlancer-agency | INFO | [MOCK] Folder '2026-05-10_032218' created (parent: mock_folder_id_May)
+2026-05-10 03:25:27,859 | finlancer-agency | INFO | [MOCK] Folder '01_feed' created (parent: mock_folder_id_2026-05-10_032218)
+2026-05-10 03:25:27,859 | finlancer-agency | INFO | [MOCK] Folder '02_carrossel' created (parent: mock_folder_id_2026-05-10_032218)
+2026-05-10 03:25:27,859 | finlancer-agency | INFO | [MOCK] Folder '03_ugc_video' created (parent: mock_folder_id_2026-05-10_032218)
+2026-05-10 03:25:27,859 | finlancer-agency | INFO | [MOCK] File 'ugc_persona_thumbnail.png' uploaded to mock_folder_id_03_ugc_video
+2026-05-10 03:25:27,859 | finlancer-agency | INFO | [MOCK] File 'INDEX.md' uploaded to mock_folder_id_2026-05-10_032218
+2026-05-10 03:25:27,859 | finlancer-agency | INFO | ✅ Pacote do dia pronto: https://drive.google.com/mock/2026-05-10_032218
+2026-05-10 03:25:27,859 | finlancer-agency | INFO | Upload para Google Drive concluido. Pasta do dia: https://drive.google.com/mock/2026-05-10_032218
+2026-05-10 03:25:27,859 | finlancer-agency | INFO | 
+============================================================
+2026-05-10 03:25:27,859 | finlancer-agency | INFO | RESUMO DA EXECUÇÃO 2026-05-10_032218
+2026-05-10 03:25:27,859 | finlancer-agency | INFO | ============================================================
+2026-05-10 03:25:27,859 | finlancer-agency | INFO | Revisão Final do Brand Director: STATUS GERAL: REVISAR com ajustes finos para precisão fiscal e alinhamento de tom.
+
+CHECKLIST DE IA:
+✓ Palavras-robô: Nenhuma encontrada.
+✓ Frases-clichê de abertura: "Maio chegou e com ele a correria...
+2026-05-10 03:25:27,860 | finlancer-agency | INFO | ------------------------------------------------------------
+2026-05-10 03:25:27,860 | finlancer-agency | INFO | Arquivos Locais Salvos:
+2026-05-10 03:25:27,860 | finlancer-agency | INFO |   - visual_concept: output/2026-05-10_032218/visual-conceito/conceito.md
+2026-05-10 03:25:27,860 | finlancer-agency | INFO | ------------------------------------------------------------
+2026-05-10 03:25:27,860 | finlancer-agency | INFO | Google Drive: https://drive.google.com/mock/2026-05-10_032218
+2026-05-10 03:25:27,860 | finlancer-agency | INFO | ============================================================
+2026-05-10 03:25:27,875 | finlancer-agency | INFO | Rotina concluída com sucesso para 2026-05-10
+2026-05-10 14:05:40,014 | finlancer-agency | INFO | === ROTINA DIÁRIA — 2026-05-10_140540 ===
+2026-05-10 14:05:40,172 | finlancer-agency | ERROR | Falha crítica na rotina: name 'VisualRenderer' is not defined
+Traceback (most recent call last):
+  File "/home/ubuntu/agents_marketing/main.py", line 282, in main
+    run_daily_routine(args.date, args.custom, not args.no_review, args.no_images, args.no_drive, args.no_video, args.only, args.skip)
+  File "/home/ubuntu/agents_marketing/main.py", line 68, in run_daily_routine
+    visual_renderer = VisualRenderer()
+                      ^^^^^^^^^^^^^^
+NameError: name 'VisualRenderer' is not defined
+2026-05-10 14:05:49,299 | finlancer-agency | INFO | === ROTINA DIÁRIA — 2026-05-10_140549 ===
+2026-05-10 14:05:49,461 | finlancer-agency | WARNING | PEXELS_API_KEY not found. Pexels image search will be mocked.
+2026-05-10 14:05:49,557 | finlancer-agency | WARNING | GOOGLE_SERVICE_ACCOUNT_JSON not found. Drive operations will be mocked.
+2026-05-10 14:05:49,557 | finlancer-agency | INFO | FASE 1: Planning Meeting
+2026-05-10 14:05:49,675 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 14:06:15,870 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-10 14:06:15,872 | agents.base_agent | INFO | [Finlancer Content Strategist] Resposta gerada (8154 chars)
+2026-05-10 14:06:15,872 | finlancer-agency | INFO | FASE 2: Producao de Conteudo (paralela)
+2026-05-10 14:06:16,238 | finlancer-agency | INFO | Copy Specialist produzindo...
+2026-05-10 14:06:16,238 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 14:06:50,230 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-10 14:06:50,232 | agents.base_agent | INFO | [Finlancer Social Copy Specialist] Resposta gerada (6922 chars)
+2026-05-10 14:06:50,232 | finlancer-agency | INFO | copy concluido
+2026-05-10 14:06:50,233 | finlancer-agency | INFO | Visual Creator produzindo conceito...
+2026-05-10 14:06:50,233 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 14:07:12,786 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-10 14:07:12,788 | agents.base_agent | INFO | [Finlancer Visual Content Creator] Resposta gerada (5563 chars)
+2026-05-10 14:07:12,788 | finlancer-agency | ERROR | Falha ao parsear JSON do Visual Content Creator: Expecting value: line 1 column 1 (char 0). Raw output: ```json
+{
+  "feed_image": {
+    "concept": "Imagem estática para feed, com fundo claro e minimalista. O foco é visualmente representar a dualidade de finanças PF e PJ para quem é CLT + MEI, e a urgência das declarações de maio, com a solução de organização.",
+    "background_prompt": "clean minimalist desk with a laptop, a physical calendar with 'MAY 31' circled or highlighted, two distinct piles of documents (one neat, one slightly messy) representing personal and business finances, subtle offi...
+2026-05-10 14:07:12,788 | finlancer-agency | INFO | visual concluido
+2026-05-10 14:07:12,788 | finlancer-agency | INFO | Video Script Specialist produzindo roteiros...
+2026-05-10 14:07:12,788 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 14:07:33,143 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-10 14:07:33,145 | agents.base_agent | INFO | [Finlancer Video Script Specialist] Resposta gerada (11709 chars)
+2026-05-10 14:07:33,145 | finlancer-agency | INFO | video concluido
+2026-05-10 14:07:33,145 | finlancer-agency | INFO | FASE 3: Revisao do Content Strategist (Gemini)
+2026-05-10 14:07:33,146 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 14:08:04,974 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-10 14:08:04,976 | agents.base_agent | INFO | [Finlancer Content Strategist] Resposta gerada (998 chars)
+2026-05-10 14:08:04,976 | finlancer-agency | INFO | FASE 4: Aprovacao Final — Brand Director
+2026-05-10 14:08:05,092 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 14:08:41,887 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-10 14:08:41,889 | agents.base_agent | INFO | [Finlancer Brand Director] Resposta gerada (5072 chars)
+2026-05-10 14:08:41,889 | finlancer-agency | INFO | Brand Director concluiu revisao
+2026-05-10 14:08:41,889 | finlancer-agency | INFO | FASE 7: Salvando outputs localmente
+2026-05-10 14:08:41,890 | finlancer-agency | INFO | Revisao final salva: output/2026-05-10_140549/REVISAO-FINAL.md
+2026-05-10 14:08:41,891 | finlancer-agency | INFO | 
+============================================================
+2026-05-10 14:08:41,891 | finlancer-agency | INFO | RESUMO DA EXECUÇÃO 2026-05-10_140549
+2026-05-10 14:08:41,891 | finlancer-agency | INFO | ============================================================
+2026-05-10 14:08:41,891 | finlancer-agency | INFO | Revisão Final do Brand Director: STATUS GERAL: APROVADO — Todas as peças estão perfeitamente alinhadas com a persona Carla, o calendário fiscal de maio, o tom de voz da Finlancer e as especificidades de cada plataforma.
+
+CHECKLIST DE...
+2026-05-10 14:08:41,891 | finlancer-agency | INFO | ------------------------------------------------------------
+2026-05-10 14:08:41,891 | finlancer-agency | INFO | Arquivos Locais Salvos:
+2026-05-10 14:08:41,891 | finlancer-agency | INFO |   - visual_concept: output/2026-05-10_140549/visual-conceito/conceito.md
+2026-05-10 14:08:41,891 | finlancer-agency | INFO | ------------------------------------------------------------
+2026-05-10 14:08:41,891 | finlancer-agency | INFO | Google Drive: None
+2026-05-10 14:08:41,891 | finlancer-agency | INFO | ============================================================
+2026-05-10 14:08:41,906 | finlancer-agency | INFO | Rotina concluída com sucesso para 2026-05-10
+2026-05-10 14:08:51,606 | finlancer-agency | INFO | === ROTINA DIÁRIA — 2026-05-10_140851 ===
+2026-05-10 14:08:51,761 | finlancer-agency | WARNING | PEXELS_API_KEY not found. Pexels image search will be mocked.
+2026-05-10 14:08:51,850 | finlancer-agency | WARNING | GOOGLE_SERVICE_ACCOUNT_JSON not found. Drive operations will be mocked.
+2026-05-10 14:08:51,850 | finlancer-agency | INFO | FASE 1: Planning Meeting
+2026-05-10 14:08:51,961 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 14:09:13,531 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-10 14:09:13,533 | agents.base_agent | INFO | [Finlancer Content Strategist] Resposta gerada (7881 chars)
+2026-05-10 14:09:13,533 | finlancer-agency | INFO | FASE 2: Producao de Conteudo (paralela)
+2026-05-10 14:09:13,895 | finlancer-agency | INFO | Copy Specialist produzindo...
+2026-05-10 14:09:13,895 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 14:09:46,095 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-10 14:09:46,097 | agents.base_agent | INFO | [Finlancer Social Copy Specialist] Resposta gerada (8290 chars)
+2026-05-10 14:09:46,097 | finlancer-agency | INFO | copy concluido
+2026-05-10 14:09:46,097 | finlancer-agency | INFO | Visual Creator produzindo conceito...
+2026-05-10 14:09:46,097 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 14:10:01,903 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-10 14:10:01,905 | agents.base_agent | INFO | [Finlancer Visual Content Creator] Resposta gerada (6622 chars)
+2026-05-10 14:10:01,905 | finlancer-agency | INFO | visual concluido
+2026-05-10 14:10:01,905 | finlancer-agency | INFO | Video Script Specialist produzindo roteiros...
+2026-05-10 14:10:01,905 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 14:10:35,629 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-10 14:10:35,630 | agents.base_agent | INFO | [Finlancer Video Script Specialist] Resposta gerada (15263 chars)
+2026-05-10 14:10:35,630 | finlancer-agency | INFO | video concluido
+2026-05-10 14:10:35,630 | finlancer-agency | INFO | FASE 3: Revisao do Content Strategist (Gemini)
+2026-05-10 14:10:35,631 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 14:11:09,887 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-10 14:11:09,888 | agents.base_agent | INFO | [Finlancer Content Strategist] Resposta gerada (2173 chars)
+2026-05-10 14:11:09,888 | finlancer-agency | INFO | FASE 4: Aprovacao Final — Brand Director
+2026-05-10 14:11:10,005 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 14:11:44,034 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-10 14:11:44,036 | agents.base_agent | INFO | [Finlancer Brand Director] Resposta gerada (4869 chars)
+2026-05-10 14:11:44,036 | finlancer-agency | INFO | Brand Director concluiu revisao
+2026-05-10 14:11:44,036 | finlancer-agency | INFO | FASE 7: Salvando outputs localmente
+2026-05-10 14:11:44,039 | finlancer-agency | INFO | Revisao final salva: output/2026-05-10_140851/REVISAO-FINAL.md
+2026-05-10 14:11:44,039 | finlancer-agency | INFO | 
+============================================================
+2026-05-10 14:11:44,039 | finlancer-agency | INFO | RESUMO DA EXECUÇÃO 2026-05-10_140851
+2026-05-10 14:11:44,039 | finlancer-agency | INFO | ============================================================
+2026-05-10 14:11:44,039 | finlancer-agency | INFO | Revisão Final do Brand Director: STATUS GERAL: REVISAR — Uma inconsistência na descrição visual do Carrossel do Instagram foi encontrada e corrigida. As demais peças foram aprovadas.
+
+CHECKLIST DE IA:
+✓ Palavras-robô: Não foram encon...
+2026-05-10 14:11:44,039 | finlancer-agency | INFO | ------------------------------------------------------------
+2026-05-10 14:11:44,039 | finlancer-agency | INFO | Arquivos Locais Salvos:
+2026-05-10 14:11:44,039 | finlancer-agency | INFO |   - visual_concept: output/2026-05-10_140851/visual-conceito/conceito.md
+2026-05-10 14:11:44,039 | finlancer-agency | INFO | ------------------------------------------------------------
+2026-05-10 14:11:44,039 | finlancer-agency | INFO | Google Drive: None
+2026-05-10 14:11:44,040 | finlancer-agency | INFO | ============================================================
+2026-05-10 14:11:44,067 | finlancer-agency | INFO | Rotina concluída com sucesso para 2026-05-10
+2026-05-10 14:13:33,635 | finlancer-agency | INFO | === ROTINA DIÁRIA — 2026-05-10_141333 ===
+2026-05-10 14:13:33,797 | finlancer-agency | WARNING | PEXELS_API_KEY not found. Pexels image search will be mocked.
+2026-05-10 14:13:33,891 | finlancer-agency | WARNING | GOOGLE_SERVICE_ACCOUNT_JSON not found. Drive operations will be mocked.
+2026-05-10 14:13:33,891 | finlancer-agency | INFO | FASE 1: Planning Meeting
+2026-05-10 14:13:34,004 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 14:13:53,966 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-10 14:13:53,969 | agents.base_agent | INFO | [Finlancer Content Strategist] Resposta gerada (8347 chars)
+2026-05-10 14:13:53,969 | finlancer-agency | INFO | FASE 2: Producao de Conteudo (paralela)
+2026-05-10 14:13:54,395 | finlancer-agency | INFO | Copy Specialist produzindo...
+2026-05-10 14:13:54,395 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 14:14:21,369 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-10 14:14:21,371 | agents.base_agent | INFO | [Finlancer Social Copy Specialist] Resposta gerada (8371 chars)
+2026-05-10 14:14:21,371 | finlancer-agency | INFO | copy concluido
+2026-05-10 14:14:21,371 | finlancer-agency | INFO | Visual Creator produzindo conceito...
+2026-05-10 14:14:21,371 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 14:14:45,287 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-10 14:14:45,289 | agents.base_agent | INFO | [Finlancer Visual Content Creator] Resposta gerada (5979 chars)
+2026-05-10 14:14:45,289 | finlancer-agency | INFO | visual concluido
+2026-05-10 14:14:45,289 | finlancer-agency | INFO | Video Script Specialist produzindo roteiros...
+2026-05-10 14:14:45,289 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 14:15:20,429 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-10 14:15:20,431 | agents.base_agent | INFO | [Finlancer Video Script Specialist] Resposta gerada (939 chars)
+2026-05-10 14:15:20,431 | finlancer-agency | INFO | video concluido
+2026-05-10 14:15:20,431 | finlancer-agency | INFO | FASE 3: Revisao do Content Strategist (Gemini)
+2026-05-10 14:15:20,431 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 14:15:53,629 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-10 14:15:53,631 | agents.base_agent | INFO | [Finlancer Content Strategist] Resposta gerada (5904 chars)
+2026-05-10 14:15:53,631 | finlancer-agency | INFO | FASE 4: Aprovacao Final — Brand Director
+2026-05-10 14:15:53,757 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 14:16:26,455 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-10 14:16:26,456 | agents.base_agent | INFO | [Finlancer Brand Director] Resposta gerada (5477 chars)
+2026-05-10 14:16:26,457 | finlancer-agency | INFO | Brand Director concluiu revisao
+2026-05-10 14:16:26,457 | finlancer-agency | INFO | FASE 7: Salvando outputs localmente
+2026-05-10 14:16:26,469 | finlancer-agency | INFO | Revisao final salva: output/2026-05-10_141333/REVISAO-FINAL.md
+2026-05-10 14:16:26,470 | finlancer-agency | INFO | 
+============================================================
+2026-05-10 14:16:26,470 | finlancer-agency | INFO | RESUMO DA EXECUÇÃO 2026-05-10_141333
+2026-05-10 14:16:26,470 | finlancer-agency | INFO | ============================================================
+2026-05-10 14:16:26,470 | finlancer-agency | INFO | Revisão Final do Brand Director: STATUS GERAL: REVISAR — Conteúdo textual aprovado, mas ajustes finos de horários de publicação e identidade visual são necessários para alinhamento total com as diretrizes da marca.
+
+---
+
+CHECKLIST DE...
+2026-05-10 14:16:26,470 | finlancer-agency | INFO | ------------------------------------------------------------
+2026-05-10 14:16:26,470 | finlancer-agency | INFO | Arquivos Locais Salvos:
+2026-05-10 14:16:26,470 | finlancer-agency | INFO |   - visual_concept: output/2026-05-10_141333/visual-conceito/conceito.md
+2026-05-10 14:16:26,470 | finlancer-agency | INFO | ------------------------------------------------------------
+2026-05-10 14:16:26,470 | finlancer-agency | INFO | Google Drive: None
+2026-05-10 14:16:26,470 | finlancer-agency | INFO | ============================================================
+2026-05-10 14:16:26,488 | finlancer-agency | INFO | Rotina concluída com sucesso para 2026-05-10
+2026-05-10 14:18:54,136 | finlancer-agency | INFO | === ROTINA DIÁRIA — 2026-05-10_141854 ===
+2026-05-10 14:18:54,291 | finlancer-agency | WARNING | PEXELS_API_KEY not found. Pexels image search will be mocked.
+2026-05-10 14:18:54,382 | finlancer-agency | WARNING | GOOGLE_SERVICE_ACCOUNT_JSON not found. Drive operations will be mocked.
+2026-05-10 14:18:54,382 | finlancer-agency | INFO | FASE 1: Planning Meeting
+2026-05-10 14:18:54,493 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 14:19:18,978 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-10 14:19:18,982 | agents.base_agent | INFO | [Finlancer Content Strategist] Resposta gerada (6552 chars)
+2026-05-10 14:19:18,983 | finlancer-agency | INFO | FASE 2: Producao de Conteudo (paralela)
+2026-05-10 14:19:19,374 | finlancer-agency | INFO | Copy Specialist produzindo...
+2026-05-10 14:19:19,374 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 14:19:36,312 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-10 14:19:36,313 | agents.base_agent | INFO | [Finlancer Social Copy Specialist] Resposta gerada (7521 chars)
+2026-05-10 14:19:36,313 | finlancer-agency | INFO | copy concluido
+2026-05-10 14:19:36,314 | finlancer-agency | INFO | Visual Creator produzindo conceito...
+2026-05-10 14:19:36,314 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 14:19:56,020 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-10 14:19:56,021 | agents.base_agent | INFO | [Finlancer Visual Content Creator] Resposta gerada (5193 chars)
+2026-05-10 14:19:56,021 | finlancer-agency | INFO | visual concluido
+2026-05-10 14:19:56,021 | finlancer-agency | INFO | Video Script Specialist produzindo roteiros...
+2026-05-10 14:19:56,021 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 14:20:29,921 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-10 14:20:29,923 | agents.base_agent | INFO | [Finlancer Video Script Specialist] Resposta gerada (2779 chars)
+2026-05-10 14:20:29,923 | finlancer-agency | INFO | video concluido
+2026-05-10 14:20:29,923 | finlancer-agency | INFO | FASE 3: Revisao do Content Strategist (Gemini)
+2026-05-10 14:20:29,923 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 14:21:00,913 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-10 14:21:00,914 | agents.base_agent | INFO | [Finlancer Content Strategist] Resposta gerada (4967 chars)
+2026-05-10 14:21:00,914 | finlancer-agency | INFO | FASE 4: Aprovacao Final — Brand Director
+2026-05-10 14:21:01,032 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 14:21:35,038 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-10 14:21:35,040 | agents.base_agent | INFO | [Finlancer Brand Director] Resposta gerada (13722 chars)
+2026-05-10 14:21:35,040 | finlancer-agency | INFO | Brand Director concluiu revisao
+2026-05-10 14:21:35,040 | finlancer-agency | INFO | FASE 7: Salvando outputs localmente
+2026-05-10 14:21:35,042 | finlancer-agency | INFO | Revisao final salva: output/2026-05-10_141854/REVISAO-FINAL.md
+2026-05-10 14:21:35,042 | finlancer-agency | INFO | 
+============================================================
+2026-05-10 14:21:35,042 | finlancer-agency | INFO | RESUMO DA EXECUÇÃO 2026-05-10_141854
+2026-05-10 14:21:35,042 | finlancer-agency | INFO | ============================================================
+2026-05-10 14:21:35,042 | finlancer-agency | INFO | Revisão Final do Brand Director: STATUS GERAL: APROVADO — O conteúdo está perfeitamente alinhado com a persona Carla, o calendário fiscal crítico de maio e os diferenciais do Finlancer, com tom de voz autêntico e CTAs claros.
+
+CHECKL...
+2026-05-10 14:21:35,042 | finlancer-agency | INFO | ------------------------------------------------------------
+2026-05-10 14:21:35,042 | finlancer-agency | INFO | Arquivos Locais Salvos:
+2026-05-10 14:21:35,042 | finlancer-agency | INFO |   - visual_concept: output/2026-05-10_141854/visual-conceito/conceito.md
+2026-05-10 14:21:35,042 | finlancer-agency | INFO | ------------------------------------------------------------
+2026-05-10 14:21:35,042 | finlancer-agency | INFO | Google Drive: None
+2026-05-10 14:21:35,042 | finlancer-agency | INFO | ============================================================
+2026-05-10 14:21:35,056 | finlancer-agency | INFO | Rotina concluída com sucesso para 2026-05-10
+2026-05-10 14:24:48,343 | finlancer-agency | INFO | === ROTINA DIÁRIA — 2026-05-10_142448 ===
+2026-05-10 14:24:48,523 | finlancer-agency | WARNING | PEXELS_API_KEY not found. Pexels image search will be mocked.
+2026-05-10 14:24:48,622 | finlancer-agency | WARNING | GOOGLE_SERVICE_ACCOUNT_JSON not found. Drive operations will be mocked.
+2026-05-10 14:24:48,622 | finlancer-agency | INFO | FASE 1: Planning Meeting
+2026-05-10 14:24:48,737 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 14:25:10,358 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-10 14:25:10,360 | agents.base_agent | INFO | [Finlancer Content Strategist] Resposta gerada (5962 chars)
+2026-05-10 14:25:10,360 | finlancer-agency | INFO | FASE 2: Producao de Conteudo (paralela)
+2026-05-10 14:25:10,360 | finlancer-agency | ERROR | Falha crítica na rotina: BaseAgent.__init__() missing 1 required positional argument: 'agent_key'
+Traceback (most recent call last):
+  File "/home/ubuntu/agents_marketing/main.py", line 296, in main
+    run_daily_routine(args.date, args.custom, not args.no_review, args.no_images, args.no_drive, args.no_video, args.only, args.skip)
+  File "/home/ubuntu/agents_marketing/main.py", line 88, in run_daily_routine
+    copy_agent = SocialCopySpecialist()
+                 ^^^^^^^^^^^^^^^^^^^^^^
+TypeError: BaseAgent.__init__() missing 1 required positional argument: 'agent_key'
+2026-05-10 14:25:32,019 | finlancer-agency | INFO | === ROTINA DIÁRIA — 2026-05-10_142532 ===
+2026-05-10 14:25:32,175 | finlancer-agency | WARNING | PEXELS_API_KEY not found. Pexels image search will be mocked.
+2026-05-10 14:25:32,266 | finlancer-agency | WARNING | GOOGLE_SERVICE_ACCOUNT_JSON not found. Drive operations will be mocked.
+2026-05-10 14:25:32,267 | finlancer-agency | INFO | FASE 1: Planning Meeting
+2026-05-10 14:25:32,378 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 14:26:00,610 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-10 14:26:00,612 | agents.base_agent | INFO | [Finlancer Content Strategist] Resposta gerada (7920 chars)
+2026-05-10 14:26:00,612 | finlancer-agency | INFO | FASE 2: Producao de Conteudo (paralela)
+2026-05-10 14:26:00,966 | finlancer-agency | INFO | Copy Specialist produzindo...
+2026-05-10 14:26:00,966 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 14:26:29,257 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-10 14:26:29,258 | agents.base_agent | INFO | [Finlancer Social Copy Specialist] Resposta gerada (11505 chars)
+2026-05-10 14:26:29,258 | finlancer-agency | INFO | copy concluido
+2026-05-10 14:26:29,258 | finlancer-agency | INFO | Visual Creator produzindo conceito...
+2026-05-10 14:26:29,259 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 14:26:59,975 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-10 14:26:59,976 | agents.base_agent | INFO | [Finlancer Visual Content Creator] Resposta gerada (3986 chars)
+2026-05-10 14:26:59,976 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 14:27:32,821 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-10 14:27:32,823 | agents.base_agent | INFO | [Finlancer Visual Content Creator] Resposta gerada (9677 chars)
+2026-05-10 14:27:32,823 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 14:27:54,758 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-10 14:27:54,759 | agents.base_agent | INFO | [Finlancer Visual Content Creator] Resposta gerada (1945 chars)
+2026-05-10 14:27:54,760 | finlancer-agency | INFO | visual concluido
+2026-05-10 14:27:54,760 | finlancer-agency | INFO | Video Script Specialist produzindo roteiros...
+2026-05-10 14:27:54,760 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 14:28:13,165 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-10 14:28:13,167 | agents.base_agent | INFO | [Finlancer Video Script Specialist] Resposta gerada (6976 chars)
+2026-05-10 14:28:13,167 | finlancer-agency | INFO | video concluido
+2026-05-10 14:28:13,167 | finlancer-agency | INFO | FASE 3: Revisao do Content Strategist (Gemini)
+2026-05-10 14:28:13,168 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 14:28:48,282 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-10 14:28:48,284 | agents.base_agent | INFO | [Finlancer Content Strategist] Resposta gerada (1008 chars)
+2026-05-10 14:28:48,284 | finlancer-agency | INFO | FASE 4: Aprovacao Final — Brand Director
+2026-05-10 14:28:48,402 | google_genai.models | INFO | AFC is enabled with max remote calls: 10.
+2026-05-10 14:29:20,659 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-10 14:29:20,661 | agents.base_agent | INFO | [Finlancer Brand Director] Resposta gerada (10883 chars)
+2026-05-10 14:29:20,661 | finlancer-agency | INFO | Brand Director concluiu revisao
+2026-05-10 14:29:20,661 | finlancer-agency | INFO | FASE 7: Salvando outputs localmente
+2026-05-10 14:29:20,665 | finlancer-agency | INFO | Revisao final salva: output/2026-05-10_142532/REVISAO-FINAL.md
+2026-05-10 14:29:20,665 | finlancer-agency | INFO | 
+============================================================
+2026-05-10 14:29:20,665 | finlancer-agency | INFO | RESUMO DA EXECUÇÃO 2026-05-10_142532
+2026-05-10 14:29:20,665 | finlancer-agency | INFO | ============================================================
+2026-05-10 14:29:20,665 | finlancer-agency | INFO | Revisão Final do Brand Director: STATUS GERAL: APROVADO — Todas as peças estão alinhadas com a persona Carla, o calendário fiscal crítico de maio e a identidade de marca Finlancer, com CTAs claros e tom de voz autêntico.
+
+---
+
+CHECKL...
+2026-05-10 14:29:20,665 | finlancer-agency | INFO | ------------------------------------------------------------
+2026-05-10 14:29:20,665 | finlancer-agency | INFO | Arquivos Locais Salvos:
+2026-05-10 14:29:20,665 | finlancer-agency | INFO |   - instagram_legenda: output/2026-05-10_142532/instagram/legendas.md
+2026-05-10 14:29:20,665 | finlancer-agency | INFO |   - instagram_carrossel_textos: output/2026-05-10_142532/instagram/carrossel_textos.md
+2026-05-10 14:29:20,665 | finlancer-agency | INFO |   - instagram_engagement: output/2026-05-10_142532/instagram/engagement_dicas.md
+2026-05-10 14:29:20,665 | finlancer-agency | INFO |   - tiktok_legenda: output/2026-05-10_142532/tiktok/legenda_video.md
+2026-05-10 14:29:20,665 | finlancer-agency | INFO |   - tiktok_engagement: output/2026-05-10_142532/tiktok/engagement_dicas.md
+2026-05-10 14:29:20,665 | finlancer-agency | INFO |   - tiktok_video_ideia: output/2026-05-10_142532/tiktok/video_ideia.md
+2026-05-10 14:29:20,665 | finlancer-agency | INFO |   - youtube_legenda: output/2026-05-10_142532/youtube/titulo_descricao.md
+2026-05-10 14:29:20,665 | finlancer-agency | INFO |   - youtube_engagement: output/2026-05-10_142532/youtube/engagement_dicas.md
+2026-05-10 14:29:20,665 | finlancer-agency | INFO |   - facebook_legenda: output/2026-05-10_142532/facebook/legenda_video.md
+2026-05-10 14:29:20,665 | finlancer-agency | INFO |   - facebook_storytelling: output/2026-05-10_142532/facebook/storytelling.md
+2026-05-10 14:29:20,665 | finlancer-agency | INFO |   - facebook_engagement: output/2026-05-10_142532/facebook/engagement_dicas.md
+2026-05-10 14:29:20,665 | finlancer-agency | INFO |   - video_master: output/2026-05-10_142532/03_ugc_video/01_briefing_geral.md
+2026-05-10 14:29:20,665 | finlancer-agency | INFO |   - briefing_producao: output/2026-05-10_142532/03_ugc_video/02_diretrizes_producao.md
+2026-05-10 14:29:20,665 | finlancer-agency | INFO |   - cenas_detalhadas: output/2026-05-10_142532/03_ugc_video/03_roteiro_cenas.md
+2026-05-10 14:29:20,665 | finlancer-agency | INFO |   - overlay_plataforma: output/2026-05-10_142532/03_ugc_video/05_textos_overlay.md
+2026-05-10 14:29:20,665 | finlancer-agency | INFO |   - trilha_sonora: output/2026-05-10_142532/03_ugc_video/06_trilha_sonora.md
+2026-05-10 14:29:20,665 | finlancer-agency | INFO |   - visual_concept: output/2026-05-10_142532/visual-conceito/conceito.md
+2026-05-10 14:29:20,665 | finlancer-agency | INFO | ------------------------------------------------------------
+2026-05-10 14:29:20,665 | finlancer-agency | INFO | Google Drive: None
+2026-05-10 14:29:20,665 | finlancer-agency | INFO | ============================================================
+2026-05-10 14:29:20,678 | finlancer-agency | INFO | Rotina concluída com sucesso para 2026-05-10
