@@ -141,15 +141,19 @@ def run_daily_routine(date_str=None, custom_theme=None, use_review=True, no_imag
         try:
 
 
-            feed_image_data = visual_output.get("feed_image", {})
-            if feed_image_data.get("overlay_text") and feed_image_data.get("background_prompt"):
+            feed_image_data = visual_output.get("feed_image") or visual_output.get("feed", {})
+            feed_title = feed_image_data.get("overlay_text") or feed_image_data.get("title")
+            feed_background_prompt = feed_image_data.get("background_prompt") or feed_image_data.get("visual_hint")
+            if feed_title and feed_background_prompt:
                 image_outputs["feed_image_path"] = visual_renderer.create_feed_image(
-                    title=feed_image_data["overlay_text"],
-                    illustration_prompt=feed_image_data["background_prompt"],
+                    title=feed_title,
+                    illustration_prompt=feed_background_prompt,
                     style="Light Mode Finlancer",
                     output_path=output_manager.base_dir / run_id / "01_feed" / "feed_estatico.png"
                 )
                 time.sleep(7)
+            else:
+                logger.warning("Dados insuficientes para gerar feed_estatico.png. Esperado title/overlay_text e visual_hint/background_prompt.")
 
             carousel_data = visual_output.get("carousel", {})
             carousel_slides = carousel_data.get("slides", [])
