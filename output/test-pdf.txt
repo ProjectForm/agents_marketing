@@ -1,0 +1,12 @@
+# Teste PDF
+
+Conteudo com acentuacao: a e c.
+
+## Secao com acento
+
+- Item 1 com texto normal
+- Item 2 **negrito** aqui
+
+### Subsecao
+
+Paragrafo normal com financas PF e PJ.

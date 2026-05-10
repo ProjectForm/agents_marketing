@@ -1,0 +1,169 @@
+# Cronograma de Publicação — Finlancer Marketing Agency
+# Baseado em análise de melhores horários para o público MEI/freelancer brasileiro
+
+schedule:
+  timezone: "America/Sao_Paulo"
+
+  # Produção diária (dias úteis)
+  daily_production:
+    planning_meeting:
+      time: "08:00"
+      agents: ["brand_director", "content_strategist"]
+      tasks:
+        - "Revisar trending topics do nicho"
+        - "Verificar datas sazonais do dia/semana"
+        - "Emitir briefing para agentes de produção"
+
+    content_production:
+      time: "09:00"
+      agents: ["social_copy_specialist", "visual_content_creator", "video_script_specialist"]
+      deliverables:
+        social_copy:
+          - "4 legendas Instagram (2 reels, 1 carrossel, 1 feed)"
+          - "1 post Facebook storytelling"
+          - "Variação de legenda para TikTok"
+        visual_content:
+          - "1 carrossel (wireframe + textos, 5-10 slides)"
+          - "1 conceito feed estático"
+          - "Prompts para Canva AI / DALL-E"
+        video_scripts:
+          - "2 roteiros Reels (1 OBRIGATORIAMENTE UGC)"
+          - "Variação para TikTok se houver"
+
+    specialist_review:
+      time: "11:00"
+      agents: ["content_strategist"]
+      tasks:
+        - "Revisar outputs de todos os agentes"
+        - "Verificar coerência entre copy, visual e vídeo"
+        - "Devolver com feedback se necessário"
+
+    final_approval:
+      time: "12:00"
+      agents: ["brand_director"]
+      tasks:
+        - "Validar alinhamento de marca"
+        - "Aprovar ou solicitar ajustes"
+        - "Organizar outputs por plataforma"
+
+  # Planejamento semanal (toda segunda-feira)
+  weekly_planning:
+    day: "monday"
+    time: "08:00"
+    agents: ["brand_director", "content_strategist", "visual_content_creator"]
+    tasks:
+      - "Gerar calendário editorial completo da semana"
+      - "Definir tema semanal e pilares por dia"
+      - "Criar paleta visual da semana (se houver variação sazonal)"
+      - "Identificar datas comemorativas da semana"
+      - "Distribuir briefings para agentes"
+
+  # Planejamento mensal (primeiro dia útil)
+  monthly_planning:
+    day: "first_business_day"
+    time: "09:00"
+    agents: ["brand_director", "content_strategist"]
+    tasks:
+      - "Análise de tendências do mês anterior"
+      - "Mapeamento de datas sazonais do mês"
+      - "Definição de campanhas especiais"
+      - "Ajuste de estratégia de conteúdo"
+      - "Meta de output do mês"
+
+# Horários de publicação (para agendamento no Reportei ou Buffer)
+# Baseado em dados de melhor engajamento para o nicho MEI/freelancer brasileiro
+
+posting_times:
+  instagram:
+    feed:
+      - day: "tuesday"
+        time: "12:00"
+        reason: "Pico de engajamento na hora do almoço"
+      - day: "thursday"
+        time: "19:00"
+        reason: "Pós-trabalho, público mais disponível"
+      - day: "saturday"
+        time: "10:00"
+        reason: "Manhã de fim de semana, horário livre"
+
+    carrossel:
+      - day: "monday"
+        time: "08:30"
+        reason: "Segunda de manhã, planejamento da semana"
+      - day: "wednesday"
+        time: "12:30"
+        reason: "Quarta, pico de meio de semana"
+      - day: "friday"
+        time: "17:00"
+        reason: "Final de expediente, mais reflexivo"
+
+    reels:
+      primary: "19:00"   # Maior alcance
+      secondary: "12:00" # Almoço
+      days: ["monday", "tuesday", "wednesday", "thursday", "friday"]
+
+  tiktok:
+    best_times:
+      - "12:00"  # Almoço
+      - "18:00"  # Saída do trabalho
+      - "21:00"  # Noite
+    days: ["tuesday", "thursday", "saturday"]
+
+  facebook:
+    best_times:
+      - "09:00"  # Manhã de trabalho
+      - "13:00"  # Depois do almoço
+    days: ["monday", "wednesday", "friday"]
+
+  youtube_shorts:
+    best_times:
+      - "10:00"
+      - "18:00"
+    days: ["tuesday", "friday"]
+
+# Meta semanal de conteúdo
+weekly_targets:
+  instagram_legendas: 15     # 3 por dia útil
+  carrosseis: 3              # 1 por segunda, quarta e sexta
+  reels_roteiros: 5          # 1 por dia útil (2 em dias de alta produção)
+  facebook_posts: 5          # 1 por dia útil
+  youtube_ideias: 1          # 1 por semana
+  tiktok_roteiros: 5         # 1 por dia útil
+
+# Distribuição de pilares de conteúdo (orientação, não regra rígida)
+content_pillars_guide:
+  educacional:
+    target_percentage: 40
+    formats: ["carrossel", "reel_educacional", "facebook_post"]
+    themes: ["DAS", "IRPF", "gestao_financeira", "diferencas_PF_PJ"]
+
+  engajamento:
+    target_percentage: 30
+    formats: ["feed_estatico", "stories", "reel_relatable"]
+    themes: ["enquetes", "casos_reais", "relatable_content"]
+
+  promocional:
+    target_percentage: 30
+    formats: ["reel_ugc", "feed_cta", "facebook_ads_organic"]
+    themes: ["features_finlancer", "cases_sucesso", "cta_cadastro"]
+
+# Datas fiscais recorrentes (para automação de lembretes)
+recurring_fiscal_dates:
+  das_vencimento:
+    day_of_month: 20
+    content_reminder_days_before: 7
+    content_type: "educacional_urgencia_suave"
+    message_template: "O DAS vence em {days} dias — você está preparado?"
+
+  mei_anual:
+    month: 1
+    deadline_month: 5
+    deadline_day: 31
+    content_start_month: 1
+    message_template: "Janeiro chegou: hora de pensar na declaração MEI anual"
+
+  irpf:
+    start_month: 3
+    end_month: 5
+    content_from_month: 2
+    message_template: "IRPF {year}: o que o MEI precisa saber"

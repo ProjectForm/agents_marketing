@@ -1,0 +1,144 @@
+2026-05-01 19:31:00,314 | finlancer-agency | INFO | === ROTINA DI�RIA � 2026-05-01 ===
+2026-05-01 19:31:00,314 | finlancer-agency | ERROR | ANTHROPIC_API_KEY n�o encontrada. Configure no arquivo .env
+2026-05-01 19:32:40,152 | finlancer-agency | INFO | === ROTINA DI�RIA � 2026-05-01 ===
+2026-05-01 19:32:40,792 | finlancer-agency | INFO | Tema customizado: erros comuns do MEI no primeiro ano
+2026-05-01 19:32:41,707 | httpx | INFO | HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-01 19:32:41,709 | agents.base_agent | WARNING | [Finlancer Brand Director] Tentativa 1 falhou: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CaceGnHRrRtqbecf9zgp2'}
+2026-05-01 19:32:43,923 | httpx | INFO | HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-01 19:32:43,924 | agents.base_agent | WARNING | [Finlancer Brand Director] Tentativa 2 falhou: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CaceGwse1fHasW63SckfV'}
+2026-05-01 19:32:48,188 | httpx | INFO | HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-01 19:32:48,188 | agents.base_agent | WARNING | [Finlancer Brand Director] Tentativa 3 falhou: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CaceHG4mX6hjjXwefavGD'}
+2026-05-01 19:36:03,288 | finlancer-agency | INFO | === ROTINA DI�RIA � 2026-05-01 ===
+2026-05-01 19:36:03,808 | finlancer-agency | INFO | Tema customizado: erros comuns do MEI no primeiro ano
+2026-05-01 19:37:20,885 | httpx | INFO | HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-01 19:37:20,926 | agents.base_agent | INFO | [Finlancer Brand Director] Resposta gerada (11477 chars)
+2026-05-01 19:38:27,657 | httpx | INFO | HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-01 19:38:27,658 | agents.base_agent | INFO | [Finlancer Social Copy Specialist] Resposta gerada (9247 chars)
+2026-05-01 19:38:37,780 | httpx | INFO | HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-01 19:38:37,781 | agents.base_agent | INFO | [Finlancer Visual Content Creator] Resposta gerada (15917 chars)
+2026-05-01 19:39:11,749 | httpx | INFO | HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-01 19:39:11,751 | agents.base_agent | INFO | [Finlancer Video Script Specialist] Resposta gerada (14789 chars)
+2026-05-01 19:40:06,457 | httpx | INFO | HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-01 19:40:06,459 | agents.base_agent | INFO | [Finlancer Visual Content Creator] Resposta gerada (15809 chars)
+2026-05-01 19:41:20,598 | httpx | INFO | HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-01 19:41:20,600 | agents.base_agent | INFO | [Finlancer Content Strategist] Resposta gerada (11160 chars)
+2026-05-01 19:42:36,880 | httpx | INFO | HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-01 19:42:36,881 | agents.base_agent | INFO | [Finlancer Brand Director] Resposta gerada (11889 chars)
+2026-05-01 19:42:36,881 | finlancer-agency | INFO | Brand Director concluiu revis�o
+2026-05-01 19:42:36,887 | tools.output_manager | INFO | Salvo [instagram_captions]: C:\Users\Juan\Downloads\Finlancer\C�digo\fin-liberta\finlancer-marketing-agency\output\2026-05-01\instagram\legendas.md
+2026-05-01 19:42:36,889 | tools.output_manager | INFO | Salvo [instagram_carousel]: C:\Users\Juan\Downloads\Finlancer\C�digo\fin-liberta\finlancer-marketing-agency\output\2026-05-01\instagram\carrossel-conceito.md
+2026-05-01 19:42:36,892 | tools.output_manager | INFO | Salvo [instagram_reels]: C:\Users\Juan\Downloads\Finlancer\C�digo\fin-liberta\finlancer-marketing-agency\output\2026-05-01\instagram\reels-roteiros.md
+2026-05-01 19:42:36,895 | tools.output_manager | INFO | Salvo [visual_concept]: C:\Users\Juan\Downloads\Finlancer\C�digo\fin-liberta\finlancer-marketing-agency\output\2026-05-01\instagram\visual-conceito.md
+2026-05-01 19:42:36,897 | tools.output_manager | INFO | Salvo [facebook_post]: C:\Users\Juan\Downloads\Finlancer\C�digo\fin-liberta\finlancer-marketing-agency\output\2026-05-01\facebook\post-storytelling.md
+2026-05-01 19:42:36,900 | tools.output_manager | INFO | Salvo [tiktok_script]: C:\Users\Juan\Downloads\Finlancer\C�digo\fin-liberta\finlancer-marketing-agency\output\2026-05-01\tiktok\roteiro-video.md
+2026-05-01 19:42:36,902 | tools.output_manager | INFO | Salvo [youtube_idea]: C:\Users\Juan\Downloads\Finlancer\C�digo\fin-liberta\finlancer-marketing-agency\output\2026-05-01\youtube\ideia-video.md
+2026-05-01 20:49:43,335 | finlancer-agency | INFO | === ROTINA DIÁRIA — 2026-05-01 ===
+2026-05-01 20:49:43,875 | finlancer-agency | INFO | FASE 1: Planning Meeting
+2026-05-01 20:49:45,319 | httpx | INFO | HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+2026-05-01 20:49:45,323 | agents.base_agent | WARNING | [Finlancer Brand Director] Tentativa 1 falhou: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cack9c1YhHSwLvtDBHP9d'}
+2026-05-01 20:49:47,497 | httpx | INFO | HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+2026-05-01 20:49:47,499 | agents.base_agent | WARNING | [Finlancer Brand Director] Tentativa 2 falhou: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cack9mYHWuPkRmerxc7kB'}
+2026-05-01 20:49:51,748 | httpx | INFO | HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+2026-05-01 20:49:51,749 | agents.base_agent | WARNING | [Finlancer Brand Director] Tentativa 3 falhou: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CackA5WmjgSTzeer2hSnf'}
+2026-05-01 21:01:26,721 | finlancer-agency | INFO | === ROTINA DIÁRIA — 2026-05-01 ===
+2026-05-01 21:01:26,722 | finlancer-agency | ERROR | ANTHROPIC_API_KEY não encontrada. Configure no arquivo .env
+2026-05-01 21:04:26,460 | finlancer-agency | INFO | === ROTINA DIÁRIA — 2026-05-01 ===
+2026-05-01 21:04:26,461 | finlancer-agency | ERROR | ANTHROPIC_API_KEY não encontrada. Configure no arquivo .env
+2026-05-01 21:25:07,176 | finlancer-agency | INFO | === ROTINA DIÁRIA — 2026-05-01 ===
+2026-05-01 21:25:07,177 | finlancer-agency | ERROR | ANTHROPIC_API_KEY não encontrada. Configure no arquivo .env
+2026-05-01 21:26:44,025 | finlancer-agency | INFO | === ROTINA DIÁRIA — 2026-05-01 ===
+2026-05-01 21:26:44,659 | finlancer-agency | INFO | FASE 1: Planning Meeting
+2026-05-01 21:26:45,564 | httpx | INFO | HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+2026-05-01 21:26:45,567 | agents.base_agent | WARNING | [Finlancer Brand Director] Tentativa 1 falhou: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'Invalid authentication credentials'}, 'request_id': 'req_011CacnyGd4MFLwk83vbKXzU'}
+2026-05-01 21:26:47,735 | httpx | INFO | HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+2026-05-01 21:26:47,741 | agents.base_agent | WARNING | [Finlancer Brand Director] Tentativa 2 falhou: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'Invalid authentication credentials'}, 'request_id': 'req_011CacnyRz7qGQnbv3eXAkmf'}
+2026-05-01 21:26:51,946 | httpx | INFO | HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+2026-05-01 21:26:51,947 | agents.base_agent | WARNING | [Finlancer Brand Director] Tentativa 3 falhou: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'Invalid authentication credentials'}, 'request_id': 'req_011CacnyjudRk5GbmaUd9uzP'}
+2026-05-01 21:38:47,231 | finlancer-agency | INFO | === ROTINA DIÁRIA — 2026-05-01 ===
+2026-05-01 21:38:47,762 | finlancer-agency | INFO | FASE 1: Planning Meeting
+2026-05-01 21:39:28,585 | httpx | INFO | HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-01 21:39:28,624 | agents.base_agent | INFO | [Finlancer Brand Director] Resposta gerada (5519 chars)
+2026-05-01 21:39:28,624 | finlancer-agency | INFO | Tema customizado: erros comuns do MEI no primeiro ano
+2026-05-01 21:39:28,624 | finlancer-agency | INFO | Briefing do dia gerado
+2026-05-01 21:39:28,625 | finlancer-agency | INFO | FASE 2: Producao de Conteudo (paralela)
+2026-05-01 21:39:28,627 | finlancer-agency | INFO | Copy Specialist produzindo...
+2026-05-01 21:39:28,627 | finlancer-agency | INFO | Visual Creator produzindo conceito...
+2026-05-01 21:39:28,629 | finlancer-agency | INFO | Video Script Specialist produzindo roteiros...
+2026-05-01 21:40:03,973 | httpx | INFO | HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-01 21:40:03,974 | agents.base_agent | INFO | [Finlancer Visual Content Creator] Resposta gerada (6697 chars)
+2026-05-01 21:40:12,619 | httpx | INFO | HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-01 21:40:12,620 | agents.base_agent | INFO | [Finlancer Video Script Specialist] Resposta gerada (6310 chars)
+2026-05-01 21:40:12,621 | finlancer-agency | INFO | video concluido
+2026-05-01 21:40:14,181 | httpx | INFO | HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-01 21:40:14,182 | agents.base_agent | INFO | [Finlancer Social Copy Specialist] Resposta gerada (6905 chars)
+2026-05-01 21:40:14,182 | finlancer-agency | INFO | copy concluido
+2026-05-01 21:40:38,182 | httpx | INFO | HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-01 21:40:38,183 | agents.base_agent | INFO | [Finlancer Visual Content Creator] Resposta gerada (5858 chars)
+2026-05-01 21:40:38,184 | finlancer-agency | INFO | visual concluido
+2026-05-01 21:40:38,185 | finlancer-agency | INFO | FASE 3: Revisao do Content Strategist (Haiku)
+2026-05-01 21:40:39,670 | finlancer-agency | INFO | FASE 2b: Geracao de Midia (Imagen 2 + Veo 3)
+2026-05-01 21:40:40,486 | tools.google_ai_client | INFO | Google AI client inicializado.
+2026-05-01 21:40:40,486 | finlancer-agency | INFO | Gerando imagens com Imagen 2...
+2026-05-01 21:40:40,488 | finlancer-agency | INFO | Gerando persona UGC com Imagen 2...
+2026-05-01 21:40:40,820 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/imagen-2.0-002:predict "HTTP/1.1 404 Not Found"
+2026-05-01 21:40:40,821 | agents.image_generator | ERROR | Erro ao gerar persona UGC: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/imagen-2.0-002 is not found for API version v1beta, or is not supported for predict. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}
+2026-05-01 21:40:40,821 | finlancer-agency | INFO | Gerando 5 clipes UGC com Veo 3 (isso leva alguns minutos)...
+2026-05-01 21:40:40,836 | agents.ugc_video_generator | WARNING | Sem imagem de referência — vídeos sem consistência de personagem.
+2026-05-01 21:40:40,836 | agents.ugc_video_generator | INFO | Claude gerando prompts Veo 3...
+2026-05-01 21:40:55,170 | httpx | INFO | HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-01 21:40:55,171 | agents.base_agent | INFO | [Finlancer Visual Content Creator] Resposta gerada (2509 chars)
+2026-05-01 21:40:55,486 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/imagen-2.0-002:predict "HTTP/1.1 404 Not Found"
+2026-05-01 21:40:55,487 | agents.image_generator | ERROR | Erro ao gerar slide 1: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/imagen-2.0-002 is not found for API version v1beta, or is not supported for predict. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}
+2026-05-01 21:40:55,715 | httpx | INFO | HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-01 21:40:55,716 | agents.base_agent | INFO | [Finlancer UGC Video Generator] Resposta gerada (2806 chars)
+2026-05-01 21:40:55,716 | agents.ugc_video_generator | INFO | Submetendo clipe 1/5 (GANCHO) ao Veo 3...
+2026-05-01 21:40:55,717 | agents.ugc_video_generator | WARNING | Veo 3 falhou no submit (module 'google.genai.types' has no attribute 'GenerateVideoConfig'). Tentando Veo 2...
+2026-05-01 21:40:55,717 | agents.ugc_video_generator | INFO | Submetendo clipe 2/5 (DEV 1) ao Veo 3...
+2026-05-01 21:40:55,717 | agents.ugc_video_generator | INFO | Submetendo clipe 3/5 (DEV 2) ao Veo 3...
+2026-05-01 21:40:55,717 | agents.ugc_video_generator | ERROR | Veo 2 também falhou: module 'google.genai.types' has no attribute 'GenerateVideoConfig'
+2026-05-01 21:40:55,717 | agents.ugc_video_generator | WARNING | Veo 3 falhou no submit (module 'google.genai.types' has no attribute 'GenerateVideoConfig'). Tentando Veo 2...
+2026-05-01 21:40:55,718 | agents.ugc_video_generator | INFO | Submetendo clipe 4/5 (DEV 3) ao Veo 3...
+2026-05-01 21:40:55,718 | agents.ugc_video_generator | WARNING | Veo 3 falhou no submit (module 'google.genai.types' has no attribute 'GenerateVideoConfig'). Tentando Veo 2...
+2026-05-01 21:40:55,718 | agents.ugc_video_generator | INFO | Submetendo clipe 5/5 (CTA) ao Veo 3...
+2026-05-01 21:40:55,718 | agents.ugc_video_generator | ERROR | Veo 2 também falhou: module 'google.genai.types' has no attribute 'GenerateVideoConfig'
+2026-05-01 21:40:55,718 | agents.ugc_video_generator | WARNING | Veo 3 falhou no submit (module 'google.genai.types' has no attribute 'GenerateVideoConfig'). Tentando Veo 2...
+2026-05-01 21:40:55,718 | agents.ugc_video_generator | ERROR | Veo 2 também falhou: module 'google.genai.types' has no attribute 'GenerateVideoConfig'
+2026-05-01 21:40:55,719 | agents.ugc_video_generator | WARNING | Veo 3 falhou no submit (module 'google.genai.types' has no attribute 'GenerateVideoConfig'). Tentando Veo 2...
+2026-05-01 21:40:55,719 | agents.ugc_video_generator | ERROR | Veo 2 também falhou: module 'google.genai.types' has no attribute 'GenerateVideoConfig'
+2026-05-01 21:40:55,719 | agents.ugc_video_generator | ERROR | Veo 2 também falhou: module 'google.genai.types' has no attribute 'GenerateVideoConfig'
+2026-05-01 21:40:55,720 | agents.ugc_video_generator | INFO | UGC concluído: 0/5 clipes gerados.
+2026-05-01 21:40:56,153 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/imagen-2.0-002:predict "HTTP/1.1 404 Not Found"
+2026-05-01 21:40:56,154 | agents.image_generator | ERROR | Erro ao gerar slide 2: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/imagen-2.0-002 is not found for API version v1beta, or is not supported for predict. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}
+2026-05-01 21:40:56,388 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/imagen-2.0-002:predict "HTTP/1.1 404 Not Found"
+2026-05-01 21:40:56,389 | agents.image_generator | ERROR | Erro ao gerar slide 3: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/imagen-2.0-002 is not found for API version v1beta, or is not supported for predict. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}
+2026-05-01 21:40:57,065 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/imagen-2.0-002:predict "HTTP/1.1 404 Not Found"
+2026-05-01 21:40:57,065 | agents.image_generator | ERROR | Erro ao gerar slide 4: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/imagen-2.0-002 is not found for API version v1beta, or is not supported for predict. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}
+2026-05-01 21:40:57,297 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/imagen-2.0-002:predict "HTTP/1.1 404 Not Found"
+2026-05-01 21:40:57,299 | agents.image_generator | ERROR | Erro ao gerar slide 5: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/imagen-2.0-002 is not found for API version v1beta, or is not supported for predict. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}
+2026-05-01 21:40:57,987 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/imagen-2.0-002:predict "HTTP/1.1 404 Not Found"
+2026-05-01 21:40:57,988 | agents.image_generator | ERROR | Erro ao gerar slide 6: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/imagen-2.0-002 is not found for API version v1beta, or is not supported for predict. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}
+2026-05-01 21:40:58,214 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/imagen-2.0-002:predict "HTTP/1.1 404 Not Found"
+2026-05-01 21:40:58,214 | agents.image_generator | ERROR | Erro ao gerar slide 7: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/imagen-2.0-002 is not found for API version v1beta, or is not supported for predict. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}
+2026-05-01 21:40:58,888 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/imagen-2.0-002:predict "HTTP/1.1 404 Not Found"
+2026-05-01 21:40:58,889 | agents.image_generator | ERROR | Erro ao gerar slide 8: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/imagen-2.0-002 is not found for API version v1beta, or is not supported for predict. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}
+2026-05-01 21:40:58,890 | finlancer-agency | INFO | Slides gerados: 0/8
+2026-05-01 21:41:01,324 | httpx | INFO | HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-01 21:41:01,325 | agents.base_agent | INFO | [Finlancer Content Strategist] Resposta gerada (5362 chars)
+2026-05-01 21:41:02,289 | httpx | INFO | HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-01 21:41:02,290 | agents.base_agent | INFO | [Finlancer Visual Content Creator] Resposta gerada (337 chars)
+2026-05-01 21:41:02,506 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/imagen-2.0-002:predict "HTTP/1.1 404 Not Found"
+2026-05-01 21:41:02,507 | agents.image_generator | ERROR | Erro ao gerar imagem de feed: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/imagen-2.0-002 is not found for API version v1beta, or is not supported for predict. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}
+2026-05-01 21:41:02,508 | finlancer-agency | INFO | FASE 4: Aprovacao Final — Brand Director (Haiku)
+2026-05-01 21:41:25,958 | httpx | INFO | HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-01 21:41:25,959 | agents.base_agent | INFO | [Finlancer Brand Director] Resposta gerada (5696 chars)
+2026-05-01 21:41:25,959 | finlancer-agency | INFO | Brand Director concluiu revisao
+2026-05-01 21:41:25,959 | finlancer-agency | INFO | FASE 5: Salvando outputs
+2026-05-01 21:41:25,964 | tools.output_manager | INFO | Salvo [instagram_captions]: C:\Users\Juan\Downloads\Finlancer\Código\fin-liberta\finlancer-marketing-agency\output\2026-05-01\instagram\legendas.md
+2026-05-01 21:41:25,967 | tools.output_manager | INFO | Salvo [instagram_carousel]: C:\Users\Juan\Downloads\Finlancer\Código\fin-liberta\finlancer-marketing-agency\output\2026-05-01\instagram\carrossel-conceito.md
+2026-05-01 21:41:25,971 | tools.output_manager | INFO | Salvo [instagram_reels]: C:\Users\Juan\Downloads\Finlancer\Código\fin-liberta\finlancer-marketing-agency\output\2026-05-01\instagram\reels-roteiros.md
+2026-05-01 21:41:25,974 | tools.output_manager | INFO | Salvo [visual_concept]: C:\Users\Juan\Downloads\Finlancer\Código\fin-liberta\finlancer-marketing-agency\output\2026-05-01\instagram\visual-conceito.md
+2026-05-01 21:41:25,977 | tools.output_manager | INFO | Salvo [facebook_post]: C:\Users\Juan\Downloads\Finlancer\Código\fin-liberta\finlancer-marketing-agency\output\2026-05-01\facebook\post-storytelling.md
+2026-05-01 21:41:25,981 | tools.output_manager | INFO | Salvo [tiktok_script]: C:\Users\Juan\Downloads\Finlancer\Código\fin-liberta\finlancer-marketing-agency\output\2026-05-01\tiktok\roteiro-video.md
+2026-05-01 21:41:25,984 | tools.output_manager | INFO | Salvo [youtube_idea]: C:\Users\Juan\Downloads\Finlancer\Código\fin-liberta\finlancer-marketing-agency\output\2026-05-01\youtube\ideia-video.md
+2026-05-01 21:41:25,987 | tools.output_manager | INFO | Narração UGC salva: C:\Users\Juan\Downloads\Finlancer\Código\fin-liberta\finlancer-marketing-agency\output\2026-05-01\videos\ugc\narracao-edicao.md
+2026-05-01 21:41:25,992 | tools.output_manager | INFO | Índice de mídia salvo: C:\Users\Juan\Downloads\Finlancer\Código\fin-liberta\finlancer-marketing-agency\output\2026-05-01\MIDIA-INDEX.md

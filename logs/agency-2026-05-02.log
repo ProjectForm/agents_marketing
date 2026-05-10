@@ -1,0 +1,297 @@
+2026-05-02 10:56:57,858 | finlancer-agency | INFO | === ROTINA DIÁRIA — 2026-05-02 ===
+2026-05-02 10:56:58,490 | finlancer-agency | INFO | FASE 1: Planning Meeting
+2026-05-02 10:57:38,930 | httpx | INFO | HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-02 10:57:38,963 | agents.base_agent | INFO | [Finlancer Brand Director] Resposta gerada (5653 chars)
+2026-05-02 10:57:38,964 | finlancer-agency | INFO | Briefing do dia gerado
+2026-05-02 10:57:38,965 | finlancer-agency | INFO | FASE 2: Producao de Conteudo (paralela)
+2026-05-02 10:57:38,966 | finlancer-agency | INFO | Copy Specialist produzindo...
+2026-05-02 10:57:38,966 | finlancer-agency | INFO | Visual Creator produzindo conceito...
+2026-05-02 10:57:38,968 | finlancer-agency | INFO | Video Script Specialist produzindo roteiros...
+2026-05-02 10:58:11,770 | httpx | INFO | HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-02 10:58:11,771 | agents.base_agent | INFO | [Finlancer Visual Content Creator] Resposta gerada (6284 chars)
+2026-05-02 10:58:12,032 | httpx | INFO | HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2026-05-02 10:58:12,033 | anthropic._base_client | INFO | Retrying request to /v1/messages in 25.000000 seconds
+2026-05-02 10:58:21,563 | httpx | INFO | HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-02 10:58:21,566 | agents.base_agent | INFO | [Finlancer Social Copy Specialist] Resposta gerada (6014 chars)
+2026-05-02 10:58:21,566 | finlancer-agency | INFO | copy concluido
+2026-05-02 10:58:27,704 | httpx | INFO | HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-02 10:58:27,706 | agents.base_agent | INFO | [Finlancer Video Script Specialist] Resposta gerada (6846 chars)
+2026-05-02 10:58:27,706 | finlancer-agency | INFO | video concluido
+2026-05-02 10:59:12,249 | httpx | INFO | HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-02 10:59:12,251 | agents.base_agent | INFO | [Finlancer Visual Content Creator] Resposta gerada (7207 chars)
+2026-05-02 10:59:12,251 | finlancer-agency | INFO | visual concluido
+2026-05-02 10:59:12,252 | finlancer-agency | INFO | Geracao de midia pulada (--no-media)
+2026-05-02 10:59:12,252 | finlancer-agency | INFO | FASE 3: Revisao do Content Strategist (Haiku)
+2026-05-02 10:59:33,688 | httpx | INFO | HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-02 10:59:33,689 | agents.base_agent | INFO | [Finlancer Content Strategist] Resposta gerada (5194 chars)
+2026-05-02 10:59:33,689 | finlancer-agency | INFO | FASE 4: Aprovacao Final — Brand Director
+2026-05-02 10:59:33,690 | finlancer-agency | INFO | FASE 4b: Revisao textual final (Haiku)
+2026-05-02 10:59:55,234 | httpx | INFO | HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-02 10:59:55,235 | agents.base_agent | INFO | [Finlancer Brand Director] Resposta gerada (5334 chars)
+2026-05-02 10:59:55,235 | finlancer-agency | INFO | Brand Director concluiu revisao
+2026-05-02 10:59:55,235 | finlancer-agency | INFO | FASE 5: Salvando outputs
+2026-05-02 10:59:55,242 | tools.output_manager | INFO | Salvo [instagram_captions]: C:\Users\Juan\Downloads\Finlancer\Código\fin-liberta\finlancer-marketing-agency\output\2026-05-02\instagram\legendas.md
+2026-05-02 10:59:55,245 | tools.output_manager | INFO | Salvo [instagram_carousel]: C:\Users\Juan\Downloads\Finlancer\Código\fin-liberta\finlancer-marketing-agency\output\2026-05-02\instagram\carrossel-conceito.md
+2026-05-02 10:59:55,249 | tools.output_manager | INFO | Salvo [instagram_reels]: C:\Users\Juan\Downloads\Finlancer\Código\fin-liberta\finlancer-marketing-agency\output\2026-05-02\instagram\reels-roteiros.md
+2026-05-02 10:59:55,252 | tools.output_manager | INFO | Salvo [visual_concept]: C:\Users\Juan\Downloads\Finlancer\Código\fin-liberta\finlancer-marketing-agency\output\2026-05-02\instagram\visual-conceito.md
+2026-05-02 10:59:55,257 | tools.output_manager | INFO | Salvo [facebook_post]: C:\Users\Juan\Downloads\Finlancer\Código\fin-liberta\finlancer-marketing-agency\output\2026-05-02\facebook\post-storytelling.md
+2026-05-02 10:59:55,260 | tools.output_manager | INFO | Salvo [tiktok_script]: C:\Users\Juan\Downloads\Finlancer\Código\fin-liberta\finlancer-marketing-agency\output\2026-05-02\tiktok\roteiro-video.md
+2026-05-02 10:59:55,264 | tools.output_manager | INFO | Salvo [youtube_idea]: C:\Users\Juan\Downloads\Finlancer\Código\fin-liberta\finlancer-marketing-agency\output\2026-05-02\youtube\ideia-video.md
+2026-05-02 12:50:17,904 | finlancer-agency | INFO | === ROTINA DIÁRIA — 2026-05-02_125017 ===
+2026-05-02 12:50:18,459 | finlancer-agency | INFO | FASE 1: Planning Meeting
+2026-05-02 12:51:19,572 | httpx | INFO | HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-02 12:51:19,607 | agents.base_agent | INFO | [Finlancer Brand Director] Resposta gerada (7992 chars)
+2026-05-02 12:51:19,607 | finlancer-agency | INFO | Briefing do dia gerado
+2026-05-02 12:51:19,608 | finlancer-agency | INFO | FASE 2: Producao de Conteudo (paralela)
+2026-05-02 12:51:19,609 | finlancer-agency | INFO | Copy Specialist produzindo...
+2026-05-02 12:51:19,612 | finlancer-agency | INFO | Visual Creator produzindo conceito...
+2026-05-02 12:51:19,612 | finlancer-agency | INFO | Video Script Specialist produzindo roteiros...
+2026-05-02 12:52:17,920 | httpx | INFO | HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-02 12:52:17,922 | agents.base_agent | INFO | [Finlancer Visual Content Creator] Resposta gerada (9900 chars)
+2026-05-02 12:52:18,119 | httpx | INFO | HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-02 12:52:18,121 | agents.base_agent | INFO | [Finlancer Video Script Specialist] Resposta gerada (9294 chars)
+2026-05-02 12:52:18,121 | finlancer-agency | INFO | video concluido
+2026-05-02 12:52:48,576 | httpx | INFO | HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-02 12:52:48,578 | agents.base_agent | INFO | [Finlancer Social Copy Specialist] Resposta gerada (13642 chars)
+2026-05-02 12:52:48,578 | finlancer-agency | INFO | copy concluido
+2026-05-02 12:53:10,460 | httpx | INFO | HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-02 12:53:10,462 | agents.base_agent | INFO | [Finlancer Visual Content Creator] Resposta gerada (10944 chars)
+2026-05-02 12:53:10,462 | finlancer-agency | INFO | visual concluido
+2026-05-02 12:53:10,463 | finlancer-agency | INFO | FASE 3: Revisao do Content Strategist (Haiku)
+2026-05-02 12:53:12,097 | finlancer-agency | INFO | FASE 2b: Geracao de Midia (Imagen 2 + Veo 3)
+2026-05-02 12:53:12,919 | tools.google_ai_client | INFO | Google AI client inicializado.
+2026-05-02 12:53:12,920 | finlancer-agency | INFO | Gerando imagens com Imagen 2...
+2026-05-02 12:53:12,923 | finlancer-agency | INFO | Selecionando imagem de referencia da pasta 'Reference UGC'...
+2026-05-02 12:53:17,438 | httpx | INFO | HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-02 12:53:17,440 | agents.brand_director | INFO | Seleção de referência: SELECIONADA: 1 — Rosto nítido, boca aberta em ato de fala, formato vertical 9:16, mãos fora do quadro, fundo simples e iluminação uniforme sem sombras pesadas.
+2026-05-02 12:53:17,440 | agents.brand_director | INFO | Imagem de referência selecionada: Screenshot_1.png
+2026-05-02 12:53:17,441 | finlancer-agency | INFO | Referencia UGC selecionada: Screenshot_1.png
+2026-05-02 12:53:17,441 | finlancer-agency | INFO | Iniciando geracao de clipes Veo 3 (referencia: Screenshot_1.png)...
+2026-05-02 12:53:17,461 | agents.ugc_video_generator | INFO | Imagem de referência carregada: Screenshot_1.png
+2026-05-02 12:53:17,461 | agents.ugc_video_generator | INFO | Claude gerando prompts Veo 3...
+2026-05-02 12:53:27,897 | httpx | INFO | HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-02 12:53:27,898 | agents.base_agent | INFO | [Finlancer Visual Content Creator] Resposta gerada (2883 chars)
+2026-05-02 12:53:28,958 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/imagen-4.0-fast-generate-001:predict "HTTP/1.1 400 Bad Request"
+2026-05-02 12:53:28,959 | agents.image_generator | ERROR | Erro ao gerar slide 1: 400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Only block_low_and_above is supported for safetySetting.', 'status': 'INVALID_ARGUMENT'}}
+2026-05-02 12:53:29,192 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/imagen-4.0-fast-generate-001:predict "HTTP/1.1 400 Bad Request"
+2026-05-02 12:53:29,193 | agents.image_generator | ERROR | Erro ao gerar slide 2: 400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Only block_low_and_above is supported for safetySetting.', 'status': 'INVALID_ARGUMENT'}}
+2026-05-02 12:53:29,867 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/imagen-4.0-fast-generate-001:predict "HTTP/1.1 400 Bad Request"
+2026-05-02 12:53:29,867 | agents.image_generator | ERROR | Erro ao gerar slide 3: 400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Only block_low_and_above is supported for safetySetting.', 'status': 'INVALID_ARGUMENT'}}
+2026-05-02 12:53:30,106 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/imagen-4.0-fast-generate-001:predict "HTTP/1.1 400 Bad Request"
+2026-05-02 12:53:30,106 | agents.image_generator | ERROR | Erro ao gerar slide 4: 400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Only block_low_and_above is supported for safetySetting.', 'status': 'INVALID_ARGUMENT'}}
+2026-05-02 12:53:30,774 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/imagen-4.0-fast-generate-001:predict "HTTP/1.1 400 Bad Request"
+2026-05-02 12:53:30,776 | agents.image_generator | ERROR | Erro ao gerar slide 5: 400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Only block_low_and_above is supported for safetySetting.', 'status': 'INVALID_ARGUMENT'}}
+2026-05-02 12:53:31,016 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/imagen-4.0-fast-generate-001:predict "HTTP/1.1 400 Bad Request"
+2026-05-02 12:53:31,017 | agents.image_generator | ERROR | Erro ao gerar slide 6: 400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Only block_low_and_above is supported for safetySetting.', 'status': 'INVALID_ARGUMENT'}}
+2026-05-02 12:53:31,691 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/imagen-4.0-fast-generate-001:predict "HTTP/1.1 400 Bad Request"
+2026-05-02 12:53:31,692 | agents.image_generator | ERROR | Erro ao gerar slide 7: 400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Only block_low_and_above is supported for safetySetting.', 'status': 'INVALID_ARGUMENT'}}
+2026-05-02 12:53:31,695 | httpx | INFO | HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-02 12:53:31,696 | agents.base_agent | INFO | [Finlancer UGC Video Generator] Resposta gerada (2543 chars)
+2026-05-02 12:53:31,697 | agents.ugc_video_generator | WARNING | Clipe 1 submit com veo-3.0-generate-001 falhou: module 'google.genai.types' has no attribute 'GenerateVideoConfig'
+2026-05-02 12:53:31,697 | agents.ugc_video_generator | WARNING | Clipe 1 submit com veo-2.0-generate-001 falhou: module 'google.genai.types' has no attribute 'GenerateVideoConfig'
+2026-05-02 12:53:31,697 | agents.ugc_video_generator | ERROR | Clipe 1: nenhum modelo aceitou o submit.
+2026-05-02 12:53:31,698 | agents.ugc_video_generator | WARNING | Clipe 2 submit com veo-3.0-generate-001 falhou: module 'google.genai.types' has no attribute 'GenerateVideoConfig'
+2026-05-02 12:53:31,698 | agents.ugc_video_generator | WARNING | Clipe 3 submit com veo-3.0-generate-001 falhou: module 'google.genai.types' has no attribute 'GenerateVideoConfig'
+2026-05-02 12:53:31,700 | agents.ugc_video_generator | INFO | Clipe 1 — retry 1 com prompt simplificado
+2026-05-02 12:53:31,701 | agents.ugc_video_generator | WARNING | Clipe 4 submit com veo-3.0-generate-001 falhou: module 'google.genai.types' has no attribute 'GenerateVideoConfig'
+2026-05-02 12:53:31,701 | agents.ugc_video_generator | WARNING | Clipe 2 submit com veo-2.0-generate-001 falhou: module 'google.genai.types' has no attribute 'GenerateVideoConfig'
+2026-05-02 12:53:31,701 | agents.ugc_video_generator | WARNING | Clipe 5 submit com veo-3.0-generate-001 falhou: module 'google.genai.types' has no attribute 'GenerateVideoConfig'
+2026-05-02 12:53:31,701 | agents.ugc_video_generator | WARNING | Clipe 3 submit com veo-2.0-generate-001 falhou: module 'google.genai.types' has no attribute 'GenerateVideoConfig'
+2026-05-02 12:53:31,701 | agents.ugc_video_generator | WARNING | Clipe 1 submit com veo-3.0-generate-001 falhou: module 'google.genai.types' has no attribute 'GenerateVideoConfig'
+2026-05-02 12:53:31,702 | agents.ugc_video_generator | WARNING | Clipe 4 submit com veo-2.0-generate-001 falhou: module 'google.genai.types' has no attribute 'GenerateVideoConfig'
+2026-05-02 12:53:31,702 | agents.ugc_video_generator | ERROR | Clipe 2: nenhum modelo aceitou o submit.
+2026-05-02 12:53:31,702 | agents.ugc_video_generator | WARNING | Clipe 5 submit com veo-2.0-generate-001 falhou: module 'google.genai.types' has no attribute 'GenerateVideoConfig'
+2026-05-02 12:53:31,702 | agents.ugc_video_generator | ERROR | Clipe 3: nenhum modelo aceitou o submit.
+2026-05-02 12:53:31,702 | agents.ugc_video_generator | WARNING | Clipe 1 submit com veo-2.0-generate-001 falhou: module 'google.genai.types' has no attribute 'GenerateVideoConfig'
+2026-05-02 12:53:31,702 | agents.ugc_video_generator | ERROR | Clipe 4: nenhum modelo aceitou o submit.
+2026-05-02 12:53:31,703 | agents.ugc_video_generator | INFO | Clipe 2 — retry 1 com prompt simplificado
+2026-05-02 12:53:31,703 | agents.ugc_video_generator | ERROR | Clipe 5: nenhum modelo aceitou o submit.
+2026-05-02 12:53:31,704 | agents.ugc_video_generator | INFO | Clipe 3 — retry 1 com prompt simplificado
+2026-05-02 12:53:31,704 | agents.ugc_video_generator | ERROR | Clipe 1: nenhum modelo aceitou o submit.
+2026-05-02 12:53:31,705 | agents.ugc_video_generator | INFO | Clipe 4 — retry 1 com prompt simplificado
+2026-05-02 12:53:31,706 | agents.ugc_video_generator | WARNING | Clipe 2 submit com veo-3.0-generate-001 falhou: module 'google.genai.types' has no attribute 'GenerateVideoConfig'
+2026-05-02 12:53:31,706 | agents.ugc_video_generator | INFO | Clipe 5 — retry 1 com prompt simplificado
+2026-05-02 12:53:31,706 | agents.ugc_video_generator | WARNING | Clipe 3 submit com veo-3.0-generate-001 falhou: module 'google.genai.types' has no attribute 'GenerateVideoConfig'
+2026-05-02 12:53:31,707 | agents.ugc_video_generator | INFO | Clipe 1 — retry 2 com prompt simplificado
+2026-05-02 12:53:31,707 | agents.ugc_video_generator | WARNING | Clipe 4 submit com veo-3.0-generate-001 falhou: module 'google.genai.types' has no attribute 'GenerateVideoConfig'
+2026-05-02 12:53:31,707 | agents.ugc_video_generator | WARNING | Clipe 2 submit com veo-2.0-generate-001 falhou: module 'google.genai.types' has no attribute 'GenerateVideoConfig'
+2026-05-02 12:53:31,707 | agents.ugc_video_generator | WARNING | Clipe 5 submit com veo-3.0-generate-001 falhou: module 'google.genai.types' has no attribute 'GenerateVideoConfig'
+2026-05-02 12:53:31,707 | agents.ugc_video_generator | WARNING | Clipe 3 submit com veo-2.0-generate-001 falhou: module 'google.genai.types' has no attribute 'GenerateVideoConfig'
+2026-05-02 12:53:31,707 | agents.ugc_video_generator | WARNING | Clipe 1 submit com veo-3.0-generate-001 falhou: module 'google.genai.types' has no attribute 'GenerateVideoConfig'
+2026-05-02 12:53:31,708 | agents.ugc_video_generator | WARNING | Clipe 4 submit com veo-2.0-generate-001 falhou: module 'google.genai.types' has no attribute 'GenerateVideoConfig'
+2026-05-02 12:53:31,708 | agents.ugc_video_generator | ERROR | Clipe 2: nenhum modelo aceitou o submit.
+2026-05-02 12:53:31,708 | agents.ugc_video_generator | WARNING | Clipe 5 submit com veo-2.0-generate-001 falhou: module 'google.genai.types' has no attribute 'GenerateVideoConfig'
+2026-05-02 12:53:31,708 | agents.ugc_video_generator | ERROR | Clipe 3: nenhum modelo aceitou o submit.
+2026-05-02 12:53:31,708 | agents.ugc_video_generator | WARNING | Clipe 1 submit com veo-2.0-generate-001 falhou: module 'google.genai.types' has no attribute 'GenerateVideoConfig'
+2026-05-02 12:53:31,708 | agents.ugc_video_generator | ERROR | Clipe 4: nenhum modelo aceitou o submit.
+2026-05-02 12:53:31,708 | agents.ugc_video_generator | INFO | Clipe 2 — retry 2 com prompt simplificado
+2026-05-02 12:53:31,709 | agents.ugc_video_generator | ERROR | Clipe 5: nenhum modelo aceitou o submit.
+2026-05-02 12:53:31,709 | agents.ugc_video_generator | INFO | Clipe 3 — retry 2 com prompt simplificado
+2026-05-02 12:53:31,709 | agents.ugc_video_generator | ERROR | Clipe 1: nenhum modelo aceitou o submit.
+2026-05-02 12:53:31,709 | agents.ugc_video_generator | INFO | Clipe 4 — retry 2 com prompt simplificado
+2026-05-02 12:53:31,709 | agents.ugc_video_generator | WARNING | Clipe 2 submit com veo-3.0-generate-001 falhou: module 'google.genai.types' has no attribute 'GenerateVideoConfig'
+2026-05-02 12:53:31,709 | agents.ugc_video_generator | INFO | Clipe 5 — retry 2 com prompt simplificado
+2026-05-02 12:53:31,710 | agents.ugc_video_generator | WARNING | Clipe 3 submit com veo-3.0-generate-001 falhou: module 'google.genai.types' has no attribute 'GenerateVideoConfig'
+2026-05-02 12:53:31,710 | agents.ugc_video_generator | WARNING | Clipe 4 submit com veo-3.0-generate-001 falhou: module 'google.genai.types' has no attribute 'GenerateVideoConfig'
+2026-05-02 12:53:31,710 | agents.ugc_video_generator | WARNING | Clipe 2 submit com veo-2.0-generate-001 falhou: module 'google.genai.types' has no attribute 'GenerateVideoConfig'
+2026-05-02 12:53:31,710 | agents.ugc_video_generator | WARNING | Clipe 5 submit com veo-3.0-generate-001 falhou: module 'google.genai.types' has no attribute 'GenerateVideoConfig'
+2026-05-02 12:53:31,710 | agents.ugc_video_generator | WARNING | Clipe 3 submit com veo-2.0-generate-001 falhou: module 'google.genai.types' has no attribute 'GenerateVideoConfig'
+2026-05-02 12:53:31,710 | agents.ugc_video_generator | WARNING | Clipe 4 submit com veo-2.0-generate-001 falhou: module 'google.genai.types' has no attribute 'GenerateVideoConfig'
+2026-05-02 12:53:31,711 | agents.ugc_video_generator | ERROR | Clipe 2: nenhum modelo aceitou o submit.
+2026-05-02 12:53:31,711 | agents.ugc_video_generator | WARNING | Clipe 5 submit com veo-2.0-generate-001 falhou: module 'google.genai.types' has no attribute 'GenerateVideoConfig'
+2026-05-02 12:53:31,711 | agents.ugc_video_generator | ERROR | Clipe 3: nenhum modelo aceitou o submit.
+2026-05-02 12:53:31,711 | agents.ugc_video_generator | ERROR | Clipe 4: nenhum modelo aceitou o submit.
+2026-05-02 12:53:31,711 | agents.ugc_video_generator | ERROR | Clipe 5: nenhum modelo aceitou o submit.
+2026-05-02 12:53:31,712 | agents.ugc_video_generator | INFO | UGC concluído: 0/5 clipes gerados.
+2026-05-02 12:53:31,929 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/imagen-4.0-fast-generate-001:predict "HTTP/1.1 400 Bad Request"
+2026-05-02 12:53:31,930 | agents.image_generator | ERROR | Erro ao gerar slide 8: 400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Only block_low_and_above is supported for safetySetting.', 'status': 'INVALID_ARGUMENT'}}
+2026-05-02 12:53:31,930 | finlancer-agency | INFO | Slides gerados: 0/8
+2026-05-02 12:53:32,286 | httpx | INFO | HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-02 12:53:32,287 | agents.base_agent | INFO | [Finlancer Content Strategist] Resposta gerada (4672 chars)
+2026-05-02 12:53:35,499 | httpx | INFO | HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-02 12:53:35,500 | agents.base_agent | INFO | [Finlancer Visual Content Creator] Resposta gerada (466 chars)
+2026-05-02 12:53:35,736 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/imagen-4.0-fast-generate-001:predict "HTTP/1.1 400 Bad Request"
+2026-05-02 12:53:35,737 | agents.image_generator | ERROR | Erro ao gerar imagem de feed: 400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Only block_low_and_above is supported for safetySetting.', 'status': 'INVALID_ARGUMENT'}}
+2026-05-02 12:53:35,738 | finlancer-agency | INFO | FASE 4: Aprovacao Final — Brand Director
+2026-05-02 12:53:35,738 | finlancer-agency | INFO | FASE 4b: Revisao textual final (Haiku)
+2026-05-02 12:54:05,592 | httpx | INFO | HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-02 12:54:05,594 | agents.base_agent | INFO | [Finlancer Brand Director] Resposta gerada (7677 chars)
+2026-05-02 12:54:05,594 | finlancer-agency | INFO | Brand Director concluiu revisao
+2026-05-02 12:54:05,594 | finlancer-agency | INFO | FASE 5: Salvando outputs
+2026-05-02 12:54:05,602 | tools.output_manager | INFO | Salvo [instagram_legenda]: C:\Users\Juan\Downloads\Finlancer\Código\fin-liberta\finlancer-marketing-agency\output\2026-05-02_125017\instagram\legenda-reel.md
+2026-05-02 12:54:05,606 | tools.output_manager | INFO | Salvo [instagram_carrossel_textos]: C:\Users\Juan\Downloads\Finlancer\Código\fin-liberta\finlancer-marketing-agency\output\2026-05-02_125017\instagram\carrossel-textos.md
+2026-05-02 12:54:05,610 | tools.output_manager | INFO | Salvo [instagram_engagement]: C:\Users\Juan\Downloads\Finlancer\Código\fin-liberta\finlancer-marketing-agency\output\2026-05-02_125017\instagram\engagement-dicas.md
+2026-05-02 12:54:05,613 | tools.output_manager | INFO | Salvo [tiktok_legenda]: C:\Users\Juan\Downloads\Finlancer\Código\fin-liberta\finlancer-marketing-agency\output\2026-05-02_125017\tiktok\legenda-video.md
+2026-05-02 12:54:05,617 | tools.output_manager | INFO | Salvo [tiktok_engagement]: C:\Users\Juan\Downloads\Finlancer\Código\fin-liberta\finlancer-marketing-agency\output\2026-05-02_125017\tiktok\engagement-dicas.md
+2026-05-02 12:54:05,621 | tools.output_manager | INFO | Salvo [youtube_legenda]: C:\Users\Juan\Downloads\Finlancer\Código\fin-liberta\finlancer-marketing-agency\output\2026-05-02_125017\youtube\titulo-descricao.md
+2026-05-02 12:54:05,625 | tools.output_manager | INFO | Salvo [youtube_engagement]: C:\Users\Juan\Downloads\Finlancer\Código\fin-liberta\finlancer-marketing-agency\output\2026-05-02_125017\youtube\engagement-dicas.md
+2026-05-02 12:54:05,628 | tools.output_manager | INFO | Salvo [facebook_legenda]: C:\Users\Juan\Downloads\Finlancer\Código\fin-liberta\finlancer-marketing-agency\output\2026-05-02_125017\facebook\legenda-video.md
+2026-05-02 12:54:05,632 | tools.output_manager | INFO | Salvo [facebook_storytelling]: C:\Users\Juan\Downloads\Finlancer\Código\fin-liberta\finlancer-marketing-agency\output\2026-05-02_125017\facebook\storytelling.md
+2026-05-02 12:54:05,635 | tools.output_manager | INFO | Salvo [video_master]: C:\Users\Juan\Downloads\Finlancer\Código\fin-liberta\finlancer-marketing-agency\output\2026-05-02_125017\video-criativo\producao-roteiro.md
+2026-05-02 12:54:05,639 | tools.output_manager | INFO | Salvo [visual_concept]: C:\Users\Juan\Downloads\Finlancer\Código\fin-liberta\finlancer-marketing-agency\output\2026-05-02_125017\instagram\visual-conceito.md
+2026-05-02 12:54:05,642 | tools.output_manager | INFO | Narração UGC salva: C:\Users\Juan\Downloads\Finlancer\Código\fin-liberta\finlancer-marketing-agency\output\2026-05-02_125017\videos\ugc\narracao-edicao.md
+2026-05-02 12:54:05,646 | tools.output_manager | INFO | Índice de mídia salvo: C:\Users\Juan\Downloads\Finlancer\Código\fin-liberta\finlancer-marketing-agency\output\2026-05-02_125017\MIDIA-INDEX.md
+2026-05-02 14:30:30,858 | finlancer-agency | INFO | === ROTINA DIÁRIA — 2026-05-02_143030 ===
+2026-05-02 14:30:31,534 | finlancer-agency | INFO | FASE 1: Planning Meeting
+2026-05-02 14:31:34,022 | httpx | INFO | HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-02 14:31:34,055 | agents.base_agent | INFO | [Finlancer Brand Director] Resposta gerada (8639 chars)
+2026-05-02 14:31:34,055 | finlancer-agency | INFO | Briefing do dia gerado
+2026-05-02 14:31:34,056 | finlancer-agency | INFO | FASE 2: Producao de Conteudo (paralela)
+2026-05-02 14:31:34,057 | finlancer-agency | INFO | Copy Specialist produzindo...
+2026-05-02 14:31:34,057 | finlancer-agency | INFO | Visual Creator produzindo conceito...
+2026-05-02 14:31:34,060 | finlancer-agency | INFO | Video Script Specialist produzindo roteiros...
+2026-05-02 14:32:23,555 | httpx | INFO | HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-02 14:32:23,557 | agents.base_agent | INFO | [Finlancer Visual Content Creator] Resposta gerada (9997 chars)
+2026-05-02 14:32:23,817 | httpx | INFO | HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2026-05-02 14:32:23,819 | anthropic._base_client | INFO | Retrying request to /v1/messages in 28.000000 seconds
+2026-05-02 14:32:34,727 | httpx | INFO | HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-02 14:32:34,728 | agents.base_agent | INFO | [Finlancer Video Script Specialist] Resposta gerada (9155 chars)
+2026-05-02 14:32:34,728 | finlancer-agency | INFO | video concluido
+2026-05-02 14:33:16,271 | httpx | INFO | HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-02 14:33:16,273 | agents.base_agent | INFO | [Finlancer Social Copy Specialist] Resposta gerada (14241 chars)
+2026-05-02 14:33:16,273 | finlancer-agency | INFO | copy concluido
+2026-05-02 14:33:48,284 | httpx | INFO | HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-02 14:33:48,286 | agents.base_agent | INFO | [Finlancer Visual Content Creator] Resposta gerada (11550 chars)
+2026-05-02 14:33:48,286 | finlancer-agency | INFO | visual concluido
+2026-05-02 14:33:48,287 | finlancer-agency | INFO | FASE 3: Revisao pulada (--no-review)
+2026-05-02 14:33:49,522 | finlancer-agency | INFO | FASE 2b: Geracao de Midia (Imagen 2 + Veo 3)
+2026-05-02 14:33:50,355 | tools.google_ai_client | INFO | Google AI client inicializado.
+2026-05-02 14:33:50,355 | finlancer-agency | INFO | Gerando imagens com Imagen 2...
+2026-05-02 14:33:50,358 | finlancer-agency | INFO | Selecionando imagem de referencia da pasta 'Reference UGC'...
+2026-05-02 14:33:55,601 | httpx | INFO | HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-02 14:33:55,602 | agents.brand_director | INFO | Seleção de referência: SELECIONADA: 1 — Rosto nítido, boca aberta em postura de fala, formato vertical 9:16, mãos fora do quadro, iluminação uniforme e fundo simples desfocado, sem telas em destaque.
+2026-05-02 14:33:55,603 | agents.brand_director | INFO | Imagem de referência selecionada: Screenshot_1.png
+2026-05-02 14:33:55,603 | finlancer-agency | INFO | Referencia UGC selecionada: Screenshot_1.png
+2026-05-02 14:33:55,603 | finlancer-agency | INFO | Iniciando geracao de clipes Veo 3 (referencia: Screenshot_1.png)...
+2026-05-02 14:33:55,625 | agents.ugc_video_generator | INFO | Imagem de referência carregada: Screenshot_1.png
+2026-05-02 14:33:55,625 | agents.ugc_video_generator | INFO | Claude gerando prompts Veo 3...
+2026-05-02 14:34:03,731 | httpx | INFO | HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-02 14:34:03,732 | agents.base_agent | INFO | [Finlancer Visual Content Creator] Resposta gerada (2594 chars)
+2026-05-02 14:34:07,638 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/imagen-4.0-fast-generate-001:predict "HTTP/1.1 200 OK"
+2026-05-02 14:34:08,632 | httpx | INFO | HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-02 14:34:08,633 | agents.base_agent | INFO | [Finlancer UGC Video Generator] Resposta gerada (2428 chars)
+2026-05-02 14:34:08,703 | agents.image_generator | INFO | Imagem salva: C:\Users\Juan\Downloads\Finlancer\Código\fin-liberta\finlancer-marketing-agency\output\2026-05-02_143030\instagram\slides\slide-01.png
+2026-05-02 14:34:09,788 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/veo-3.0-generate-001:predictLongRunning "HTTP/1.1 400 Bad Request"
+2026-05-02 14:34:09,790 | agents.ugc_video_generator | WARNING | Clipe 1 submit com veo-3.0-generate-001 falhou: 400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'The number value for `durationSeconds` is out of bound. Please provide a value between 4 and 8, inclusive.', 'status': 'INVALID_ARGUMENT'}}
+2026-05-02 14:34:09,814 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/veo-3.0-generate-001:predictLongRunning "HTTP/1.1 400 Bad Request"
+2026-05-02 14:34:09,816 | agents.ugc_video_generator | WARNING | Clipe 2 submit com veo-3.0-generate-001 falhou: 400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'The number value for `durationSeconds` is out of bound. Please provide a value between 4 and 8, inclusive.', 'status': 'INVALID_ARGUMENT'}}
+2026-05-02 14:34:10,437 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/veo-3.0-generate-001:predictLongRunning "HTTP/1.1 400 Bad Request"
+2026-05-02 14:34:10,439 | agents.ugc_video_generator | WARNING | Clipe 3 submit com veo-3.0-generate-001 falhou: 400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'The number value for `durationSeconds` is out of bound. Please provide a value between 4 and 8, inclusive.', 'status': 'INVALID_ARGUMENT'}}
+2026-05-02 14:34:10,455 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/veo-3.0-generate-001:predictLongRunning "HTTP/1.1 400 Bad Request"
+2026-05-02 14:34:10,456 | agents.ugc_video_generator | WARNING | Clipe 4 submit com veo-3.0-generate-001 falhou: 400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'The number value for `durationSeconds` is out of bound. Please provide a value between 4 and 8, inclusive.', 'status': 'INVALID_ARGUMENT'}}
+2026-05-02 14:34:11,087 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/veo-3.0-generate-001:predictLongRunning "HTTP/1.1 200 OK"
+2026-05-02 14:34:11,089 | agents.ugc_video_generator | INFO | Clipe 5/5 (CTA) submetido — aguardando Veo...
+2026-05-02 14:34:11,546 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/veo-2.0-generate-001:predictLongRunning "HTTP/1.1 200 OK"
+2026-05-02 14:34:11,548 | agents.ugc_video_generator | INFO | Clipe 2/5 (DEV 1) submetido — aguardando Veo...
+2026-05-02 14:34:11,550 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/veo-2.0-generate-001:predictLongRunning "HTTP/1.1 200 OK"
+2026-05-02 14:34:11,553 | agents.ugc_video_generator | INFO | Clipe 1/5 (GANCHO) submetido — aguardando Veo...
+2026-05-02 14:34:11,673 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/veo-2.0-generate-001:predictLongRunning "HTTP/1.1 429 Too Many Requests"
+2026-05-02 14:34:11,675 | agents.ugc_video_generator | WARNING | Clipe 4 submit com veo-2.0-generate-001 falhou: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. ', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}]}}
+2026-05-02 14:34:11,675 | agents.ugc_video_generator | ERROR | Clipe 4: nenhum modelo aceitou o submit.
+2026-05-02 14:34:11,676 | agents.ugc_video_generator | INFO | Clipe 4 — retry 1 com prompt simplificado
+2026-05-02 14:34:12,198 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/veo-2.0-generate-001:predictLongRunning "HTTP/1.1 200 OK"
+2026-05-02 14:34:12,200 | agents.ugc_video_generator | INFO | Clipe 3/5 (DEV 2) submetido — aguardando Veo...
+2026-05-02 14:34:12,212 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/imagen-4.0-fast-generate-001:predict "HTTP/1.1 200 OK"
+2026-05-02 14:34:12,723 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/veo-3.0-generate-001:predictLongRunning "HTTP/1.1 400 Bad Request"
+2026-05-02 14:34:12,725 | agents.ugc_video_generator | WARNING | Clipe 4 submit com veo-3.0-generate-001 falhou: 400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'The number value for `durationSeconds` is out of bound. Please provide a value between 4 and 8, inclusive.', 'status': 'INVALID_ARGUMENT'}}
+2026-05-02 14:34:13,168 | agents.image_generator | INFO | Imagem salva: C:\Users\Juan\Downloads\Finlancer\Código\fin-liberta\finlancer-marketing-agency\output\2026-05-02_143030\instagram\slides\slide-02.png
+2026-05-02 14:34:13,921 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/veo-2.0-generate-001:predictLongRunning "HTTP/1.1 429 Too Many Requests"
+2026-05-02 14:34:13,923 | agents.ugc_video_generator | WARNING | Clipe 4 submit com veo-2.0-generate-001 falhou: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. ', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}]}}
+2026-05-02 14:34:13,923 | agents.ugc_video_generator | ERROR | Clipe 4: nenhum modelo aceitou o submit.
+2026-05-02 14:34:13,923 | agents.ugc_video_generator | INFO | Clipe 4 — retry 2 com prompt simplificado
+2026-05-02 14:34:14,984 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/veo-3.0-generate-001:predictLongRunning "HTTP/1.1 400 Bad Request"
+2026-05-02 14:34:14,985 | agents.ugc_video_generator | WARNING | Clipe 4 submit com veo-3.0-generate-001 falhou: 400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'The number value for `durationSeconds` is out of bound. Please provide a value between 4 and 8, inclusive.', 'status': 'INVALID_ARGUMENT'}}
+2026-05-02 14:34:16,177 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/veo-2.0-generate-001:predictLongRunning "HTTP/1.1 429 Too Many Requests"
+2026-05-02 14:34:16,178 | agents.ugc_video_generator | WARNING | Clipe 4 submit com veo-2.0-generate-001 falhou: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. ', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}]}}
+2026-05-02 14:34:16,179 | agents.ugc_video_generator | ERROR | Clipe 4: nenhum modelo aceitou o submit.
+2026-05-02 14:34:17,375 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/imagen-4.0-fast-generate-001:predict "HTTP/1.1 200 OK"
+2026-05-02 14:34:18,396 | agents.image_generator | INFO | Imagem salva: C:\Users\Juan\Downloads\Finlancer\Código\fin-liberta\finlancer-marketing-agency\output\2026-05-02_143030\instagram\slides\slide-03.png
+2026-05-02 14:34:22,068 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/imagen-4.0-fast-generate-001:predict "HTTP/1.1 200 OK"
+2026-05-02 14:34:23,020 | agents.image_generator | INFO | Imagem salva: C:\Users\Juan\Downloads\Finlancer\Código\fin-liberta\finlancer-marketing-agency\output\2026-05-02_143030\instagram\slides\slide-04.png
+2026-05-02 14:34:23,399 | httpx | INFO | HTTP Request: GET https://generativelanguage.googleapis.com/v1beta/models/veo-3.0-generate-001/operations/e5vhfp6u8ze3 "HTTP/1.1 200 OK"
+2026-05-02 14:34:24,274 | httpx | INFO | HTTP Request: GET https://generativelanguage.googleapis.com/v1beta/models/veo-2.0-generate-001/operations/347h3tnobsov "HTTP/1.1 200 OK"
+2026-05-02 14:34:24,733 | httpx | INFO | HTTP Request: GET https://generativelanguage.googleapis.com/v1beta/models/veo-2.0-generate-001/operations/4ynv1kmy1wpo "HTTP/1.1 200 OK"
+2026-05-02 14:34:24,819 | httpx | INFO | HTTP Request: GET https://generativelanguage.googleapis.com/v1beta/models/veo-2.0-generate-001/operations/jh8g62dj722p "HTTP/1.1 200 OK"
+2026-05-02 14:34:35,728 | httpx | INFO | HTTP Request: GET https://generativelanguage.googleapis.com/v1beta/models/veo-3.0-generate-001/operations/e5vhfp6u8ze3 "HTTP/1.1 200 OK"
+2026-05-02 14:34:36,508 | httpx | INFO | HTTP Request: GET https://generativelanguage.googleapis.com/v1beta/models/veo-2.0-generate-001/operations/347h3tnobsov "HTTP/1.1 200 OK"
+2026-05-02 14:34:37,133 | httpx | INFO | HTTP Request: GET https://generativelanguage.googleapis.com/v1beta/models/veo-2.0-generate-001/operations/jh8g62dj722p "HTTP/1.1 200 OK"
+2026-05-02 14:34:37,173 | httpx | INFO | HTTP Request: GET https://generativelanguage.googleapis.com/v1beta/models/veo-2.0-generate-001/operations/4ynv1kmy1wpo "HTTP/1.1 200 OK"
+2026-05-02 14:34:44,504 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/imagen-4.0-fast-generate-001:predict "HTTP/1.1 200 OK"
+2026-05-02 14:34:45,466 | agents.image_generator | INFO | Imagem salva: C:\Users\Juan\Downloads\Finlancer\Código\fin-liberta\finlancer-marketing-agency\output\2026-05-02_143030\instagram\slides\slide-05.png
+2026-05-02 14:34:48,031 | httpx | INFO | HTTP Request: GET https://generativelanguage.googleapis.com/v1beta/models/veo-3.0-generate-001/operations/e5vhfp6u8ze3 "HTTP/1.1 200 OK"
+2026-05-02 14:34:48,711 | agents.ugc_video_generator | ERROR | Clipe 5 falhou inesperadamente: HTTP Error 403: Forbidden
+2026-05-02 14:34:49,146 | httpx | INFO | HTTP Request: GET https://generativelanguage.googleapis.com/v1beta/models/veo-2.0-generate-001/operations/347h3tnobsov "HTTP/1.1 200 OK"
+2026-05-02 14:34:49,624 | httpx | INFO | HTTP Request: GET https://generativelanguage.googleapis.com/v1beta/models/veo-2.0-generate-001/operations/4ynv1kmy1wpo "HTTP/1.1 200 OK"
+2026-05-02 14:34:49,827 | agents.ugc_video_generator | ERROR | Clipe 2 falhou inesperadamente: HTTP Error 403: Forbidden
+2026-05-02 14:34:49,885 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/imagen-4.0-fast-generate-001:predict "HTTP/1.1 200 OK"
+2026-05-02 14:34:50,015 | httpx | INFO | HTTP Request: GET https://generativelanguage.googleapis.com/v1beta/models/veo-2.0-generate-001/operations/jh8g62dj722p "HTTP/1.1 200 OK"
+2026-05-02 14:34:50,691 | agents.ugc_video_generator | ERROR | Clipe 1 falhou inesperadamente: HTTP Error 403: Forbidden
+2026-05-02 14:34:50,901 | agents.image_generator | INFO | Imagem salva: C:\Users\Juan\Downloads\Finlancer\Código\fin-liberta\finlancer-marketing-agency\output\2026-05-02_143030\instagram\slides\slide-06.png
+2026-05-02 14:34:55,413 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/imagen-4.0-fast-generate-001:predict "HTTP/1.1 200 OK"
+2026-05-02 14:34:56,366 | agents.image_generator | INFO | Imagem salva: C:\Users\Juan\Downloads\Finlancer\Código\fin-liberta\finlancer-marketing-agency\output\2026-05-02_143030\instagram\slides\slide-07.png
+2026-05-02 14:35:02,387 | httpx | INFO | HTTP Request: GET https://generativelanguage.googleapis.com/v1beta/models/veo-2.0-generate-001/operations/4ynv1kmy1wpo "HTTP/1.1 200 OK"
+2026-05-02 14:35:03,561 | agents.ugc_video_generator | ERROR | Clipe 3 falhou inesperadamente: HTTP Error 403: Forbidden
+2026-05-02 14:35:03,562 | agents.ugc_video_generator | INFO | UGC concluído: 0/5 clipes gerados.
+2026-05-02 14:35:28,574 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/imagen-4.0-fast-generate-001:predict "HTTP/1.1 200 OK"
+2026-05-02 14:35:29,532 | agents.image_generator | INFO | Imagem salva: C:\Users\Juan\Downloads\Finlancer\Código\fin-liberta\finlancer-marketing-agency\output\2026-05-02_143030\instagram\slides\slide-08.png
+2026-05-02 14:35:29,532 | finlancer-agency | INFO | Slides gerados: 8/8
+2026-05-02 14:35:32,368 | httpx | INFO | HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-02 14:35:32,369 | agents.base_agent | INFO | [Finlancer Visual Content Creator] Resposta gerada (365 chars)
+2026-05-02 14:35:36,696 | httpx | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/imagen-4.0-fast-generate-001:predict "HTTP/1.1 200 OK"
+2026-05-02 14:35:37,637 | agents.image_generator | INFO | Imagem salva: C:\Users\Juan\Downloads\Finlancer\Código\fin-liberta\finlancer-marketing-agency\output\2026-05-02_143030\instagram\feed-post.png
+2026-05-02 14:35:37,637 | finlancer-agency | INFO | FASE 4: Aprovacao Final — Brand Director
+2026-05-02 14:35:37,637 | finlancer-agency | INFO | Brand Director concluiu revisao
+2026-05-02 14:35:37,637 | finlancer-agency | INFO | FASE 5: Salvando outputs
+2026-05-02 14:35:37,644 | tools.output_manager | INFO | Salvo [instagram_legenda]: C:\Users\Juan\Downloads\Finlancer\Código\fin-liberta\finlancer-marketing-agency\output\2026-05-02_143030\instagram\legenda-reel.md
+2026-05-02 14:35:37,648 | tools.output_manager | INFO | Salvo [instagram_carrossel_textos]: C:\Users\Juan\Downloads\Finlancer\Código\fin-liberta\finlancer-marketing-agency\output\2026-05-02_143030\instagram\carrossel-textos.md
+2026-05-02 14:35:37,652 | tools.output_manager | INFO | Salvo [instagram_engagement]: C:\Users\Juan\Downloads\Finlancer\Código\fin-liberta\finlancer-marketing-agency\output\2026-05-02_143030\instagram\engagement-dicas.md
+2026-05-02 14:35:37,655 | tools.output_manager | INFO | Salvo [tiktok_legenda]: C:\Users\Juan\Downloads\Finlancer\Código\fin-liberta\finlancer-marketing-agency\output\2026-05-02_143030\tiktok\legenda-video.md
+2026-05-02 14:35:37,659 | tools.output_manager | INFO | Salvo [tiktok_engagement]: C:\Users\Juan\Downloads\Finlancer\Código\fin-liberta\finlancer-marketing-agency\output\2026-05-02_143030\tiktok\engagement-dicas.md
+2026-05-02 14:35:37,662 | tools.output_manager | INFO | Salvo [youtube_legenda]: C:\Users\Juan\Downloads\Finlancer\Código\fin-liberta\finlancer-marketing-agency\output\2026-05-02_143030\youtube\titulo-descricao.md
+2026-05-02 14:35:37,666 | tools.output_manager | INFO | Salvo [facebook_legenda]: C:\Users\Juan\Downloads\Finlancer\Código\fin-liberta\finlancer-marketing-agency\output\2026-05-02_143030\facebook\legenda-video.md
+2026-05-02 14:35:37,670 | tools.output_manager | INFO | Salvo [facebook_storytelling]: C:\Users\Juan\Downloads\Finlancer\Código\fin-liberta\finlancer-marketing-agency\output\2026-05-02_143030\facebook\storytelling.md
+2026-05-02 14:35:37,673 | tools.output_manager | INFO | Salvo [facebook_engagement]: C:\Users\Juan\Downloads\Finlancer\Código\fin-liberta\finlancer-marketing-agency\output\2026-05-02_143030\facebook\engagement-dicas.md
+2026-05-02 14:35:37,677 | tools.output_manager | INFO | Salvo [video_master]: C:\Users\Juan\Downloads\Finlancer\Código\fin-liberta\finlancer-marketing-agency\output\2026-05-02_143030\video-criativo\producao-roteiro.md
+2026-05-02 14:35:37,680 | tools.output_manager | INFO | Salvo [visual_concept]: C:\Users\Juan\Downloads\Finlancer\Código\fin-liberta\finlancer-marketing-agency\output\2026-05-02_143030\instagram\visual-conceito.md
+2026-05-02 14:35:37,684 | tools.output_manager | INFO | Narração UGC salva: C:\Users\Juan\Downloads\Finlancer\Código\fin-liberta\finlancer-marketing-agency\output\2026-05-02_143030\videos\ugc\narracao-edicao.md
+2026-05-02 14:35:37,687 | tools.output_manager | INFO | Índice de mídia salvo: C:\Users\Juan\Downloads\Finlancer\Código\fin-liberta\finlancer-marketing-agency\output\2026-05-02_143030\MIDIA-INDEX.md
