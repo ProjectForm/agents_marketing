@@ -6,6 +6,8 @@ from .social_copy_specialist import SocialCopySpecialist
 from .ugc_video_generator import UGCVideoGenerator
 from .visual_content_creator import VisualContentCreator
 from .video_script_specialist import VideoScriptSpecialist
+from .video_generator import VideoGeneratorAgent
+# from ..utils.output_parser import OutputParser # Removed to avoid relative import error
 
 __all__ = [
     "BaseAgent",
@@ -16,4 +18,6 @@ __all__ = [
     "UGCVideoGenerator",
     "VisualContentCreator",
     "VideoScriptSpecialist",
+    "VideoGeneratorAgent",
+    # "OutputParser",
 ]

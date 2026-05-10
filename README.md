@@ -1,6 +1,6 @@
 # Finlancer Marketing Agency
 
-Este repositório contém o pipeline de produção de conteúdo para a Finlancer Marketing Agency, utilizando agentes de IA para gerar copy, roteiros, briefings visuais e imagens, com upload automático para o Google Drive.
+Este repositório contém o pipeline de produção de conteúdo para a Finlancer Marketing Agency, utilizando agentes de IA para gerar copy, roteiros, briefings visuais, imagens e vídeos, com upload automático para o Google Drive.
 
 ## Setup
 
@@ -23,18 +23,16 @@ Este repositório contém o pipeline de produção de conteúdo para a Finlancer
 
 ## Configuração das Credenciais Google
 
-Crie um arquivo `.env` na raiz do projeto, baseado no `.env.example`, e preencha as seguintes variáveis:
+Crie um arquivo `.env` na raiz do projeto, baseado no `.env.example`, e preencha a seguinte variável:
 
 -   `GEMINI_API_KEY`: Sua chave de API para o Google Gemini. Obtenha em [Google AI Studio](https://aistudio.google.com/app/apikey).
--   `GOOGLE_SERVICE_ACCOUNT_JSON`: O caminho para o arquivo JSON da sua chave de conta de serviço do Google Cloud, ou o conteúdo JSON diretamente. Esta chave é usada para autenticação com a Google Drive API. Certifique-se de que a conta de serviço tenha permissões de acesso ao Google Drive.
--   `GOOGLE_DRIVE_ROOT_FOLDER_ID`: O ID da pasta raiz no Google Drive onde os outputs serão salvos (ex: a pasta "Finlancer Marketing").
+
+**Nota sobre o Google Drive:** O sistema utiliza o `gws` CLI e `rclone` pré-configurados no ambiente Manus para interagir com o Google Drive. Não é necessário configurar `GOOGLE_SERVICE_ACCOUNT_JSON` ou `GOOGLE_DRIVE_ROOT_FOLDER_ID` diretamente no `.env` para esta integração.
 
 Exemplo de `.env`:
 
 ```
 GEMINI_API_KEY=SUA_CHAVE_GEMINI
-GOOGLE_SERVICE_ACCOUNT_JSON=/path/to/your/service_account.json
-GOOGLE_DRIVE_ROOT_FOLDER_ID=SEU_ID_DA_PASTA_RAIZ_NO_DRIVE
 ```
 
 ## Uso
@@ -66,6 +64,11 @@ Execute o `main.py` com os seguintes argumentos:
     python main.py --no-drive
     ```
 
+-   **Pular geração de vídeo UGC:**
+    ```bash
+    python main.py --no-video
+    ```
+
 -   **Pular fases de revisão (3 e 4):**
     ```bash
     python main.py --no-review
@@ -82,10 +85,12 @@ agents_marketing/
 │   ├── social_copy_specialist.py
 │   ├── visual_content_creator.py
 │   ├── video_script_specialist.py
-│   └── image_generator.py      # NOVO: Agente para geração de imagens com Gemini Imagen
+│   ├── image_generator.py      # Agente para geração de imagens com Imagen 4
+│   └── video_generator.py      # NOVO: Agente para geração de vídeos UGC com Veo 3
 ├── utils/                      # Utilitários e módulos auxiliares
 │   ├── output_manager.py
-│   └── drive_manager.py        # NOVO: Gerenciador de upload para Google Drive
+│   ├── drive_manager.py        # Gerenciador de upload para Google Drive (usando gws CLI)
+│   └── output_parser.py        # NOVO: Parser para extrair dados dos outputs dos agentes
 ├── config/                     # Configurações dos agentes e prompts
 ├── knowledge/                  # Base de conhecimento para os agentes
 ├── workflows/                  # Definições de workflows
@@ -94,4 +99,5 @@ agents_marketing/
 ├── requirements.txt            # Dependências do projeto
 ├── .env.example                # Exemplo de variáveis de ambiente
 └── README.md                   # Este arquivo
+```
 ```
