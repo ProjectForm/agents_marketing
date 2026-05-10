@@ -1,204 +1,109 @@
+import os
+import sys
+import time
+import logging
 import argparse
 import json
-import logging
-import os
 import re
-import sys
-from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime
 from pathlib import Path
+from dotenv import load_dotenv
 
-from agents import (
-    BrandDirector,
-    ContentStrategist,
-    SocialCopySpecialist,
-    VisualContentCreator,
-    VideoScriptSpecialist,
-    ImageGeneratorAgent,
-)
-from tools import OutputManager, DriveManager
+# Add project root to path
+sys.path.append(str(Path(__file__).parent))
 
-# Configure logging
+from agents.base_agent import BaseAgent
+from agents.image_generator import ImageGeneratorAgent
+from agents.video_generator import VideoGeneratorAgent
+from utils.output_parser import OutputParser
+from utils.drive_manager import DriveManager
+from tools.output_manager import OutputManager
+
+# Load environment variables
+load_dotenv()
+
+# Configuration
+_GEMINI_MODEL = "gemini-2.5-flash"
+
+# Setup Logging
 logging.basicConfig(
     level=logging.INFO,
-    format="%(asctime)s | %(name)s | %(levelname)s | %(message)s",
+    format='%(asctime)s | %(name)s | %(levelname)s | %(message)s',
     handlers=[
         logging.FileHandler(f"logs/agency-{datetime.now().strftime('%Y-%m-%d')}.log"),
-        logging.StreamHandler(sys.stdout),
-    ],
+        logging.StreamHandler()
+    ]
 )
 logger = logging.getLogger("finlancer-agency")
 
-_GEMINI_MODEL = "gemini-2.5-flash"
-_REVIEW_MAX_CHARS = 5000
-
-def _extract_section(text: str, section_name: str) -> str:
-    pattern = re.compile(rf"## {section_name}\n\n(.*?)(?=\n## |$)", re.DOTALL)
-    match = pattern.search(text)
+def _extract_section(text, section_name):
+    """Helper to extract sections from agent output based on headers like ## SECTION_NAME"""
+    pattern = rf"## {section_name}\n\n(.*?)(?=\n## |$)"
+    match = re.search(pattern, text, re.DOTALL | re.IGNORECASE)
     if match:
         return match.group(1).strip()
     return ""
 
-def _trim(text: str, max_chars: int = _REVIEW_MAX_CHARS) -> str:
-    """Truncate text for review inputs to reduce token cost."""
-    if not text or len(text) <= max_chars:
-        return text or ""
-    return text[:max_chars] + "\n...[truncado]"
-
-
-def _print_summary(run_id: str, saved_local_files: dict[str, Path], final_review: str, uploaded_drive_links: dict = None):
-    logger.info("\n" + "=" * 60)
-    logger.info(f"RESUMO DA EXECUÇÃO {run_id}")
-    logger.info("=" * 60)
-    logger.info(f"Revisão Final do Brand Director: {final_review[:100]}...")
-    logger.info("-" * 60)
-    logger.info("Arquivos Locais Salvos:")
-    for key, path in saved_local_files.items():
-        logger.info(f"  - {key}: {path}")
+def run_daily_routine(date_str=None, custom_theme=None, use_review=True, no_images=False, no_drive=False, no_video=False):
+    if not date_str:
+        date_str = datetime.now().strftime("%Y-%m-%d")
     
-    if uploaded_drive_links and uploaded_drive_links.get("day_folder_link"):
-        logger.info("-" * 60)
-        logger.info(f"Google Drive: {uploaded_drive_links['day_folder_link']}")
-    logger.info("=" * 60 + "\n")
-
-
-def run_daily_routine(
-    date_str: str = None,
-    custom_theme: str = None,
-    run_review: bool = True,
-    no_images: bool = False,
-    no_drive: bool = False,
-) -> dict:
-    """Executes the full daily content production routine."""
-    date_str = date_str or datetime.now().strftime("%Y-%m-%d")
-    run_id = date_str + "_" + datetime.now().strftime("%H%M%S")
+    run_id = f"{date_str}_{datetime.now().strftime('%H%M%S')}"
     logger.info(f"=== ROTINA DIÁRIA — {run_id} ===")
 
+    # Initialize Tools
     output_manager = OutputManager()
-    drive_manager = None
-    if not no_drive:
-        try:
-            drive_manager = DriveManager()
-        except Exception as e:
-            logger.error(f"Falha ao inicializar DriveManager: {e}. Upload para Drive sera desativado.")
-            no_drive = True
-
-    # Instantiate agents
-    brand_director = BrandDirector()
-    content_strategist = ContentStrategist()
-    copy_specialist = SocialCopySpecialist()
-    visual_creator = VisualContentCreator()
-    video_specialist = VideoScriptSpecialist()
+    output_parser = OutputParser()
     image_generator = ImageGeneratorAgent()
+    video_generator = VideoGeneratorAgent()
+    drive_manager = DriveManager()
 
-    # ─── PHASE 1: Planning Meeting ────────────────────────────────────────────
+    # ─── PHASE 1: Planning ────────────────────────────────────────────────────
     logger.info("FASE 1: Planning Meeting")
-    # In a real scenario, we would use TrendAnalyzer here.
-    # For this evolution, we'll use the custom theme or a default briefing.
-    briefing = """Foco na persona 'Carla' (32 anos, consultora de marketing, CLT + MEI). 
-    Ela sofre com a confusão entre finanças pessoais e do negócio, especialmente agora em maio com o IRPF e o DASN-SIMEI.
-    Diferencial Finlancer: Visão unificada PF+PJ e IA Consultiva (Fin) para tirar dúvidas fiscais."""
-    
-    theme_for_day = custom_theme or briefing
+    planner = BaseAgent("content_strategist")
+    theme_for_day = custom_theme or "Organização financeira para freelancers CLT + MEI"
+    plan = planner.run(f"Planeje o conteúdo para o dia {date_str}. Tema: {theme_for_day}")
 
-    # ─── PHASE 2: Parallel Text Production ────────────────────────────────────
+    # ─── PHASE 2: Production ──────────────────────────────────────────────────
     logger.info("FASE 2: Producao de Conteudo (paralela)")
-    production_results: dict = {}
+    
+    copy_agent = BaseAgent("social_copy_specialist")
+    visual_agent = BaseAgent("visual_content_creator")
+    video_script_agent = BaseAgent("video_script_specialist")
 
-    def run_copy():
-        logger.info("Copy Specialist produzindo...")
-        return copy_specialist.create_full_copy_package(
-            theme=theme_for_day,
-            briefing=briefing,
-        )
+    logger.info("Copy Specialist produzindo...")
+    copy_output = copy_agent.run(f"Crie as legendas para o tema: {theme_for_day}. Plano: {plan}")
+    logger.info("copy concluido")
 
-    def run_visual():
-        logger.info("Visual Creator produzindo conceito...")
-        carousel_concept = visual_creator.create_carousel_concept(
-            theme=theme_for_day, num_slides=8, briefing=briefing,
-        )
-        feed_concept = visual_creator.create_feed_concept(
-            theme=theme_for_day, briefing=briefing,
-        )
-        return {"carousel": carousel_concept, "feed": feed_concept}
+    logger.info("Visual Creator produzindo conceito...")
+    visual_output_raw = visual_agent.run(f"Crie o conceito visual para o tema: {theme_for_day}. Plano: {plan}")
+    try:
+        clean_visual = re.sub(r"```json\n|\n```", "", visual_output_raw).strip()
+        visual_output = json.loads(clean_visual)
+    except Exception as e:
+        logger.error(f"Falha ao parsear JSON do carrossel: {e}")
+        visual_output = {"carousel": {"concept": visual_output_raw}}
+    logger.info("visual concluido")
 
-    def run_video_scripts():
-        logger.info("Video Script Specialist produzindo roteiros...")
-        return video_specialist.create_daily_video_package(
-            theme=theme_for_day, briefing=briefing,
-        )
+    logger.info("Video Script Specialist produzindo roteiros...")
+    video_output = video_script_agent.run(f"Crie os roteiros de vídeo para o tema: {theme_for_day}. Plano: {plan}")
+    logger.info("video concluido")
 
-    with ThreadPoolExecutor(max_workers=3) as executor:
-        futures = {
-            executor.submit(run_copy): "copy",
-            executor.submit(run_visual): "visual",
-            executor.submit(run_video_scripts): "video",
-        }
-        for future in as_completed(futures):
-            key = futures[future]
-            try:
-                production_results[key] = future.result()
-                logger.info(f"{key} concluido")
-            except Exception as e:
-                logger.error(f"Erro em {key}: {e}")
-                production_results[key] = f"[ERRO: {e}]"
+    production_results = {
+        "copy": copy_output,
+        "visual": visual_output,
+        "video": video_output
+    }
 
-    # ─── PHASE 3: Content Strategist Review ───────────────────────────────────
-    def _review_phase():
-        if not run_review:
-            logger.info("FASE 3: Revisao pulada (--no-review)")
-            return "(revisão pulada via --no-review)"
+    # ─── PHASE 3: Review ──────────────────────────────────────────────────────
+    if use_review:
         logger.info("FASE 3: Revisao do Content Strategist (Gemini)")
-        visual_review_text = ""
-        if isinstance(production_results.get("visual"), dict):
-            carousel_concept = production_results["visual"].get("carousel", {})
-            feed_concept = production_results["visual"].get("feed", {})
-            visual_review_text += f"## CARROSSEL\n\n{carousel_concept.get('concept', 'N/A')}\n\n"
-            visual_review_text += f"## FEED\n\n{feed_concept.get('concept', 'N/A')}"
-        else:
-            visual_review_text = production_results.get("visual", "N/A")
-
-        return content_strategist.run(
-            f"""Revise o pacote de conteúdo abaixo (tema: {theme_for_day[:200]}):
-
-COPY:
-{_trim(production_results.get("copy", "N/A"))}
-
-VISUAL:
-{_trim(visual_review_text)}
-
-VIDEO:
-{_trim(production_results.get("video", "N/A"))}
-
-Verifique coerência, tom e alinhamento com o briefing. Seja breve."""
-        )
-
-    specialist_review = _review_phase()
-
-    # ─── PHASE 4: Final Approval — Brand Director ──────────────────────────────
+        review_feedback = planner.run(f"Revise o conteúdo produzido: {json.dumps(production_results, ensure_ascii=False)}")
+    
+    # ─── PHASE 4: Final Approval ──────────────────────────────────────────────
     logger.info("FASE 4: Aprovacao Final — Brand Director")
-
-    if run_review:
-        logger.info("FASE 4: Revisao textual final (Gemini)")
-        visual_review_text = ""
-        if isinstance(production_results.get("visual"), dict):
-            carousel_concept = production_results["visual"].get("carousel", {})
-            feed_concept = production_results["visual"].get("feed", {})
-            visual_review_text += f"## CARROSSEL\n\n{carousel_concept.get('concept', 'N/A')}\n\n"
-            visual_review_text += f"## FEED\n\n{feed_concept.get('concept', 'N/A')}"
-        else:
-            visual_review_text = production_results.get("visual", "N/A")
-
-        final_review = brand_director.review_content(
-            {
-                "copy_specialist": _trim(production_results.get("copy", "")),
-                "visual_creator": _trim(visual_review_text),
-                "video_specialist": _trim(production_results.get("video", "")),
-                "specialist_review": _trim(specialist_review, max_chars=1000),
-            }
-        )
-    else:
-        final_review = "STATUS: APROVADO\n(revisão automática pulada via --no-review)"
+    brand_director = BaseAgent("brand_director")
+    final_review = brand_director.run(f"Dê o veredito final e ajustes finos: {json.dumps(production_results, ensure_ascii=False)}")
     logger.info("Brand Director concluiu revisao")
 
     # ─── PHASE 5: Image Generation ────────────────────────────────────────────
@@ -206,126 +111,129 @@ Verifique coerência, tom e alinhamento com o briefing. Seja breve."""
     if not no_images:
         logger.info("FASE 5: Geracao de Imagens")
         try:
-            visual_concepts = production_results.get("visual", {})
-            carousel_concept = visual_concepts.get("carousel", {})
-            feed_concept = visual_concepts.get("feed", {})
+            feed_overlay_text = output_parser.extract_feed_overlay_text(copy_output)
+            carousel_slides_data = output_parser.extract_carousel_slides(visual_output)
+            ugc_persona_desc = output_parser.extract_ugc_persona_description(video_output)
 
-            carousel_visual_hints = carousel_concept.get("visual_hints", [])
-            feed_visual_hint = feed_concept.get("visual_hint", "")
+            if feed_overlay_text:
+                image_outputs["feed_image_path"] = image_generator.generate_feed_image(
+                    theme=theme_for_day, texto_overlay=feed_overlay_text, output_dir=str(output_manager.base_dir / run_id / "01_feed")
+                )
+                time.sleep(7)
 
-            if carousel_visual_hints:
-                image_outputs.update(image_generator.generate_carousel_slides(carousel_visual_hints, theme_for_day, date_str))
-            if feed_visual_hint:
-                image_outputs.update(image_generator.generate_feed_image(feed_visual_hint, theme_for_day, date_str))
-            
-            reel_cover_hint = feed_concept.get("visual_hint", "")
-            if reel_cover_hint:
-                image_outputs.update(image_generator.generate_reel_cover(reel_cover_hint, theme_for_day, date_str))
+            carousel_images_paths = []
+            for i, slide_data in enumerate(carousel_slides_data):
+                if slide_data["titulo"] or slide_data["corpo"]:
+                    img_path = image_generator.generate_carousel_slide(
+                        slide_num=i+1, titulo=slide_data["titulo"], corpo=slide_data["corpo"],
+                        output_dir=str(output_manager.base_dir / run_id / "02_carrossel")
+                    )
+                    carousel_images_paths.append(img_path)
+                    time.sleep(7)
+            image_outputs["carousel_images_paths"] = carousel_images_paths
 
+            if ugc_persona_desc:
+                image_outputs["ugc_persona_thumbnail_path"] = image_generator.generate_ugc_persona_image(
+                    persona_desc=ugc_persona_desc, output_dir=str(output_manager.base_dir / run_id / "03_ugc_video")
+                )
+                time.sleep(7)
         except Exception as e:
             logger.error(f"Erro na geracao de imagens: {e}")
 
-    # ─── PHASE 6: Upload to Google Drive ──────────────────────────────────────
-    uploaded_drive_links = {}
-    if not no_drive:
-        logger.info("FASE 6: Upload para Google Drive")
-        copy_output = production_results.get("copy", "")
-        video_output = production_results.get("video", "")
-
-        outputs_for_drive = {
-            "instagram": {
-                "legendas": _extract_section(copy_output, "INSTAGRAM_LEGENDA"),
-                "roteiros": _extract_section(copy_output, "INSTAGRAM_CARROSSEL_TEXTOS"),
-                "images": image_outputs
-            },
-            "facebook": {
-                "post": _extract_section(copy_output, "FACEBOOK_STORYTELLING")
-            },
-            "tiktok": {
-                "roteiro_ugc": _extract_section(video_output, "VIDEO_MASTER")
-            },
-            "index": "" 
-        }
-        
-        index_content = output_manager.generate_index_content(run_id, outputs_for_drive, image_outputs, final_review)
-        outputs_for_drive["index"] = index_content
-
-        uploaded_drive_links = drive_manager.upload_daily_package(date_str, outputs_for_drive)
-        logger.info(f"Upload para Google Drive concluido. Pasta do dia: {uploaded_drive_links.get('day_folder_link', 'N/A')}")
+    # ─── PHASE 6: Video Generation ────────────────────────────────────────────
+    video_files = []
+    if not no_video:
+        logger.info("FASE 6: Geracao de Video UGC (4 clipes)")
+        try:
+            ugc_persona_desc = output_parser.extract_ugc_persona_description(video_output)
+            roteiro_ugc = _extract_section(video_output, "UGC_NARRATION")
+            pontos = re.findall(r"(?:CLIPE \d+:|CLIP \d+:|\d\.)\s*(.*?)(?=(?:CLIPE \d+:|CLIP \d+:|\d\.)|$)", roteiro_ugc, re.DOTALL)
+            if not pontos:
+                pontos = [p.strip() for p in roteiro_ugc.split('\n') if p.strip() and len(p) > 20][:4]
+            
+            if not pontos:
+                pontos = ["Clip 1", "Clip 2", "Clip 3", "Clip 4"]
+            
+            video_files = video_generator.generate_ugc_video(
+                roteiro_pontos=pontos,
+                persona_desc=ugc_persona_desc,
+                output_dir=str(output_manager.base_dir / run_id / "03_ugc_video")
+            )
+        except Exception as e:
+            logger.error(f"Erro na geracao de video: {e}")
 
     # ─── PHASE 7: Save everything locally ─────────────────────────────────────
     logger.info("FASE 7: Salvando outputs localmente")
 
-    copy_output = production_results.get("copy", "")
-    video_output = production_results.get("video", "")
-    visual_output_raw = production_results.get("visual", "")
-
-    text_outputs_for_local_save = {
-        "instagram_legenda":          _extract_section(copy_output, "INSTAGRAM_LEGENDA"),
-        "instagram_carrossel_textos": _extract_section(copy_output, "INSTAGRAM_CARROSSEL_TEXTOS"),
-        "instagram_engagement":       _extract_section(copy_output, "INSTAGRAM_ENGAGEMENT"),
-        "tiktok_legenda":             _extract_section(copy_output, "TIKTOK_LEGENDA"),
-        "tiktok_engagement":          _extract_section(copy_output, "TIKTOK_ENGAGEMENT"),
+    text_outputs = {
+        "instagram_legenda":          _extract_section(copy_output, "LEGENDA 1") or _extract_section(copy_output, "INSTAGRAM_LEGENDA"),
+        "instagram_carrossel_textos": _extract_section(copy_output, "LEGENDA 2") or _extract_section(copy_output, "CARROSSEL_TEXTOS"),
+        "tiktok_legenda":             _extract_section(copy_output, "LEGENDA 3") or _extract_section(copy_output, "TIKTOK_LEGENDA"),
         "tiktok_video_ideia":         _extract_section(copy_output, "TIKTOK_VIDEO_IDEIA"),
-        "youtube_legenda":            _extract_section(copy_output, "YOUTUBE_LEGENDA"),
-        "youtube_engagement":         _extract_section(copy_output, "YOUTUBE_ENGAGEMENT"),
-        "facebook_legenda":           _extract_section(copy_output, "FACEBOOK_LEGENDA"),
-        "facebook_storytelling":      _extract_section(copy_output, "FACEBOOK_STORYTELLING"),
-        "facebook_engagement":        _extract_section(copy_output, "FACEBOOK_ENGAGEMENT"),
-        "video_master":               video_output,
         "visual_concept":             visual_output_raw,
+        "ugc_legenda":                _extract_section(video_output, "UGC_NARRATION"),
     }
 
     approval_header = f"<!-- Aprovado pelo Brand Director em {date_str} -->\n\n"
+    all_text_outputs = {k: approval_header + (json.dumps(v, indent=2, ensure_ascii=False) if isinstance(v, dict) else str(v)) for k, v in text_outputs.items() if v}
+
+    saved_local_files = output_manager.save_full_package(
+        outputs=all_text_outputs,
+        run_id=run_id
+    )
     
-    def _ensure_str(v):
-        if isinstance(v, dict):
-            return json.dumps(v, indent=2, ensure_ascii=False)
-        return str(v)
+    # Save final review
+    review_path = output_manager.base_dir / run_id / "REVISAO-FINAL.md"
+    review_path.parent.mkdir(parents=True, exist_ok=True)
+    review_path.write_text(final_review, encoding="utf-8")
+    logger.info(f"Revisao final salva: {review_path}")
 
-    text_outputs_for_local_save = {k: approval_header + _ensure_str(v) for k, v in text_outputs_for_local_save.items() if v}
+    # ─── PHASE 8: Upload to Drive ─────────────────────────────────────────────
+    uploaded_drive_links = {}
+    if not no_drive:
+        logger.info("FASE 8: Upload para Google Drive")
+        uploaded_drive_links = drive_manager.create_and_upload_daily_package(
+            run_id=run_id,
+            text_outputs=text_outputs,
+            image_outputs=image_outputs,
+            video_files=video_files,
+            final_review=final_review,
+            output_parser=output_parser
+        )
+        logger.info(f"Upload para Google Drive concluido. Pasta do dia: {uploaded_drive_links.get('day_folder_link')}")
 
-    saved_local_files = output_manager.save_full_package(text_outputs_for_local_save, run_id)
+    _print_summary(run_id, final_review, saved_local_files, uploaded_drive_links.get("day_folder_link"))
+    return run_id
 
-    if final_review:
-        run_dir = output_manager.base_dir / run_id
-        review_path = run_dir / "REVISAO-FINAL.md"
-        run_dir.mkdir(parents=True, exist_ok=True)
-        review_path.write_text(f"# Revisão Final — {run_id}\n\n{final_review}", encoding="utf-8")
-        logger.info(f"Revisao final salva: {review_path}")
-
-    index_path = output_manager.generate_index(run_id)
-    _print_summary(run_id, saved_local_files, final_review, uploaded_drive_links)
-
-    return {
-        "date": date_str,
-        "run_id": run_id,
-        "briefing": briefing,
-        "outputs": production_results,
-        "final_review": final_review,
-        "saved_local_files": {k: str(v) for k, v in saved_local_files.items()},
-        "image_outputs": image_outputs,
-        "uploaded_drive_links": uploaded_drive_links,
-    }
-
+def _print_summary(run_id, review, files, drive_link):
+    logger.info("\n" + "="*60)
+    logger.info(f"RESUMO DA EXECUÇÃO {run_id}")
+    logger.info("="*60)
+    logger.info(f"Revisão Final do Brand Director: {review[:200]}...")
+    logger.info("-" * 60)
+    logger.info("Arquivos Locais Salvos:")
+    for k, v in files.items():
+        logger.info(f"  - {k}: {v}")
+    logger.info("-" * 60)
+    logger.info(f"Google Drive: {drive_link}")
+    logger.info("="*60)
 
 def main():
-    parser = argparse.ArgumentParser(description="Agência Finlancer — Produção de Conteúdo")
-    parser.add_argument("--date", type=str, help="Data para produção (YYYY-MM-DD)")
+    parser = argparse.ArgumentParser(description="Finlancer Agency - Daily Content Routine")
+    parser.add_argument("--date", type=str, help="Data da rotina (YYYY-MM-DD)")
     parser.add_argument("--custom", type=str, help="Tema customizado para o dia")
-    parser.add_argument("--no-review", action="store_true", help="Pular fase de revisão")
-    parser.add_argument("--no-images", action="store_true", help="Pular geração de imagens")
-    parser.add_argument("--no-drive", action="store_true", help="Pular upload para Google Drive")
+    parser.add_argument("--no-review", action="store_true", help="Pular fase de revisao")
+    parser.add_argument("--no-images", action="store_true", help="Pular geracao de imagens")
+    parser.add_argument("--no-video", action="store_true", help="Pular geracao de video")
+    parser.add_argument("--no-drive", action="store_true", help="Pular upload para o Drive")
     
     args = parser.parse_args()
-
+    
     try:
-        result = run_daily_routine(args.date, args.custom, not args.no_review, args.no_images, args.no_drive)
-        logger.info(f"Rotina concluída com sucesso para {result['date']}")
+        run_daily_routine(args.date, args.custom, not args.no_review, args.no_images, args.no_drive, args.no_video)
+        logger.info(f"Rotina concluída com sucesso para {args.date or datetime.now().strftime('%Y-%m-%d')}")
     except Exception as e:
         logger.error(f"Falha crítica na rotina: {e}", exc_info=True)
-        sys.exit(1)
-
 
 if __name__ == "__main__":
     main()

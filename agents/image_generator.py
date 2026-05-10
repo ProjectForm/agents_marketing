@@ -1,40 +1,43 @@
-import os
-import logging
-from pathlib import Path
 from google import genai
-from google.genai import types
+import os
+from pathlib import Path
+import time
+import logging
 
-logger = logging.getLogger(__name__)
+logger = logging.getLogger("finlancer-agency")
 
-FINLANCER_VISUAL_IDENTITY = """
-Dark mode fintech design. Background color #0f172a (deep navy/dark slate).
-Primary accent color emerald green #10b981. 
-Glassmorphism UI cards with subtle blur effect and rgba(255,255,255,0.1) borders.
-Border radius 12-20px on all elements.
-Typography: Inter or Poppins font family, clean and minimal.
-Color palette: background #0f172a, surface #1e293b, primary #10b981, 
-gradient from #10b981 to #0ea5e9, text #f1f5f9, secondary text #94a3b8.
-High contrast, professional, trustworthy Brazilian fintech aesthetic.
-Never white background. Always dark mode.
+FINLANCER_STYLE = """
+Dark mode fintech design. Solid background #0f172a (deep navy dark slate).
+Emerald green #10b981 as primary accent. Glassmorphism UI cards with 
+rgba(255,255,255,0.1) border and subtle blur. Inter or Poppins typography, 
+bold white text high contrast. Professional Brazilian fintech. 
+No white backgrounds. Dark mode only. Minimal, clean, trustworthy.
+Gradient elements from #10b981 to #0ea5e9 on highlights.
 """
-
-# Nano Banana 2 (Gemini 3.1 Flash Image)
-IMAGEN_MODEL = "imagen-3.1-flash-generate-001"
 
 class ImageGeneratorAgent:
     def __init__(self):
         self.client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
-        self.output_base_dir = Path(__file__).parent.parent / "output"
-
-    def _generate_image(self, prompt: str, width: int, height: int, output_path: Path) -> str:
+        self.model = "imagen-4.0-generate-001"
+    
+    def generate_image(self, prompt: str, output_path: str, 
+                       aspect_ratio: str = "1:1") -> str:
+        """
+        aspect_ratio: "1:1" para feed, "3:4" para carrossel (fallback de 4:5), "9:16" para reel cover
+        Retorna path do arquivo salvo.
+        """
+        # Imagen 4.0 supports 1:1, 9:16, 16:9, 4:3, 3:4. 4:5 is NOT supported.
+        if aspect_ratio == "4:5":
+            aspect_ratio = "3:4"
+            
+        logger.info(f"Gerando imagem com prompt: {prompt[:100]}... (Ratio: {aspect_ratio})")
         try:
             response = self.client.models.generate_images(
-                model=IMAGEN_MODEL,
+                model=self.model,
                 prompt=prompt,
-                config=types.GenerateImagesConfig(
-                    number_of_images=1,
-                    aspect_ratio="1:1" if width == height else ("4:5" if height > width and height/width < 1.5 else "9:16"),
+                config=genai.types.GenerateImagesConfig(
                     output_mime_type="image/png",
+                    aspect_ratio=aspect_ratio,
                 )
             )
             
@@ -42,36 +45,71 @@ class ImageGeneratorAgent:
                 logger.error(f"Nenhuma imagem gerada para o prompt: {prompt[:50]}...")
                 return ""
 
-            image_bytes = response.generated_images[0].image.image_bytes
-            output_path.parent.mkdir(parents=True, exist_ok=True)
+            image_data = response.generated_images[0].image.image_bytes
+            
+            Path(output_path).parent.mkdir(parents=True, exist_ok=True)
             with open(output_path, "wb") as f:
-                f.write(image_bytes)
-            logger.info(f"Imagem gerada e salva em: {output_path}")
-            return str(output_path)
+                f.write(image_data)
+            logger.info(f"Imagem salva em: {output_path}")
+            return output_path
         except Exception as e:
             logger.error(f"Erro ao gerar imagem para prompt '{prompt[:50]}...': {e}")
-            return ""
-
-    def generate_carousel_slides(self, visual_hints: list[str], theme: str, date_str: str) -> dict:
-        output_dir = self.output_base_dir / date_str / "instagram" / "images"
-        generated_images = {}
-        for i, hint in enumerate(visual_hints):
-            slide_name = f"carrossel_slide_{i+1:02d}"
-            prompt = f"{FINLANCER_VISUAL_IDENTITY}\n\nTema do dia: {theme}\n\n{hint}\n\nFormato: 1080x1350px. Imagem de fundo para slide de carrossel. Sem texto legível na imagem."
-            output_path = output_dir / f"{slide_name}.png"
-            generated_images[slide_name] = self._generate_image(prompt, 1080, 1350, output_path)
-        return generated_images
-
-    def generate_feed_image(self, visual_hint: str, theme: str, date_str: str) -> dict:
-        output_dir = self.output_base_dir / date_str / "instagram" / "images"
-        slide_name = "feed_estatico"
-        prompt = f"{FINLANCER_VISUAL_IDENTITY}\n\nTema do dia: {theme}\n\n{visual_hint}\n\nFormato: 1080x1080px. Imagem para post de feed estático. Sem texto legível na imagem."
-        output_path = output_dir / f"{slide_name}.png"
-        return {slide_name: self._generate_image(prompt, 1080, 1080, output_path)}
-
-    def generate_reel_cover(self, visual_hint: str, theme: str, date_str: str) -> dict:
-        output_dir = self.output_base_dir / date_str / "instagram" / "images"
-        slide_name = "reel_cover"
-        prompt = f"{FINLANCER_VISUAL_IDENTITY}\n\nTema do dia: {theme}\n\n{visual_hint}\n\nFormato: 1080x1920px. Capa para Reel. Texto APENAS no terço superior. Sem texto legível na imagem, apenas elementos visuais que sugiram espaço para texto no terço superior."
-        output_path = output_dir / f"{slide_name}.png"
-        return {slide_name: self._generate_image(prompt, 1080, 1920, output_path)}
+            return f"[ERRO_IMAGEM: {e}]"
+    
+    def generate_feed_image(self, theme: str, texto_overlay: str, 
+                            output_dir: str) -> str:
+        """Feed 1080x1080. Retorna path do PNG."""
+        prompt = f"""
+        {FINLANCER_STYLE}
+        Social media feed post 1:1 square format.
+        Main topic: {theme}
+        Text overlay (bold, top-center): "{texto_overlay}"
+        Include: emerald accent card, financial dashboard UI elements,
+        subtle chart or graph decoration, @finlancer.app watermark bottom-right.
+        Photorealistic fintech app promotional image.
+        """
+        path = f"{output_dir}/feed_estatico.png"
+        return self.generate_image(prompt, path, "1:1")
+    
+    def generate_carousel_slide(self, slide_num: int, titulo: str, 
+                                 corpo: str, output_dir: str) -> str:
+        """Slide carrossel 1080x1350. Retorna path do PNG."""
+        is_capa = slide_num == 1
+        
+        if is_capa:
+            prompt = f"""
+            {FINLANCER_STYLE}
+            Instagram carousel cover slide vertical format.
+            Bold impact title center: "{titulo}"
+            Subtitle below: "{corpo}"
+            Large emerald geometric accent shape background.
+            Professional, high-impact, invites to swipe right.
+            """
+        else:
+            prompt = f"""
+            {FINLANCER_STYLE}
+            Instagram carousel content slide {slide_num}, vertical.
+            Slide number "{slide_num:02d}" small emerald top-left.
+            Title: "{titulo}"
+            Body text: "{corpo}"
+            Glassmorphism card center, emerald left border accent strip.
+            Clean readable layout, minimal elements.
+            """
+        
+        path = f"{output_dir}/carrossel_slide_{slide_num:02d}.png"
+        return self.generate_image(prompt, path, "3:4")
+    
+    def generate_ugc_persona_image(self, persona_desc: str, 
+                                    output_dir: str) -> str:
+        """Gera imagem fotorrealista da persona para thumbnail do UGC."""
+        prompt = f"""
+        Photorealistic portrait of a Brazilian professional person.
+        {persona_desc}
+        Natural home office or coworking background, São Paulo aesthetic.
+        Casual-professional attire, authentic expression looking at camera.
+        Natural lighting, UGC style (not overly staged). 
+        Smartphone or laptop subtly visible. High quality, 9:16 vertical.
+        Do NOT include text overlays. Pure portrait for video thumbnail.
+        """
+        path = f"{output_dir}/ugc_persona_thumbnail.png"
+        return self.generate_image(prompt, path, "9:16")

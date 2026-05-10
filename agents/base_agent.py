@@ -25,13 +25,16 @@ def _load_knowledge() -> str:
 class BaseAgent:
     """Agente base com integração Gemini e base de conhecimento Finlancer."""
 
-    agent_key: str = ""  # Sobrescrever nas subclasses
-
-    def __init__(self, model_name: str = "gemini-2.5-flash"):
+    def __init__(self, agent_key: str, model_name: str = "gemini-2.5-flash"):
         self.client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
         self.model_name = model_name
+        self.agent_key = agent_key
+        
         config = _load_config()
-        agent_config = config["agents"][self.agent_key]
+        if agent_key not in config["agents"]:
+            raise ValueError(f"Agent key '{agent_key}' not found in config/agent_prompts.yaml")
+            
+        agent_config = config["agents"][agent_key]
         self.name = agent_config["name"]
         self.temperature = agent_config["temperature"]
         self.max_tokens = 8192 # Force higher max_tokens for all agents to prevent truncation
@@ -79,6 +82,4 @@ class BaseAgent:
         return ""
 
     def reset(self) -> None:
-        # O novo SDK não mantém chat state automaticamente da mesma forma, 
-        # mas para o uso atual de 'run' simples, isso não é estritamente necessário.
         pass
