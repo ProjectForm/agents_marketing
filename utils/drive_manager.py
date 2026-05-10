@@ -154,6 +154,7 @@ class DriveManager:
             run_id=run_id,
             text_outputs=text_outputs,
             image_outputs=image_outputs,
+            video_files=video_files,
             final_review=final_review,
             uploaded_drive_links=uploaded_links
         )
