@@ -75,37 +75,44 @@ def run_daily_routine(date_str=None, custom_theme=None, use_review=True, no_imag
     drive_manager = DriveManager()
 
     # ─── PHASE 1: Planning ────────────────────────────────────────────────────
-    if _should_run_phase(1):
-        logger.info("FASE 1: Planning Meeting")
     planner = BaseAgent("content_strategist")
     theme_for_day = custom_theme or "Organização financeira para freelancers CLT + MEI"
-    plan = planner.run(f"Planeje o conteúdo para o dia {date_str}. Tema: {theme_for_day}")
+    if _should_run_phase(1):
+        logger.info("FASE 1: Planning Meeting")
+        plan = planner.run(f"Planeje o conteúdo para o dia {date_str}. Tema: {theme_for_day}")
+    else:
+        logger.info("FASE 1 pulada. Usando plano mínimo de fallback.")
+        plan = f"Plano mínimo para {date_str}. Tema: {theme_for_day}"
 
     # ─── PHASE 2: Production ──────────────────────────────────────────────────
     if _should_run_phase(2):
         logger.info("FASE 2: Producao de Conteudo (paralela)")
-    
-    copy_agent = SocialCopySpecialist()
-    visual_agent = VisualContentCreator()
-    video_script_agent = VideoScriptSpecialist()
+        copy_agent = SocialCopySpecialist()
+        visual_agent = VisualContentCreator()
+        video_script_agent = VideoScriptSpecialist()
 
-    logger.info("Copy Specialist produzindo...")
-    copy_output = copy_agent.create_full_copy_package(theme_for_day, plan)
-    logger.info("copy concluido")
+        logger.info("Copy Specialist produzindo...")
+        copy_output = copy_agent.create_full_copy_package(theme_for_day, plan)
+        logger.info("copy concluido")
 
-    logger.info("Visual Creator produzindo conceito...")
-    # We need both feed and carousel concepts
-    visual_output = {
-        "feed": visual_agent.create_feed_concept(theme_for_day, plan),
-        "carousel": visual_agent.create_carousel_concept(theme_for_day, 8, plan),
-        "ugc_brief": visual_agent.create_ugc_visual_brief("MEI Freelancer", theme_for_day)
-    }
-    visual_output_raw = json.dumps(visual_output, indent=2, ensure_ascii=False)
-    logger.info("visual concluido")
+        logger.info("Visual Creator produzindo conceito...")
+        visual_output = {
+            "feed": visual_agent.create_feed_concept(theme_for_day, plan),
+            "carousel": visual_agent.create_carousel_concept(theme_for_day, 8, plan),
+            "ugc_brief": visual_agent.create_ugc_visual_brief("MEI Freelancer", theme_for_day)
+        }
+        visual_output_raw = json.dumps(visual_output, indent=2, ensure_ascii=False)
+        logger.info("visual concluido")
 
-    logger.info("Video Script Specialist produzindo roteiros...")
-    video_output = video_script_agent.create_daily_video_package(theme_for_day, plan)
-    logger.info("video concluido")
+        logger.info("Video Script Specialist produzindo roteiros...")
+        video_output = video_script_agent.create_daily_video_package(theme_for_day, plan)
+        logger.info("video concluido")
+    else:
+        logger.info("FASE 2 pulada. Usando placeholders vazios.")
+        copy_output = ""
+        visual_output = {}
+        visual_output_raw = "{}"
+        video_output = ""
 
     production_results = {
         "copy": copy_output,
@@ -119,11 +126,13 @@ def run_daily_routine(date_str=None, custom_theme=None, use_review=True, no_imag
         review_feedback = planner.run(f"Revise o conteúdo produzido: {json.dumps(production_results, ensure_ascii=False)}")
     
     # ─── PHASE 4: Final Approval ──────────────────────────────────────────────
+    brand_director = BaseAgent("brand_director")
     if _should_run_phase(4):
         logger.info("FASE 4: Aprovacao Final — Brand Director")
-    brand_director = BaseAgent("brand_director")
-    final_review = brand_director.run(f"Dê o veredito final e ajustes finos: {json.dumps(production_results, ensure_ascii=False)}")
-    logger.info("Brand Director concluiu revisao")
+        final_review = brand_director.run(f"Dê o veredito final e ajustes finos: {json.dumps(production_results, ensure_ascii=False)}")
+        logger.info("Brand Director concluiu revisao")
+    else:
+        final_review = "Fase 4 pulada."
 
     # ─── PHASE 5: Image Generation ────────────────────────────────────────────
     image_outputs = {}
@@ -204,7 +213,7 @@ def run_daily_routine(date_str=None, custom_theme=None, use_review=True, no_imag
             
             video_files = video_generator.generate_ugc_video(
                 roteiro_pontos=pontos,
-                persona_desc=ugc_persona_desc,
+                persona_desc=ugc_persona_desc_for_video,
                 output_dir=str(output_manager.base_dir / run_id / "03_ugc_video")
             )
         except Exception as e:
