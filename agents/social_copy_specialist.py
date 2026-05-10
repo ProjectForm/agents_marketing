@@ -2,7 +2,8 @@ from .base_agent import BaseAgent
 
 
 class SocialCopySpecialist(BaseAgent):
-    agent_key = "social_copy_specialist"
+    def __init__(self, model_name: str = "gemini-2.5-flash"):
+        super().__init__("social_copy_specialist", model_name)
 
     def create_full_copy_package(self, theme: str, briefing: str) -> str:
         """

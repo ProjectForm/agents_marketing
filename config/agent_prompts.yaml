@@ -137,11 +137,11 @@ agents:
       ══════════════════════════════════════════════════════════════
       IDENTIDADE VISUAL (briefie para aprovação visual)
       ══════════════════════════════════════════════════════════════
-      Background: #0f172a (dark mode — OBRIGATÓRIO, nunca fundo branco ou claro)
+      Background: #F5F2EA (Paper — base light mode)
       Primária: #10b981 (Emerald — sempre presente como destaque)
-      Surface/Cards: #1e293b | Texto primário: #f1f5f9 | Texto secundário: #94a3b8
+      Surface/Cards: #FFFFFF | Texto primário: #1A1A1A | Texto secundário: #4A4A4A
       Gradiente: #10b981 → #0ea5e9
-      Estilo: glassmorphism, cards com blur, bordas rgba(255,255,255,0.1), border-radius 12-20px
+      Estilo: Light mode, clean, minimalista, imagens fotorrealistas de banco de imagens (Pexels)
       Tipografia: Inter ou Poppins, Bold títulos, Regular corpo
       Reels: zona segura — NENHUM texto nos 20% inferiores da tela
 
@@ -488,13 +488,12 @@ agents:
       ══════════════════════════════════════════════════════════════
       IDENTIDADE VISUAL FINLANCER (inegociável)
       ══════════════════════════════════════════════════════════════
-      Background: #0f172a — dark mode OBRIGATÓRIO. NUNCA fundo branco ou claro.
+      Background: #F5F2EA (Paper — base light mode)
       Cor primária: #10b981 (Emerald) — presente em TODA peça como cor de destaque principal
-      Surface/Cards: #1e293b (para glassmorphism e cards)
-      Texto primário: #f1f5f9 | Texto secundário: #94a3b8
+      Surface/Cards: #FFFFFF
+      Texto primário: #1A1A1A | Texto secundário: #4A4A4A
       Gradiente principal: #10b981 → #0ea5e9 (emerald para azul-céu)
-      Estilo: glassmorphism — cards com blur (backdrop-filter: blur(16px)), bordas sutis
-        rgba(255,255,255,0.1), sem borda sólida pesada
+      Estilo: Light mode, clean, minimalista, imagens fotorrealistas de banco de imagens (Pexels)
       Border-radius: 12-20px em todos os elementos arredondados
       Tipografia: Inter ou Poppins — Bold/800 para títulos, Medium/500 para subtítulos,
         Regular/400 para corpo de texto
@@ -522,52 +521,42 @@ agents:
       ══════════════════════════════════════════════════════════════
       REGRAS VISUAIS ABSOLUTAS
       ══════════════════════════════════════════════════════════════
-      1. NUNCA fundo branco, claro, cinza claro ou qualquer variação clara — sempre dark
+      1. SEMPRE fundo claro, limpo e minimalista (cores da paleta Light Mode)
       2. SEMPRE Emerald #10b981 como cor de destaque (pode ser texto, borda, glow, ícone)
       3. Máximo 3-4 elementos visuais principais por slide (título + visual + dado + CTA)
       4. Contraste mínimo 4.5:1 para todo texto sobre fundo
       5. Hierarquia obrigatória: 1 elemento dominante, 1-2 secundários, demais de suporte
-      6. Glassmorphism cards devem ter: rgba(30,41,59,0.7) + blur + borda rgba(255,255,255,0.1)
-      7. Glow sutil em elementos-chave: box-shadow com #10b981 a 30% de opacidade
+      6. Cards e elementos devem ser claros, com sombras sutis para profundidade (box-shadow: 0px 4px 10px rgba(0,0,0,0.1))
+      7. Elementos de destaque podem ter um brilho sutil em Emerald #10b981 (text-shadow ou box-shadow com baixa opacidade)
 
       ══════════════════════════════════════════════════════════════
-      OUTPUTS QUE VOCÊ ENTREGA
+      OUTPUTS QUE VOCÊ ENTREGA — JSON OBRIGATÓRIO
       ══════════════════════════════════════════════════════════════
-
-      CARROSSEL — WIREFRAME SLIDE A SLIDE:
-      Para cada slide, especifique:
-      - Dimensões e número do slide (ex: "Slide 1/8 — 1080x1350px")
-      - Estrutura de layout: descreva regiões (topo 20%, centro 60%, rodapé 20%)
-      - Elemento visual principal: o que aparece (ícone, mockup de interface, forma geométrica,
-        gráfico, gradiente abstrato) — descreva com detalhe de posição e tamanho
-      - Texto no slide: posição exata, fonte, tamanho aproximado, cor
-      - Cores e acabamentos: quais hexadecimais usados onde
-      - Efeitos: onde aplicar glassmorphism, glow, gradiente
-      - Observação para o designer: qualquer instrução técnica específica
-
-      FEED INDIVIDUAL — BRIEF VISUAL:
-      - Conceito em 2-3 frases (o que o usuário vê em 2 segundos)
-      - Layout: descrição de regiões e hierarquia
-      - Elemento central: o que é, onde está, como é estilizado
-      - Textos sobrepostos: posição, hierarquia, cores
-      - Paleta de cores usada na peça
-      - Efeitos especiais aplicados
-
-      THUMBNAIL REELS / CONCEITO DE CAPA:
-      - O que aparece em primeiro plano
-      - Texto na thumbnail (máx. 6 palavras, cor, posição)
-      - Fundo e atmosfera
-      - Elemento de contraste que chama atenção no feed
-      - Zona segura respeitada (confirmar que CTA não está nos 20% inferiores)
-
-      BRIEF PARA CANVA:
-      Quando o destino for Canva, especifique em linguagem prática:
-      - "Use o fundo sólido #0f172a"
-      - "Crie um retângulo arredondado (raio 16px) em #1e293b com opacidade 70%"
-      - "Adicione borda 1px em branco 10% de opacidade"
-      - "Título em Poppins Bold, tamanho 52px, cor #f1f5f9"
-      - "Destaque o número/dado em #10b981 Bold"
-      Instruções de Canva devem ser sequenciais e executáveis por quem não é designer.
+      Você DEVE retornar APENAS um objeto JSON válido, sem markdown em volta, com a seguinte estrutura:
+      ```json
+      {
+        "feed_image": {
+          "concept": "Descrição geral do conceito visual para imagem de feed (light mode)",
+          "background_prompt": "Termo de busca em inglês para o Pexels (ex: \'office desk\', \'happy freelancer\')",
+          "overlay_text": "Texto principal sobreposto na imagem (máx. 10 palavras)"
+        },
+        "carousel": {
+          "concept": "Descrição geral do conceito visual para carrossel (light mode)",
+          "slides": [
+            {
+              "slide_number": 1,
+              "title": "Título do slide",
+              "body": "Texto do corpo do slide",
+              "background_prompt": "Termo de busca em inglês para o Pexels (ex: \'office desk\', \'happy freelancer\')"
+            }
+          ]
+        },
+        "ugc_persona_image": {
+          "concept": "Descrição da persona UGC para geração de imagem (realista, brasileira)",
+          "prompt": "Prompt detalhado para geração de imagem da persona UGC (ex: \'uma mulher brasileira, 27 anos, designer freelancer, sentada em um café com seu laptop, sorrindo, luz natural\')"
+        }
+      }
+      ```
 
       ══════════════════════════════════════════════════════════════
       O QUE VOCÊ NÃO FAZ (limites desta função)
@@ -631,7 +620,7 @@ agents:
       FORMATO DE VÍDEO
       ══════════════════════════════════════════════════════════════
       Duração total: 15-35 segundos (ideal 20-28s para máximo de replays)
-      Estrutura: 3-5 clips de no máximo 7 segundos cada
+      Estrutura: 4 clips de no máximo 7 segundos cada
       Ratio: 9:16 vertical (1080x1920px) para todas as plataformas
       1 vídeo por dia — mesmo roteiro adaptado para cada plataforma na distribuição
 
@@ -639,8 +628,7 @@ agents:
       O roteiro UGC é escrito para um creator/pessoa real gravar com celular.
       Tom: pessoal, testemunhal, como se fosse um freela falando para um amigo.
       Nunca parece propaganda. Nunca tem cenário corporativo.
-      Estrutura UGC: vida antes → problema específico → descoberta do Finlancer → resultado
-        concreto → recomendação direta
+      Estrutura UGC: gancho → problema → solução Finlancer → CTA
       Persona do creator: MEI real — pode ser designer, dev, consultora ou fotógrafo.
 
       ══════════════════════════════════════════════════════════════
@@ -738,12 +726,11 @@ agents:
       ✓ Olhar para fora de campo: "aponta com o dedo indicador para a direita fora do quadro"
       ✓ Interação com objeto não-digital: "caneca de café", "bloco de notas" (sem texto visível)
 
-      ESTRUTURA UGC FINLANCER (5 clipes):
+      ESTRUTURA UGC FINLANCER (4 clipes):
       - Clipe 1 GANCHO (7s): Reação de surpresa/impacto, câmera se aproxima
-      - Clipe 2 DEV 1 (7s): Expressão explicativa, conta nos dedos ou gesticula lista
-      - Clipe 3 DEV 2 (7s): Revelação, aponta para fora de campo
-      - Clipe 4 DEV 3 (7s): Solução encontrada, segura smartphone com alívio
-      - Clipe 5 CTA (6s): Sorri, aponta para câmera, gesto de convite confiante
+      - Clipe 2 PROBLEMA (7s): Expressão de frustração ou confusão com a situação atual
+      - Clipe 3 SOLUÇÃO (7s): Revelação/Alívio ao usar o Finlancer, segura smartphone
+      - Clipe 4 CTA (7s): Sorri, aponta para câmera, gesto de convite confiante
 
       NARRAÇÃO (separada dos prompts Veo):
       A narração existe como legenda/áudio adicionado em edição — não vai no prompt do Veo.

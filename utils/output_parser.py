@@ -1,108 +1,60 @@
-import re
 import json
-from pathlib import Path
+import re
 
 class OutputParser:
-    
-    def extract_carousel_slides(self, visual_output: str) -> list[dict]:
-        """
-        Lê o output do visual_content_creator.
-        Pode ser uma string markdown ou um dicionário (se o agente retornou JSON).
-        """
-        slides = []
-        
-        # Se for um dicionário, tentar extrair da estrutura JSON
-        if isinstance(visual_output, dict):
-            carousel_data = visual_output.get("carousel", {})
-            # O VisualContentCreator pode retornar uma string no campo 'concept'
-            if isinstance(carousel_data, dict) and "concept" in carousel_data:
-                concept_text = carousel_data["concept"]
-                # Tentar parsear o concept_text se for JSON string
-                try:
-                    concept_json = json.loads(concept_text)
-                    if "slides" in concept_json:
-                        for s in concept_json["slides"]:
-                            title = s.get("title", "")
-                            body = s.get("subtitle", "") or s.get("body", "")
-                            slides.append({"titulo": title, "corpo": body})
-                except:
-                    # Se falhar, tratar como texto normal abaixo
-                    visual_output = concept_text
-            else:
-                visual_output = str(carousel_data)
+    def __init__(self):
+        pass
 
-        if not slides and isinstance(visual_output, str):
-            # Tentar extrair do formato markdown gerado pelo OutputManager
-            slide_blocks = re.findall(r"\*\*SLIDE (\d+).*?\*\*\n(.*?)(?=\n\*\*SLIDE|$)", visual_output, re.DOTALL)
-            
-            if not slide_blocks:
-                # Fallback para o padrão do VisualContentCreator: "Slide X/8 — 1080x1350px"
-                slide_blocks = re.findall(r"Slide (\d+)/8.*?\n(.*?)(?=\nSlide \d+/8|$)", visual_output, re.DOTALL)
-            
-            for num, block in slide_blocks:
-                title_match = re.search(r'T[íi]tulo:\s*(.*?)(?=\n|$)', block) or re.search(r'Title:\s*(.*?)(?=\n|$)', block)
-                body_match = re.search(r'Corpo:\s*(.*?)(?=\n|$)', block) or re.search(r'Subt[íi]tulo:\s*(.*?)(?=\n|$)', block) or re.search(r'Subtitle:\s*(.*?)(?=\n|$)', block)
-                
-                title = title_match.group(1).strip().strip('"') if title_match else ""
-                body = body_match.group(1).strip().strip('"') if body_match else ""
-                slides.append({"titulo": title, "corpo": body})
-            
-        # Garantir 8 slides
-        while len(slides) < 8:
-            slides.append({"titulo": "", "corpo": ""})
-        return slides[:8]
-    
-    def extract_feed_overlay_text(self, copy_output: str) -> str:
-        """
-        Extrai o título/gancho principal da LEGENDA 4 (FEED ESTÁTICO).
-        """
-        # Tentar encontrar a seção LEGENDA 4
-        section_match = re.search(r"LEGENDA 4.*?(?=\n## |$)", copy_output, re.DOTALL | re.IGNORECASE)
-        if section_match:
-            section = section_match.group(0)
-            # Tentar encontrar o gancho/título dentro da seção
-            match = re.search(r"GANCHO/T[Íi]TULO:\s*(.*?)(?=\n|$)", section, re.IGNORECASE)
-            if match:
-                return match.group(1).strip().strip('"')
-            # Fallback: primeira linha não vazia após o cabeçalho da seção
-            lines = [l.strip() for l in section.split('\n') if l.strip() and 'LEGENDA 4' not in l]
-            if lines:
-                return lines[0].strip().strip('"')
-        return ""
-    
-    def extract_ugc_persona_description(self, video_output: str) -> str:
-        """
-        Extrai a descrição da persona do roteiro UGC.
-        """
-        # Padrão: "PERSONA: ..."
-        match = re.search(r"PERSONA:\s*(.*?)(?=\n|$)", video_output, re.IGNORECASE)
-        if match:
-            return match.group(1).strip()
-        return "A Brazilian professional freelancer, authentic and relatable."
+    def generate_index_content(self, run_id, text_outputs, image_outputs, video_files, final_review, uploaded_drive_links=None):
+        index_content = f"# Relatório de Produção de Conteúdo - {run_id}\n\n"
+        index_content += f"## Revisão Final do Brand Director\n\n{final_review}\n\n"
 
-    def generate_index_content(self, run_id: str, text_outputs: dict, image_outputs: dict, final_review: str, uploaded_drive_links: dict) -> str:
-        """
-        Gera o conteúdo do INDEX.md com links do Drive.
-        """
-        links_str = ""
-        for name, link in uploaded_drive_links.items():
-            links_str += f"- **{name.replace('_', ' ').title()}**: [Acessar no Drive]({link})\n"
-            
-        return f"""# Pacote de Conteúdo Finlancer - {run_id}
+        index_content += "## Outputs de Texto\n\n"
+        for key, content in text_outputs.items():
+            index_content += f"### {key.replace('_', ' ').title()}\n\n"
+            if uploaded_drive_links and f'{key}.md' in uploaded_drive_links:
+                index_content += f"[Ver no Google Drive]({uploaded_drive_links[f'{key}.md']})\n\n"
+            index_content += f"```markdown\n{content}\n```\n\n"
 
-Este pacote contém todos os entregáveis gerados automaticamente pelos agentes para a rotina de hoje.
+        index_content += "## Outputs de Imagem\n\n"
+        if image_outputs.get("feed_image_path"):
+            index_content += f"### Imagem de Feed Estático\n\n"
+            if uploaded_drive_links and 'feed_estatico.png' in uploaded_drive_links:
+                index_content += f"[Ver no Google Drive]({uploaded_drive_links['feed_estatico.png']})\n\n"
+            index_content += f"![Imagem de Feed]({image_outputs['feed_image_path']})\n\n"
 
-## 📁 Arquivos no Google Drive
-{links_str}
+        if image_outputs.get("carousel_images_paths"):
+            index_content += f"### Carrossel de Imagens\n\n"
+            for i, img_path in enumerate(image_outputs["carousel_images_paths"]):
+                if uploaded_drive_links and f'carrossel_slide_{i+1:02d}.png' in uploaded_drive_links:
+                    index_content += f"[Slide {i+1} no Google Drive]({uploaded_drive_links[f'carrossel_slide_{i+1:02d}.png']})\n\n"
+                index_content += f"![Slide {i+1}]({img_path})\n\n"
 
-## 📝 Resumo Estratégico (Brand Director)
-{final_review}
+        if image_outputs.get("ugc_persona_thumbnail_path"):
+            index_content += f"### Thumbnail da Persona UGC\n\n"
+            if uploaded_drive_links and 'ugc_persona_thumbnail.png' in uploaded_drive_links:
+                index_content += f"[Ver no Google Drive]({uploaded_drive_links['ugc_persona_thumbnail.png']})\n\n"
+            index_content += f"![Thumbnail Persona UGC]({image_outputs['ugc_persona_thumbnail_path']})\n\n"
 
-## 🚀 Próximos Passos
-1. Revise as legendas e artes no link acima.
-2. Agende as postagens conforme o cronograma.
-3. Monitore o engajamento!
+        index_content += "## Outputs de Vídeo\n\n"
+        if video_files:
+            index_content += f"### Vídeo UGC\n\n"
+            for i, video_path in enumerate(video_files):
+                if uploaded_drive_links and f'ugc_video_clip_{i+1:02d}.mp4' in uploaded_drive_links:
+                    index_content += f"[Clipe {i+1} no Google Drive]({uploaded_drive_links[f'ugc_video_clip_{i+1:02d}.mp4']})\n\n"
+                index_content += f"[Download Clipe {i+1}]({video_path})\n\n"
 
----
-*Gerado automaticamente pela Agência Finlancer (Gemini 2.5 + Imagen 4 + Veo 3)*
-"""
+        return index_content
+
+    # The following methods are no longer needed as main.py directly parses the JSON output
+    # def extract_feed_overlay_text(self, copy_output):
+    #     # This method is now handled by directly accessing visual_output['feed_image']['overlay_text']
+    #     pass
+
+    # def extract_carousel_slides(self, visual_output):
+    #     # This method is now handled by directly accessing visual_output['carousel']['slides']
+    #     pass
+
+    # def extract_ugc_persona_description(self, video_output):
+    #     # This method is now handled by directly accessing visual_output['ugc_persona_image']['prompt']
+    #     pass

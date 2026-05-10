@@ -28,9 +28,13 @@ class OutputManager:
             "facebook_legenda":           ("facebook",  "legenda_video.md"),
             "facebook_storytelling":      ("facebook",  "storytelling.md"),
             "facebook_engagement":        ("facebook",  "engagement_dicas.md"),
-            "video_master":               ("video-criativo", "producao_roteiro.md"),
+            "video_master":               ("03_ugc_video", "01_briefing_geral.md"),
+            "briefing_producao":          ("03_ugc_video", "02_diretrizes_producao.md"),
+            "cenas_detalhadas":           ("03_ugc_video", "03_roteiro_cenas.md"),
+            "narracao_completa":          ("03_ugc_video", "04_narracao_completa.md"),
+            "overlay_plataforma":         ("03_ugc_video", "05_textos_overlay.md"),
+            "trilha_sonora":              ("03_ugc_video", "06_trilha_sonora.md"),
             "visual_concept":             ("visual-conceito", "conceito.md"),
-            "ugc_legenda":                ("03_ugc_video", "roteiro_ugc.md"),
         }
         
         run_dir = self._get_run_dir(run_id)

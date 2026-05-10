@@ -16,7 +16,8 @@ def _clean_json_response(text: str) -> str:
     return text.strip()
 
 class VisualContentCreator(BaseAgent):
-    agent_key = "visual_content_creator"
+    def __init__(self, model_name: str = "gemini-2.5-flash"):
+        super().__init__("visual_content_creator", model_name)
 
     def create_carousel_concept(self, theme: str, num_slides: int, briefing: str) -> Dict[str, Any]:
         prompt = f"""Crie o conceito visual completo para um carrossel de {num_slides} slides.

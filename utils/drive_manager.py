@@ -102,7 +102,7 @@ class DriveManager:
     def create_and_upload_daily_package(self, run_id: str, 
                                          text_outputs: dict, image_outputs: dict, 
                                          video_files: list, final_review: str, 
-                                         output_parser) -> dict:
+                                         output_parser, **kwargs) -> dict:
         uploaded_links = {}
         
         root_id = os.getenv("GOOGLE_DRIVE_ROOT_FOLDER_ID")
@@ -151,11 +151,11 @@ class DriveManager:
 
         # INDEX.md
         index_content = output_parser.generate_index_content(
-            run_id,
-            text_outputs,
-            image_outputs,
-            final_review,
-            uploaded_links
+            run_id=run_id,
+            text_outputs=text_outputs,
+            image_outputs=image_outputs,
+            final_review=final_review,
+            uploaded_drive_links=uploaded_links
         )
         uploaded_links["index_file"] = self.upload_md(index_content, "INDEX.md", day_folder_id)
 

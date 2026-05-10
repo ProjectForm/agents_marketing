@@ -7,6 +7,7 @@ from .ugc_video_generator import UGCVideoGenerator
 from .visual_content_creator import VisualContentCreator
 from .video_script_specialist import VideoScriptSpecialist
 from .video_generator import VideoGeneratorAgent
+from utils.visual_renderer import VisualRenderer
 # from ..utils.output_parser import OutputParser # Removed to avoid relative import error
 
 __all__ = [
@@ -19,5 +20,6 @@ __all__ = [
     "VisualContentCreator",
     "VideoScriptSpecialist",
     "VideoGeneratorAgent",
+    "VisualRenderer",
     # "OutputParser",
 ]

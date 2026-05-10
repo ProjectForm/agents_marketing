@@ -2,7 +2,8 @@ from .base_agent import BaseAgent
 
 
 class VideoScriptSpecialist(BaseAgent):
-    agent_key = "video_script_specialist"
+    def __init__(self, model_name: str = "gemini-2.5-flash"):
+        super().__init__("video_script_specialist", model_name)
 
     def create_daily_video_package(self, theme: str, briefing: str) -> str:
         """
