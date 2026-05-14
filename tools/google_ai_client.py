@@ -19,10 +19,10 @@ def get_google_client():
             "Pacote 'google-genai' não instalado. Execute: pip install google-genai"
         )
 
-    api_key = os.environ.get("GOOGLE_AI_API_KEY")
+    api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key:
         raise ValueError(
-            "GOOGLE_AI_API_KEY não encontrada. Configure no arquivo .env"
+            "GEMINI_API_KEY não encontrada. Configure no arquivo .env"
         )
 
     _google_client = genai.Client(api_key=api_key)

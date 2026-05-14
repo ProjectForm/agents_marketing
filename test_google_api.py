@@ -19,13 +19,13 @@ try:
 except ImportError:
     print("  AVISO: python-dotenv não instalado. Usando variáveis de ambiente do sistema.")
 
-key = os.environ.get("GOOGLE_AI_API_KEY", "")
+key = os.environ.get("GEMINI_API_KEY", "")
 if not key:
-    print("  ERRO: GOOGLE_AI_API_KEY não encontrada no .env nem no ambiente.")
+    print("  ERRO: GEMINI_API_KEY não encontrada no .env nem no ambiente.")
     sys.exit(1)
 
 masked = key[:6] + "..." + key[-4:] if len(key) > 10 else "(vazia)"
-print(f"  GOOGLE_AI_API_KEY detectada: {masked}")
+print(f"  GEMINI_API_KEY detectada: {masked}")
 print(f"  Comprimento da chave: {len(key)} caracteres")
 print(f"  Formato esperado: começa com 'AI' (Google AI Studio) ou tem 39+ chars")
 

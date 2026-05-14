@@ -9,7 +9,7 @@ logger = logging.getLogger("finlancer-agency")
 class VideoGeneratorAgent:
     def __init__(self):
         self.client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
-        self.model = "veo-3.1-lite-generate-preview"
+        self.model = "veo-3.0-generate-001"
     
     def generate_ugc_video(self, roteiro_pontos: list[str], 
                             persona_desc: str, output_dir: str) -> list[str]:

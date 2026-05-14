@@ -142,7 +142,7 @@ Responda APENAS JSON válido:
         client = self._get_google()
         config = types.GenerateVideosConfig(
             aspect_ratio="9:16",
-            duration_seconds=min(duration, 8),
+            duration_seconds=max(4, min(8, duration)),
             number_of_videos=1,
         )
         if reference_bytes:
@@ -193,14 +193,13 @@ Responda APENAS JSON válido:
             
         specs = self._craft_video_prompts(theme, briefing, has_reference=bool(ref_bytes))
         results = []
-        
-        with ThreadPoolExecutor(max_workers=5) as executor:
-            futures = []
-            for spec in specs:
-                filename = f"ugc-{spec['clip']:02d}-{spec['tipo'].lower()}.mp4"
-                path = output_path / filename
-                futures.append(executor.submit(self._generate_and_save, spec, ref_bytes, path))
-            
+        with ThreadPoolExecutor(max_workers=2) as executor:
+218	            futures = []
+219	            for spec in specs:
+220	                filename = f"ugc-{spec['clip']:02d}-{spec['tipo'].lower()}.mp4"
+221	                path = output_path / filename
+222	                futures.append(executor.submit(self._generate_and_save, spec, ref_bytes, path))
+223	                time.sleep(4)  
             for future in as_completed(futures):
                 results.append(future.result())
         
